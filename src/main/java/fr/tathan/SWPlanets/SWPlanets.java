@@ -1,7 +1,7 @@
-package com.mrscauthd.beyond_addon;
+package fr.tathan.SWPlanets;
 
 import com.mojang.logging.LogUtils;
-import com.mrscauthd.beyond_addon.network.PlanetSelectionGuiNetworkHandler;
+import  fr.tathan.SWPlanets.network.PlanetSelectionGuiNetworkHandler;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
@@ -15,8 +15,8 @@ import java.util.function.BiConsumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-@Mod(BeyondAddonMod.MODID)
-public class BeyondAddonMod {
+@Mod(SWPlanets.MODID)
+public class SWPlanets {
 
     public static final String MODID = "beyond_addon";
     public static final Logger LOGGER = LogUtils.getLogger();
@@ -26,11 +26,11 @@ public class BeyondAddonMod {
     public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(new ResourceLocation(MODID, MODID), () -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
     private static int messageID;
 
-    public BeyondAddonMod() {
+    public SWPlanets() {
         MinecraftForge.EVENT_BUS.register(this);
 
         // NETWORK
-        BeyondAddonMod.addNetworkMessage(PlanetSelectionGuiNetworkHandler.class, PlanetSelectionGuiNetworkHandler::encode, PlanetSelectionGuiNetworkHandler::decode, PlanetSelectionGuiNetworkHandler::handle);
+        SWPlanets.addNetworkMessage(PlanetSelectionGuiNetworkHandler.class, PlanetSelectionGuiNetworkHandler::encode, PlanetSelectionGuiNetworkHandler::decode, PlanetSelectionGuiNetworkHandler::handle);
     }
 
     public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder, BiConsumer<T, Supplier<NetworkEvent.Context>> messageConsumer) {

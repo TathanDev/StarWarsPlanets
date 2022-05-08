@@ -1,6 +1,6 @@
-package com.mrscauthd.beyond_addon.network;
+package  fr.tathan.SWPlanets.network;
 
-import com.mrscauthd.beyond_addon.world.PlanetsRegistry;
+import  fr.tathan.SWPlanets.world.PlanetsRegistry;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkEvent;
