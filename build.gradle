@@ -16,7 +16,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle'
 
 version = '1.0'
-group = 'fr.tatha.SWPlanets'
+group = 'fr.tathan.SWPlanets'
 archivesBaseName = 'swplanets'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)

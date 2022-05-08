@@ -1,17 +1,17 @@
 {
-  "type": "swplanets:planet",
+  "type": "swplanets:tatooine",
   "forge:use_server_seed": true,
   "generator": {
     "type": "beyond_earth:planet_noise",
     "seed": 12345,
     "settings": {
-      "sea_level": 63,
+      "sea_level": 0,
       "disable_mob_generation": true,
       "aquifers_enabled": false,
       "ore_veins_enabled": false,
       "legacy_random_source": false,
       "default_block": {
-        "Name": "beyond_earth:moon_stone"
+        "Name": "minecraft:sandstone"
       },
       "default_fluid": {
         "Name": "minecraft:air"
@@ -307,7 +307,7 @@
             "if_true": {
               "type": "minecraft:biome",
               "biome_is": [
-                "beyond_earth:moon_desert"
+                "minecraft:desert"
               ]
             },
             "then_run": {
@@ -332,7 +332,7 @@
                 "then_run": {
                   "type": "minecraft:block",
                   "result_state": {
-                    "Name": "beyond_earth:moon_sand"
+                    "Name": "minecraft:sand"
                   }
                 }
               }
@@ -343,7 +343,7 @@
     },
     "biome_source": {
       "type": "minecraft:fixed",
-      "biome": "minecraft:plains"
+      "biome": "minecraft:desert"
     }
   }
 }

@@ -1,20 +1,20 @@
 {
-  "type": "swplanets:planet",
+  "type": "swplanets:kamino",
   "forge:use_server_seed": true,
   "generator": {
     "type": "beyond_earth:planet_noise",
     "seed": 12345,
     "settings": {
-      "sea_level": 63,
+      "sea_level": 0,
       "disable_mob_generation": true,
       "aquifers_enabled": false,
       "ore_veins_enabled": false,
       "legacy_random_source": false,
       "default_block": {
-        "Name": "beyond_earth:moon_stone"
+        "Name": "minecraft:stone"
       },
       "default_fluid": {
-        "Name": "minecraft:air"
+        "Name": "minecraft:water"
       },
       "noise": {
         "min_y": 0,
@@ -307,7 +307,10 @@
             "if_true": {
               "type": "minecraft:biome",
               "biome_is": [
-                "beyond_earth:moon_desert"
+                "minecraft:deep_ocean",
+                "minecraft:deep_cold_ocean",
+                "minecraft:deep_frozen_ocean",
+                "minecraft:deep_lukewarm_ocean"
               ]
             },
             "then_run": {
@@ -332,7 +335,7 @@
                 "then_run": {
                   "type": "minecraft:block",
                   "result_state": {
-                    "Name": "beyond_earth:moon_sand"
+                    "Name": "minecraft:sand"
                   }
                 }
               }
@@ -342,8 +345,57 @@
       }
     },
     "biome_source": {
-      "type": "minecraft:fixed",
-      "biome": "minecraft:plains"
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "minecraft:deep_lukewarm_ocean",
+          "parameters": {
+            "temperature": 1,
+            "humidity": -1,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": -0.5,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "minecraft:deep_frozen_ocean",
+          "parameters": {
+            "temperature": -0.5,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": -1.5,
+            "depth": 0,
+            "offset": 0
+          }
+         },
+        {
+          "biome": "minecraft:deep_ocean",
+          "parameters": {
+            "temperature": -0.5,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": -1.5,
+            "depth": 0,
+            "offset": 0
+        }
+        },
+        {
+          "biome": "minecraft:deep_cold_ocean",
+          "parameters": {
+            "temperature": -0.5,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": -1.5,
+            "depth": 0,
+            "offset": 0
+          }
+        }
+      ]
     }
   }
 }

@@ -8,6 +8,15 @@ import net.minecraft.world.level.Level;
 
 public class PlanetsRegistry {
 
-    public static final ResourceKey<Level> PLANET = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(SWPlanets.MODID, "planet"));
-    public static final ResourceKey<Level> ORBIT = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(SWPlanets.MODID, "orbit"));
+    public static final ResourceKey<Level> TATOOINE = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(SWPlanets.MODID, "tatooine"));
+    public static final ResourceKey<Level> TATOOINE_ORBIT = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(SWPlanets.MODID, "tatooine_orbit"));
+
+    public static final ResourceKey<Level> KAMINO = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(SWPlanets.MODID, "kamino"));
+    public static final ResourceKey<Level> KAMINO_ORBIT = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(SWPlanets.MODID, "kamino_orbit"));
+
+
+
 }
+
+
+

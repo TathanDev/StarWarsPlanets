@@ -43,21 +43,47 @@ public class PlanetSelectionGuiNetworkHandler extends PlanetSelectionGuiNetworkH
         /** Teleport Planet Button */
         if (message.getInteger() == 1) {
             message.defaultOptions(player);
-            Methods.teleportButton(player, PlanetsRegistry.PLANET, false);
+            Methods.teleportButton(player, PlanetsRegistry.TATOOINE, false);
         }
 
         /** Teleport Orbit Button */
         if (message.getInteger() == 2) {
             message.defaultOptions(player);
-            Methods.teleportButton(player, PlanetsRegistry.ORBIT, false);
+            Methods.teleportButton(player, PlanetsRegistry.TATOOINE_ORBIT, false);
         }
 
         /** Teleport Space Station Button */
         if (message.getInteger() == 3) {
             message.defaultOptions(player);
             message.deleteItems(player);
-            Methods.teleportButton(player, PlanetsRegistry.ORBIT, true);
+            Methods.teleportButton(player, PlanetsRegistry.TATOOINE_ORBIT, true);
         }
+
+        /**
+         *
+         * KAMINO
+         *
+         */
+
+        /** Teleport Planet Button */
+        if (message.getInteger() == 4) {
+            message.defaultOptions(player);
+            Methods.teleportButton(player, PlanetsRegistry.KAMINO, false);
+        }
+
+        /** Teleport Orbit Button */
+        if (message.getInteger() == 5) {
+            message.defaultOptions(player);
+            Methods.teleportButton(player, PlanetsRegistry.KAMINO_ORBIT, false);
+        }
+
+        /** Teleport Space Station Button */
+        if (message.getInteger() == 6) {
+            message.defaultOptions(player);
+            message.deleteItems(player);
+            Methods.teleportButton(player, PlanetsRegistry.KAMINO_ORBIT, true);
+        }
+
 
         context.setPacketHandled(true);
     }

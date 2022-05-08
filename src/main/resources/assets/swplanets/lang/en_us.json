@@ -1,4 +1,5 @@
 {
-  "gui.beyond_addon.planet_selection.solar_system_button": "Addon Solar",
-  "gui.beyond_addon.planet_selection.planet_button": "Addon Planet"
+  "gui.swplanets.planet_selection.solar_system_button": "The Galaxy",
+  "gui.swplanets.planet_selection.tatooine_button": "Tatooine",
+  "gui.swplanets.planet_selection.kamino_button": "KAMINO"
 }
