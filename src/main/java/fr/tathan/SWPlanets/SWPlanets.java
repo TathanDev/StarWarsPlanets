@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 @Mod(SWPlanets.MODID)
 public class SWPlanets {
 
-    public static final String MODID = "beyond_addon";
+    public static final String MODID = "swplanets";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     /** PACKET HANDLER */

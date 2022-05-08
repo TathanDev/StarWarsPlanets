@@ -3,24 +3,24 @@ loaderVersion="[40,)"
 license="All Rights Reserved unless otherwise explicitly stated"
 
 [[mods]]
-modId="beyond_addon"
+modId="swplanets"
 version="1.0"
-displayName="Beyond Addon"
-displayURL="https://www.curseforge.com/minecraft/mc-mods/beyond-earth"
+displayName="Star Wars Planets"
+displayURL="https://odysseyus.fr"
 logoFile="logo.png"
-authors="MrScautHD"
+authors="TATHAN"
 description='''
 This Mod is a Addon for Beyond Earth!
 '''
 
-[[dependencies.beyond_addon]]
+[[dependencies.swplanets]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.18.2]"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.beyond_addon]]
+[[dependencies.swplanets]]
     modId="forge"
     mandatory=true
     versionRange="[40.0.52,]"
