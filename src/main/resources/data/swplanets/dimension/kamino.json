@@ -5,7 +5,7 @@
     "type": "beyond_earth:planet_noise",
     "seed": 12345,
     "settings": {
-      "sea_level": 0,
+      "sea_level": 140,
       "disable_mob_generation": true,
       "aquifers_enabled": false,
       "ore_veins_enabled": false,
@@ -348,49 +348,13 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "minecraft:deep_lukewarm_ocean",
+          "biome": "minecraft:deep_ocean",
           "parameters": {
             "temperature": 1,
             "humidity": -1,
             "continentalness": 0,
             "erosion": 0,
             "weirdness": -0.5,
-            "depth": 0,
-            "offset": 0
-          }
-        },
-        {
-          "biome": "minecraft:deep_frozen_ocean",
-          "parameters": {
-            "temperature": -0.5,
-            "humidity": 0,
-            "continentalness": 0,
-            "erosion": 0,
-            "weirdness": -1.5,
-            "depth": 0,
-            "offset": 0
-          }
-         },
-        {
-          "biome": "minecraft:deep_ocean",
-          "parameters": {
-            "temperature": -0.5,
-            "humidity": 0,
-            "continentalness": 0,
-            "erosion": 0,
-            "weirdness": -1.5,
-            "depth": 0,
-            "offset": 0
-        }
-        },
-        {
-          "biome": "minecraft:deep_cold_ocean",
-          "parameters": {
-            "temperature": -0.5,
-            "humidity": 0,
-            "continentalness": 0,
-            "erosion": 0,
-            "weirdness": -1.5,
             "depth": 0,
             "offset": 0
           }

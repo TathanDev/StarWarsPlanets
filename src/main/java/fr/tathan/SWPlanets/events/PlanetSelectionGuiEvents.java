@@ -73,11 +73,13 @@ public class PlanetSelectionGuiEvents {
 
         screen.visibleButton(solarSystemButton, screen.category.get() == 0);
         screen.visibleButton(tatooineCategoryButton, category.get() == 1);
+
         screen.visibleButton(tatooineHandlerButton, category.get() == 2);
         screen.visibleButton(tatooineOrbitHandlerButton, category.get() == 2);
         screen.visibleButton(tatooineSpaceStationHandlerButton, category.get() == 2);
 
         screen.visibleButton(kaminoCategoryButton, category.get() == 1);
+
         screen.visibleButton(kaminoHandlerButton, category.get() == 3);
         screen.visibleButton(kaminoOrbitHandlerButton, category.get() == 3);
         screen.visibleButton(kaminoSpaceStationHandlerButton, category.get() == 3);
@@ -144,7 +146,7 @@ public class PlanetSelectionGuiEvents {
                 screen.category.set(0);
                 screen.scrollIndex = 0;
                 screen.updateButtonVisibility();
-            } else if (PlanetSelectionGuiHelper.categoryRange(category.get(), 2, 3)) {
+            } else if (PlanetSelectionGuiHelper.categoryRange(category.get(), 2, 2)) {
                 category.set(1);
                 screen.scrollIndex = 0;
                 screen.updateButtonVisibility();
@@ -181,7 +183,7 @@ public class PlanetSelectionGuiEvents {
         screen.visibleButton(tatooineCategoryButton, false);
 
         /** KAMINO TELEPORT BUTTONS */
-        kaminoHandlerButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 10, 1, 70, 20, true, SWPlanets.PACKET_HANDLER, getNetworkHandler(4), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(screen.PLANET_TEXT.getString(), "3.721 m/s", "a" + screen.OXYGEN_TRUE_TEXT.getString(), "a" + "40"), screen.BLUE_BUTTON_TEXTURE, screen.BLUE_LIGHT_BUTTON_TEXTURE, TATOOINE_BUTTON_TEXT);
+        kaminoHandlerButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 10, 1, 70, 20, true, SWPlanets.PACKET_HANDLER, getNetworkHandler(4), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(screen.PLANET_TEXT.getString(), "3.721 m/s", "a" + screen.OXYGEN_TRUE_TEXT.getString(), "a" + "40"), screen.BLUE_BUTTON_TEXTURE, screen.BLUE_LIGHT_BUTTON_TEXTURE, KAMINO_BUTTON_TEXT);
         screen.visibleButton(kaminoHandlerButton, false);
 
         /** KAMINO ORBIT TELEPORT BUTTONS */

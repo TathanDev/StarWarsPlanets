@@ -1,5 +1,7 @@
 package fr.tathan.SWPlanets.skyrenderers;
 
+/**
+
 import com.mojang.blaze3d.vertex.*;
 import com.mojang.math.Matrix4f;
 import com.mojang.math.Vector3f;
@@ -199,3 +201,4 @@ public class TatooineOrbitSky {
     }
 }
 
+*/
