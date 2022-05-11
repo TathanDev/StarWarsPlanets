@@ -20,13 +20,14 @@ public class GravityEvents {
         }
         */
 
+       
 
         /** ORBIT GRAVITY */
         if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.TATOOINE_ORBIT)) {
             EntityGravity.gravitySystem(event.getEntityLiving(), 0.02F);
         }
 
-        if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.KAMINO)) {
+        if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.KAMINO_ORBIT)) {
             EntityGravity.gravitySystem(event.getEntityLiving(), 0.02F);
         }
     }
