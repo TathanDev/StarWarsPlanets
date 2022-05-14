@@ -146,7 +146,7 @@ public class PlanetSelectionGuiEvents {
                 screen.category.set(0);
                 screen.scrollIndex = 0;
                 screen.updateButtonVisibility();
-            } else if (PlanetSelectionGuiHelper.categoryRange(category.get(), 2, 2)) {
+            } else if (PlanetSelectionGuiHelper.categoryRange(category.get(), 2, 3)) {
                 category.set(1);
                 screen.scrollIndex = 0;
                 screen.updateButtonVisibility();
