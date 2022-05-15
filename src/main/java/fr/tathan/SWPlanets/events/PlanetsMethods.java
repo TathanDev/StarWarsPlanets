@@ -14,25 +14,33 @@ public class PlanetsMethods {
     public static final Set<ResourceKey<Level>> worldsWithoutRain = Set.of(
             PlanetsRegistry.TATOOINE,
             PlanetsRegistry.TATOOINE_ORBIT,
-            PlanetsRegistry.KAMINO_ORBIT
+            PlanetsRegistry.KAMINO_ORBIT,
+            PlanetsRegistry.ENDOR_ORBIT
             );
 
 
     public static final Set<ResourceKey<Level>> spaceWorldsWithoutOxygen = Set.of(
             PlanetsRegistry.KAMINO_ORBIT,
-            PlanetsRegistry.TATOOINE_ORBIT
+            PlanetsRegistry.TATOOINE_ORBIT,
+            PlanetsRegistry.ENDOR_ORBIT
+
+
     );
 
     public static final Set<ResourceKey<Level>> spaceWorlds = Set.of(
             PlanetsRegistry.TATOOINE,
             PlanetsRegistry.KAMINO,
             PlanetsRegistry.KAMINO_ORBIT,
-            PlanetsRegistry.TATOOINE_ORBIT
+            PlanetsRegistry.TATOOINE_ORBIT,
+            PlanetsRegistry.ENDOR,
+            PlanetsRegistry.ENDOR_ORBIT
     );
 
     private static final Set<ResourceKey<Level>> orbitWorlds = Set.of(
             PlanetsRegistry.KAMINO_ORBIT,
-            PlanetsRegistry.TATOOINE_ORBIT
+            PlanetsRegistry.TATOOINE_ORBIT,
+            PlanetsRegistry.ENDOR_ORBIT
+
     );
 
     public static boolean isSpaceWorld(Level world) {
@@ -57,9 +65,10 @@ public class PlanetsMethods {
             Methods.landerTeleport(player, PlanetsRegistry.KAMINO);
         } else if (Methods.isWorld(world, PlanetsRegistry.TATOOINE_ORBIT)) {
             Methods.landerTeleport(player, PlanetsRegistry.TATOOINE);
+        } else if (Methods.isWorld(world, PlanetsRegistry.ENDOR_ORBIT)) {
+            Methods.landerTeleport(player, PlanetsRegistry.ENDOR);
         }
     }
-
 
     public static void entityFallToPlanet(Level world, Entity entity) {
         ResourceKey<Level> world2 = world.dimension();
@@ -69,6 +78,8 @@ public class PlanetsMethods {
         } else if (world2 == PlanetsRegistry.TATOOINE_ORBIT) {
             Methods.entityWorldTeleporter(entity, PlanetsRegistry.TATOOINE, 450);
 
+        } else if (world2 == PlanetsRegistry.ENDOR_ORBIT) {
+            Methods.entityWorldTeleporter(entity, PlanetsRegistry.ENDOR, 450);
         }
     }
 

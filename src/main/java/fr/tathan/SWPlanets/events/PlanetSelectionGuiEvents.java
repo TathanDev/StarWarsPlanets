@@ -25,8 +25,8 @@ public class PlanetSelectionGuiEvents {
     /** TEXT */
     public static final Component SOLAR_SYSTEM_BUTTON_TEXT = tl("solar_system_button");
     public static final Component TATOOINE_BUTTON_TEXT = tl("tatooine_button");
-
     public static final Component KAMINO_BUTTON_TEXT = tl("kamino_button");
+    public static final Component ENDOR_BUTTON_TEXT = tl("endor_button");
 
 
     /** BUTTONS */

@@ -1,5 +1,7 @@
 {
   "gui.swplanets.planet_selection.solar_system_button": "The Galaxy",
   "gui.swplanets.planet_selection.tatooine_button": "Tatooine",
-  "gui.swplanets.planet_selection.kamino_button": "Kamino"
+  "gui.swplanets.planet_selection.kamino_button": "Kamino",
+  "gui.swplanets.planet_selection.endor_button": "Endor"
+
 }

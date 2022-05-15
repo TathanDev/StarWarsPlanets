@@ -84,6 +84,31 @@ public class PlanetSelectionGuiNetworkHandler extends PlanetSelectionGuiNetworkH
             Methods.teleportButton(player, PlanetsRegistry.KAMINO_ORBIT, true);
         }
 
+        /**
+         *
+         * ENDOR
+         *
+         */
+
+        /** Teleport Planet Button */
+        if (message.getInteger() == 7) {
+            message.defaultOptions(player);
+            Methods.teleportButton(player, PlanetsRegistry.ENDOR, false);
+        }
+
+        /** Teleport Orbit Button */
+        if (message.getInteger() == 8) {
+            message.defaultOptions(player);
+            Methods.teleportButton(player, PlanetsRegistry.ENDOR_ORBIT, false);
+        }
+
+        /** Teleport Space Station Button */
+        if (message.getInteger() == 9) {
+            message.defaultOptions(player);
+            message.deleteItems(player);
+            Methods.teleportButton(player, PlanetsRegistry.ENDOR_ORBIT, true);
+        }
+
 
         context.setPacketHandled(true);
     }

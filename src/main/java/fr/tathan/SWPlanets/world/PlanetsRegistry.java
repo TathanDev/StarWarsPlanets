@@ -15,6 +15,9 @@ public class PlanetsRegistry {
     public static final ResourceKey<Level> KAMINO_ORBIT = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(SWPlanets.MODID, "kamino_orbit"));
 
 
+    public static final ResourceKey<Level> ENDOR = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(SWPlanets.MODID, "endor"));
+    public static final ResourceKey<Level> ENDOR_ORBIT = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(SWPlanets.MODID, "endor_orbit"));
+
 
 }
 

@@ -32,6 +32,8 @@ public class GravityEvents {
             EntityGravity.gravitySystem(event.getEntityLiving(), 0.02F);
         } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.KAMINO_ORBIT)) {
             EntityGravity.gravitySystem(event.getEntityLiving(), 0.02F);
+        } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.ENDOR_ORBIT)) {
+            EntityGravity.gravitySystem(event.getEntityLiving(), 0.02F);
         }
 
     }
