@@ -5,7 +5,7 @@
     "type": "beyond_earth:planet_noise",
     "seed": 12345,
     "settings": {
-      "sea_level": 60,
+      "sea_level": 69,
       "disable_mob_generation": false,
       "aquifers_enabled": false,
       "ore_veins_enabled": true,
@@ -14,7 +14,7 @@
         "Name": "minecraft:stone"
       },
       "default_fluid": {
-        "Name": "minecraft:air"
+        "Name": "minecraft:water"
       },
       "noise": {
         "min_y": 0,
@@ -333,7 +333,7 @@
                 "then_run": {
                   "type": "minecraft:block",
                   "result_state": {
-                    "Name": "minecraft:sand"
+                    "Name": "minecraft:grass_block"
                   }
                 }
               }
@@ -355,7 +355,7 @@
             "weirdness": -0.5,
             "depth": 0,
             "offset": 0
-          }
+            }
           },
           {
           "biome": "minecraft:sparse_jungle",

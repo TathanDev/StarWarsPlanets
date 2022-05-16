@@ -77,7 +77,6 @@ public class PlanetsMethods {
             Methods.entityWorldTeleporter(entity, PlanetsRegistry.KAMINO, 450);
         } else if (world2 == PlanetsRegistry.TATOOINE_ORBIT) {
             Methods.entityWorldTeleporter(entity, PlanetsRegistry.TATOOINE, 450);
-
         } else if (world2 == PlanetsRegistry.ENDOR_ORBIT) {
             Methods.entityWorldTeleporter(entity, PlanetsRegistry.ENDOR, 450);
         }
