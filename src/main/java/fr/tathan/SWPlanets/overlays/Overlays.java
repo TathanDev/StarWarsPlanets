@@ -24,15 +24,19 @@ import net.mrscauthd.beyond_earth.guis.helper.GuiHelper;
 @Mod.EventBusSubscriber(modid = SWPlanets.MODID, value = Dist.CLIENT)
 public class Overlays {
 
-    private static boolean check = false;
-    private static float counter = 0;
-
 
 
     private static final ResourceLocation TATOOINE_BAR_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/planet_bar/tatooine_planet_bar.png");
     private static final ResourceLocation KAMINO_BAR_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/planet_bar/kamino_planet_bar.png");
     private static final ResourceLocation ENDOR_BAR_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/planet_bar/endor_planet_bar.png");
 
+/**
+    private static final ResourceLocation MOON_PLANET_BAR_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/planet_bar/moon_planet_bar.png");
+    private static final ResourceLocation MARS_PLANET_BAR_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/planet_bar/mars_planet_bar.png");
+    private static final ResourceLocation MERCURY_PLANET_BAR_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/planet_bar/mercury_planet_bar.png");
+    private static final ResourceLocation VENUS_PLANET_BAR_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/planet_bar/venus_planet_bar.png");
+    private static final ResourceLocation GLACIO_PLANET_BAR_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/planet_bar/glacio_planet_bar.png");
+    */
     private static final ResourceLocation EARTH_PLANET_BAR_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/planet_bar/earth_planet_bar.png");
     private static final ResourceLocation ORBIT_PLANET_BAR_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/planet_bar/orbit_planet_bar.png");
     private static final ResourceLocation ROCKET_PLANET_BAR_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/planet_bar/rocket.png");
@@ -43,15 +47,15 @@ public class Overlays {
 
         /** ROCKET HEIGHT */
         if (Methods.isRocket(player.getVehicle()) || player.getVehicle() instanceof LanderEntity) {
-            OverlayRegistry.enableOverlay(Overlays.ROCKET_BAR, true);
+            OverlayRegistry.enableOverlay(Overlays.ROCKET_HEIGHT, true);
         } else {
-            OverlayRegistry.enableOverlay(Overlays.ROCKET_BAR, false);
+            OverlayRegistry.enableOverlay(Overlays.ROCKET_HEIGHT, false);
         }
     }
 
 
 
-    public static IIngameOverlay ROCKET_BAR = new IIngameOverlay() {
+    public static IIngameOverlay ROCKET_HEIGHT = new IIngameOverlay() {
         @Override
         public void render(ForgeIngameGui gui, PoseStack mStack, float partialTicks, int width, int height) {
             Player player = Minecraft.getInstance().player;

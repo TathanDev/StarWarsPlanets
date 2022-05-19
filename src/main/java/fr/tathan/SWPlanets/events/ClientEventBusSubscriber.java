@@ -15,7 +15,8 @@ public class ClientEventBusSubscriber {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
 
+
         //OVERLAY
-        OverlayRegistry.registerOverlayBottom("rocket_height", Overlays.ROCKET_BAR);
+        OverlayRegistry.registerOverlayBottom("rocket_height", Overlays.ROCKET_HEIGHT);
     }
 }
