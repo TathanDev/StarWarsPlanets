@@ -218,7 +218,7 @@ public class PlanetSelectionGuiEvents {
          */
 
         /** ENDOR BUTTONS */
-        endorCategoryButton = PlanetSelectionGuiHelper.addCategoryButton(screen, category, 10, 1, 70, 20, 4, screen.checkTier(4), ImageButtonPlacer.Types.SOLAR_SYSTEM_CATEGORY, List.of(KAMINO_BUTTON_TEXT.getString(), screen.ROCKET_TIER_4_TEXT.getString()), screen.RED_BUTTON_TEXTURE, screen.RED_LIGHT_BUTTON_TEXTURE, ENDOR_BUTTON_TEXT);
+        endorCategoryButton = PlanetSelectionGuiHelper.addCategoryButton(screen, category, 10, 1, 70, 20, 4, screen.checkTier(4), ImageButtonPlacer.Types.SOLAR_SYSTEM_CATEGORY, List.of(ENDOR_BUTTON_TEXT.getString(), screen.ROCKET_TIER_4_TEXT.getString()), screen.RED_BUTTON_TEXTURE, screen.RED_LIGHT_BUTTON_TEXTURE, ENDOR_BUTTON_TEXT);
         screen.visibleButton(endorCategoryButton, false);
 
         /** ENDOR TELEPORT BUTTONS */

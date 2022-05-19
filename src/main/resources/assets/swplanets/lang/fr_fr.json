@@ -10,7 +10,10 @@
   "advancements.kamino.title": "Kamino !",
   "advancements.kamino.descr": "Bienvenue sur Kamino !",
   "advancements.endor.title": "Endor !",
-  "advancements.endor.descr": "Bienvenue sur Endor !"
+  "advancements.endor.descr": "Bienvenue sur Endor !",
 
+  "item.swplanets.star_wars_opening_music_disc": "Star Wars Opening Music Disc",
+  "item.swplanets.star_wars_opening_music_disc.desc": "John Williams",
 
+  "itemGroup.music_tab": "Disques de Musiques"
 }

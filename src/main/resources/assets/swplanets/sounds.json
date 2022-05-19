@@ -1,0 +1,10 @@
+{
+  "star_wars_opening_music": {
+    "sounds": [
+      {
+        "name": "swplanets:star_wars_opening_music",
+        "stream": false
+      }
+    ]
+  }
+}
