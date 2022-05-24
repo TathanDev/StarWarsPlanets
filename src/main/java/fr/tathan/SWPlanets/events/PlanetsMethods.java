@@ -15,14 +15,17 @@ public class PlanetsMethods {
             PlanetsRegistry.TATOOINE,
             PlanetsRegistry.TATOOINE_ORBIT,
             PlanetsRegistry.KAMINO_ORBIT,
-            PlanetsRegistry.ENDOR_ORBIT
+            PlanetsRegistry.ENDOR_ORBIT,
+            PlanetsRegistry.HOT_ORBIT
             );
 
 
     public static final Set<ResourceKey<Level>> spaceWorldsWithoutOxygen = Set.of(
             PlanetsRegistry.KAMINO_ORBIT,
             PlanetsRegistry.TATOOINE_ORBIT,
-            PlanetsRegistry.ENDOR_ORBIT
+            PlanetsRegistry.ENDOR_ORBIT,
+            PlanetsRegistry.HOT_ORBIT
+
 
 
     );
@@ -33,13 +36,19 @@ public class PlanetsMethods {
             PlanetsRegistry.KAMINO_ORBIT,
             PlanetsRegistry.TATOOINE_ORBIT,
             PlanetsRegistry.ENDOR,
-            PlanetsRegistry.ENDOR_ORBIT
+            PlanetsRegistry.ENDOR_ORBIT,
+            PlanetsRegistry.HOT_ORBIT,
+            PlanetsRegistry.HOT
+
+
     );
 
     private static final Set<ResourceKey<Level>> orbitWorlds = Set.of(
             PlanetsRegistry.KAMINO_ORBIT,
             PlanetsRegistry.TATOOINE_ORBIT,
-            PlanetsRegistry.ENDOR_ORBIT
+            PlanetsRegistry.ENDOR_ORBIT,
+            PlanetsRegistry.HOT_ORBIT
+
 
     );
 
@@ -67,6 +76,8 @@ public class PlanetsMethods {
             Methods.landerTeleport(player, PlanetsRegistry.TATOOINE);
         } else if (Methods.isWorld(world, PlanetsRegistry.ENDOR_ORBIT)) {
             Methods.landerTeleport(player, PlanetsRegistry.ENDOR);
+        } else if (Methods.isWorld(world, PlanetsRegistry.HOT_ORBIT)) {
+            Methods.landerTeleport(player, PlanetsRegistry.HOT);
         }
     }
 
@@ -79,6 +90,8 @@ public class PlanetsMethods {
             Methods.entityWorldTeleporter(entity, PlanetsRegistry.TATOOINE, 450);
         } else if (world2 == PlanetsRegistry.ENDOR_ORBIT) {
             Methods.entityWorldTeleporter(entity, PlanetsRegistry.ENDOR, 450);
+        } else if (world2 == PlanetsRegistry.HOT_ORBIT) {
+            Methods.entityWorldTeleporter(entity, PlanetsRegistry.HOT, 450);
         }
     }
 

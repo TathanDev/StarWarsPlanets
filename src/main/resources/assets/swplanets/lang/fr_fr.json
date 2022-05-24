@@ -3,6 +3,8 @@
   "gui.swplanets.planet_selection.tatooine_button": "Tatooine",
   "gui.swplanets.planet_selection.kamino_button": "Kamino",
   "gui.swplanets.planet_selection.endor_button": "Endor",
+  "gui.swplanets.planet_selection.hot_button": "Hot",
+
 
 
   "advancements.tatooine.title": "Tatooine",
@@ -11,6 +13,8 @@
   "advancements.kamino.descr": "Bienvenue sur Kamino !",
   "advancements.endor.title": "Endor !",
   "advancements.endor.descr": "Bienvenue sur Endor !",
+  "advancements.hot.title": "Hot !",
+  "advancements.hot.descr": "Bienvenue sur Hot !",
 
   "item.swplanets.star_wars_opening_music_disc": "Star Wars Opening Music Disc",
   "item.swplanets.star_wars_opening_music_disc.desc": "John Williams",
