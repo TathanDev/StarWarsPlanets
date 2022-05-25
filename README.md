@@ -10,3 +10,5 @@ Planet i will add :
 This addon add just basic planets for the moment. Maybe i will add some structures...
 
 The mod link : https://www.curseforge.com/minecraft/mc-mods/star-wars-planets
+
+The discord link : https://discord.gg/nuDEYcFX4j
