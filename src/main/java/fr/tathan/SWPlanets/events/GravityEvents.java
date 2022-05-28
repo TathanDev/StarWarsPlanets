@@ -12,7 +12,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.fml.common.Mod;
 import net.mrscauthd.beyond_earth.events.EntityGravity;
 import net.mrscauthd.beyond_earth.events.Methods;
-import net.mrscauthd.beyond_earth.events.forgeevents.LivingEntityTickEndEvent;
+import net.mrscauthd.beyond_earth.events.forge.LivingEntityTickEndEvent;
 
 @Mod.EventBusSubscriber(modid = SWPlanets.MODID)
 public class GravityEvents {

@@ -9,7 +9,7 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.mrscauthd.beyond_earth.entities.LanderEntity;
-import net.mrscauthd.beyond_earth.events.forgeevents.EntityTickEvent;
+import net.mrscauthd.beyond_earth.events.forge.EntityTickEvent;
 
 @Mod.EventBusSubscriber(modid = SWPlanets.MODID)
 public class Event {
