@@ -11,64 +11,6 @@ import java.util.Set;
 
 public class PlanetsMethods {
 
-    public static final Set<ResourceKey<Level>> worldsWithoutRain = Set.of(
-            PlanetsRegistry.TATOOINE,
-            PlanetsRegistry.TATOOINE_ORBIT,
-            PlanetsRegistry.KAMINO_ORBIT,
-            PlanetsRegistry.ENDOR_ORBIT,
-            PlanetsRegistry.HOT_ORBIT
-            );
-
-
-    public static final Set<ResourceKey<Level>> spaceWorldsWithoutOxygen = Set.of(
-            PlanetsRegistry.KAMINO_ORBIT,
-            PlanetsRegistry.TATOOINE_ORBIT,
-            PlanetsRegistry.ENDOR_ORBIT,
-            PlanetsRegistry.HOT_ORBIT
-
-
-
-    );
-
-    public static final Set<ResourceKey<Level>> spaceWorlds = Set.of(
-            PlanetsRegistry.TATOOINE,
-            PlanetsRegistry.KAMINO,
-            PlanetsRegistry.KAMINO_ORBIT,
-            PlanetsRegistry.TATOOINE_ORBIT,
-            PlanetsRegistry.ENDOR,
-            PlanetsRegistry.ENDOR_ORBIT,
-            PlanetsRegistry.HOT_ORBIT,
-            PlanetsRegistry.HOT
-
-
-    );
-
-    private static final Set<ResourceKey<Level>> orbitWorlds = Set.of(
-            PlanetsRegistry.KAMINO_ORBIT,
-            PlanetsRegistry.TATOOINE_ORBIT,
-            PlanetsRegistry.ENDOR_ORBIT,
-            PlanetsRegistry.HOT_ORBIT
-
-
-    );
-
-    public static boolean isSpaceWorld(Level world) {
-        return spaceWorlds.contains(world.dimension());
-    }
-
-    public static boolean isSpaceWorldWithoutOxygen(Level world) {
-        return spaceWorldsWithoutOxygen.contains(world.dimension());
-    }
-
-    public static boolean isOrbitWorld(Level world) {
-        return orbitWorlds.contains(world.dimension());
-    }
-
-    public static boolean isWorld(Level world, ResourceKey<Level> loc) {
-        return world.dimension() == loc;
-    }
-
-
     public static void landerTeleportOrbit(Player player, Level world) {
         if (Methods.isWorld(world, PlanetsRegistry.KAMINO_ORBIT)) {
             Methods.landerTeleport(player, PlanetsRegistry.KAMINO);
@@ -94,5 +36,4 @@ public class PlanetsMethods {
             Methods.entityWorldTeleporter(entity, PlanetsRegistry.HOT, 450);
         }
     }
-
 }

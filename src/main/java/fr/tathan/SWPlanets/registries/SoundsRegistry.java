@@ -9,10 +9,8 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class SoundsRegistry {
 
-
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, SWPlanets.MODID);
 
     /** SOUNDS */
     public static final RegistryObject<SoundEvent> STAR_WARS_OPENING_MUSIC = SOUNDS.register("star_wars_opening_music",() -> new SoundEvent(new ResourceLocation(SWPlanets.MODID, "star_wars_opening_music")));
-
 }
