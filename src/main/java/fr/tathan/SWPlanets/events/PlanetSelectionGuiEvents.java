@@ -1,8 +1,8 @@
-package  fr.tathan.SWPlanets.events;
+package fr.tathan.SWPlanets.events;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import fr.tathan.SWPlanets.SWPlanets;
-import  fr.tathan.SWPlanets.network.PlanetSelectionGuiNetworkHandler;
+import fr.tathan.SWPlanets.network.PlanetSelectionGuiNetworkHandler;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -29,13 +29,10 @@ public class PlanetSelectionGuiEvents {
     public static final Component ENDOR_BUTTON_TEXT = tl("endor_button");
     public static final Component HOT_BUTTON_TEXT = tl("hot_button");
 
-
-
     /** BUTTONS */
     private static ImageButtonPlacer backButton;
 
     private static ImageButtonPlacer solarSystemButton;
-
 
     private static ImageButtonPlacer tatooineCategoryButton;
     private static ImageButtonPlacer tatooineHandlerButton;
@@ -65,8 +62,6 @@ public class PlanetSelectionGuiEvents {
     public static final ResourceLocation KAMINO_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/sky/kamino.png");
     public static final ResourceLocation ENDOR_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/sky/endor.png");
     public static final ResourceLocation HOT_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/sky/hot.png");
-
-
 
     @SubscribeEvent
     public static void buttonVisibilityPre(PlanetSelectionGuiButtonVisibilityEvent.Pre event) {
@@ -109,14 +104,14 @@ public class PlanetSelectionGuiEvents {
         screen.visibleButton(hotHandlerButton, category.get() == 5);
         screen.visibleButton(hotOrbitHandlerButton, category.get() == 5);
         screen.visibleButton(hotSpaceStationHandlerButton, category.get() == 5);
-
-
     }
 
     @SubscribeEvent
     public static void backgroundRenderPost(PlanetSelectionGuiBackgroundRenderEvent.Post event) {
         PlanetSelectionGuiWindow screen = (PlanetSelectionGuiWindow) event.getScreen();
         PoseStack poseStack = event.getPoseStack();
+
+        System.out.println("FUCK IT IS NULL " + category.get() + " " + screen.category.get());
 
         /** ENABLE BLEND */
         PlanetSelectionGuiHelper.enableRenderSystem();
@@ -127,8 +122,6 @@ public class PlanetSelectionGuiEvents {
             PlanetSelectionGuiHelper.addCircle(screen.width / 2, screen.height / 2, 46.0D, 180);
             PlanetSelectionGuiHelper.addCircle(screen.width / 2, screen.height / 2, 69.5D, 180);
             PlanetSelectionGuiHelper.addCircle(screen.width / 2, screen.height / 2, 92.5D, 180);
-
-
         }
 
         /** SUN */
@@ -142,8 +135,6 @@ public class PlanetSelectionGuiEvents {
             PlanetSelectionGuiHelper.addRotatedObject(screen, poseStack, KAMINO_TEXTURE, -37, -37, 10, 10, screen.rotationMars);
             PlanetSelectionGuiHelper.addRotatedObject(screen, poseStack, ENDOR_TEXTURE, -54, -54, 10, 10, screen.rotationVenus);
             PlanetSelectionGuiHelper.addRotatedObject(screen, poseStack, HOT_TEXTURE, -70, -70, 10, 10, screen.rotationMercury);
-
-
         }
 
         /** SMALL MENU RENDERER */
@@ -163,6 +154,8 @@ public class PlanetSelectionGuiEvents {
     @SubscribeEvent
     public static void screenInitPost(PlanetSelectionGuiInitEvent.Post event) {
         PlanetSelectionGuiWindow screen = (PlanetSelectionGuiWindow) event.getScreen();
+
+        System.out.println("ERROR NOT FOUNDED");
 
         /** CREATE A CATEGORY */
         category = new CategoryHelper();
@@ -185,8 +178,6 @@ public class PlanetSelectionGuiEvents {
             }
         });
         screen.visibleButton(backButton, false);
-
-
 
         /** TATOOINE BUTTONS */
         tatooineCategoryButton = PlanetSelectionGuiHelper.addCategoryButton(screen, category, 10, 1, 70, 20, 2, screen.checkTier(4), ImageButtonPlacer.Types.SOLAR_SYSTEM_CATEGORY, List.of(TATOOINE_BUTTON_TEXT.getString(), screen.ROCKET_TIER_4_TEXT.getString()), screen.RED_BUTTON_TEXTURE, screen.RED_LIGHT_BUTTON_TEXTURE, TATOOINE_BUTTON_TEXT);
@@ -241,7 +232,7 @@ public class PlanetSelectionGuiEvents {
         screen.visibleButton(endorHandlerButton, false);
 
         /** ENDOR ORBIT TELEPORT BUTTONS */
-       endorOrbitHandlerButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 84, 2, 37, 20, true, SWPlanets.PACKET_HANDLER, getNetworkHandler(8), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(screen.ORBIT_TEXT.getString(), screen.NO_GRAVITY_TEXT.getString(), "c" + screen.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), screen.SMALL_BLUE_BUTTON_TEXTURE, screen.SMALL_BLUE_LIGHT_BUTTON_TEXTURE, screen.ORBIT_TEXT);
+        endorOrbitHandlerButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 84, 2, 37, 20, true, SWPlanets.PACKET_HANDLER, getNetworkHandler(8), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(screen.ORBIT_TEXT.getString(), screen.NO_GRAVITY_TEXT.getString(), "c" + screen.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), screen.SMALL_BLUE_BUTTON_TEXTURE, screen.SMALL_BLUE_LIGHT_BUTTON_TEXTURE, screen.ORBIT_TEXT);
         screen.visibleButton(endorOrbitHandlerButton, false);
 
         /** ENDOR SPACE STATION TELEPORT BUTTONS */
@@ -269,10 +260,6 @@ public class PlanetSelectionGuiEvents {
         /** HOT SPACE STATION TELEPORT BUTTONS */
         hotSpaceStationHandlerButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 125, 3, 75, 20, screen.spaceStationItemList, SWPlanets.PACKET_HANDLER, getNetworkHandler(12), ImageButtonPlacer.Types.PLANET_SPACE_STATION_CATEGORY, List.of(screen.ORBIT_TEXT.getString(), screen.NO_GRAVITY_TEXT.getString(), "c" + screen.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), screen.LARGE_RED_BUTTON_TEXTURE, screen.LARGE_RED_LIGHT_BUTTON_TEXTURE, screen.SPACE_STATION_TEXT);
         screen.visibleButton(hotSpaceStationHandlerButton, false);
-
-
-        /** UPDATE BUTTON VISIBILITY */
-        screen.updateButtonVisibility();
     }
 
     /** GET NETWORK HANDLER */
