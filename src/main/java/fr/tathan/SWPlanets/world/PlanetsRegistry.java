@@ -20,8 +20,6 @@ public class PlanetsRegistry {
 
     public static final ResourceKey<Level> HOT = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(SWPlanets.MODID, "hot"));
     public static final ResourceKey<Level> HOT_ORBIT = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(SWPlanets.MODID, "hot_orbit"));
-
-
 }
 
 

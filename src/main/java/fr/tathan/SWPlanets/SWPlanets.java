@@ -6,7 +6,6 @@ import fr.tathan.SWPlanets.registries.ItemsRegistry;
 import fr.tathan.SWPlanets.registries.SoundsRegistry;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -37,8 +36,6 @@ public class SWPlanets {
 
         ItemsRegistry.ITEMS.register(bus);
         SoundsRegistry.SOUNDS.register(bus);
-
-
 
         // NETWORK
         SWPlanets.addNetworkMessage(PlanetSelectionGuiNetworkHandler.class, PlanetSelectionGuiNetworkHandler::encode, PlanetSelectionGuiNetworkHandler::decode, PlanetSelectionGuiNetworkHandler::handle);

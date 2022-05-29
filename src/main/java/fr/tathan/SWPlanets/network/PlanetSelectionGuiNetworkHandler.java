@@ -40,100 +40,76 @@ public class PlanetSelectionGuiNetworkHandler extends PlanetSelectionGuiNetworkH
         NetworkEvent.Context context = contextSupplier.get();
         ServerPlayer player = context.getSender();
 
-        /** Teleport Planet Button */
-        if (message.getInteger() == 1) {
-            message.defaultOptions(player);
-            Methods.teleportButton(player, PlanetsRegistry.TATOOINE, false);
+        switch (message.getInteger()) {
+
+            /** TATOOINE */
+            case 0:
+                message.defaultOptions(player);
+                Methods.teleportButton(player, PlanetsRegistry.TATOOINE, false);
+                break;
+
+            case 1:
+                message.defaultOptions(player);
+                Methods.teleportButton(player, PlanetsRegistry.TATOOINE_ORBIT, false);
+                break;
+
+            case 2:
+                message.defaultOptions(player);
+                message.deleteItems(player);
+                Methods.teleportButton(player, PlanetsRegistry.TATOOINE_ORBIT, true);
+                break;
+
+            /** KAMINO */
+            case 3:
+                message.defaultOptions(player);
+                Methods.teleportButton(player, PlanetsRegistry.KAMINO, false);
+                break;
+
+            case 4:
+                message.defaultOptions(player);
+                Methods.teleportButton(player, PlanetsRegistry.KAMINO_ORBIT, false);
+                break;
+
+            case 5:
+                message.defaultOptions(player);
+                message.deleteItems(player);
+                Methods.teleportButton(player, PlanetsRegistry.KAMINO_ORBIT, true);
+                break;
+
+            /** ENDOR */
+            case 6:
+                message.defaultOptions(player);
+                Methods.teleportButton(player, PlanetsRegistry.ENDOR, false);
+                break;
+
+            case 7:
+                message.defaultOptions(player);
+                Methods.teleportButton(player, PlanetsRegistry.ENDOR_ORBIT, false);
+                break;
+
+            case 8:
+                message.defaultOptions(player);
+                message.deleteItems(player);
+                Methods.teleportButton(player, PlanetsRegistry.ENDOR_ORBIT, true);
+                break;
+
+            /** HOT */
+            case 9:
+                message.defaultOptions(player);
+                Methods.teleportButton(player, PlanetsRegistry.HOT, false);
+                break;
+
+            case 10:
+                message.defaultOptions(player);
+                Methods.teleportButton(player, PlanetsRegistry.HOT_ORBIT, false);
+                break;
+
+            case 11:
+                message.defaultOptions(player);
+                message.deleteItems(player);
+                Methods.teleportButton(player, PlanetsRegistry.HOT_ORBIT, true);
+                break;
         }
-
-        /** Teleport Orbit Button */
-        if (message.getInteger() == 2) {
-            message.defaultOptions(player);
-            Methods.teleportButton(player, PlanetsRegistry.TATOOINE_ORBIT, false);
-        }
-
-        /** Teleport Space Station Button */
-        if (message.getInteger() == 3) {
-            message.defaultOptions(player);
-            message.deleteItems(player);
-            Methods.teleportButton(player, PlanetsRegistry.TATOOINE_ORBIT, true);
-        }
-
-        /**
-         *
-         * KAMINO
-         *
-         */
-
-        /** Teleport Planet Button */
-        if (message.getInteger() == 4) {
-            message.defaultOptions(player);
-            Methods.teleportButton(player, PlanetsRegistry.KAMINO, false);
-        }
-
-        /** Teleport Orbit Button */
-        if (message.getInteger() == 5) {
-            message.defaultOptions(player);
-            Methods.teleportButton(player, PlanetsRegistry.KAMINO_ORBIT, false);
-        }
-
-        /** Teleport Space Station Button */
-        if (message.getInteger() == 6) {
-            message.defaultOptions(player);
-            message.deleteItems(player);
-            Methods.teleportButton(player, PlanetsRegistry.KAMINO_ORBIT, true);
-        }
-
-        /**
-         *
-         * ENDOR
-         *
-         */
-
-        /** Teleport Planet Button */
-        if (message.getInteger() == 7) {
-            message.defaultOptions(player);
-            Methods.teleportButton(player, PlanetsRegistry.ENDOR, false);
-        }
-
-        /** Teleport Orbit Button */
-        if (message.getInteger() == 8) {
-            message.defaultOptions(player);
-            Methods.teleportButton(player, PlanetsRegistry.ENDOR_ORBIT, false);
-        }
-
-        /** Teleport Space Station Button */
-        if (message.getInteger() == 9) {
-            message.defaultOptions(player);
-            message.deleteItems(player);
-            Methods.teleportButton(player, PlanetsRegistry.ENDOR_ORBIT, true);
-        }
-
-        /**
-         *
-         * ENDOR
-         *
-         */
-
-        /** Teleport Planet Button */
-        if (message.getInteger() == 10) {
-            message.defaultOptions(player);
-            Methods.teleportButton(player, PlanetsRegistry.HOT, false);
-        }
-
-        /** Teleport Orbit Button */
-        if (message.getInteger() == 11) {
-            message.defaultOptions(player);
-            Methods.teleportButton(player, PlanetsRegistry.HOT_ORBIT, false);
-        }
-
-        /** Teleport Space Station Button */
-        if (message.getInteger() == 12) {
-            message.defaultOptions(player);
-            message.deleteItems(player);
-            Methods.teleportButton(player, PlanetsRegistry.HOT_ORBIT, true);
-        }
-
 
         context.setPacketHandled(true);
     }
