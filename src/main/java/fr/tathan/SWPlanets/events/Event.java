@@ -22,37 +22,72 @@ import net.mrscauthd.beyond_earth.events.forge.LivingEntityTickEndEvent;
 @Mod.EventBusSubscriber(modid = SWPlanets.MODID)
 public class Event {
 
+    /**
     @SubscribeEvent
     public static void entityGravity(LivingEntityTickEndEvent event) {
 
-        /** PLANET GRAVITY */
-        //TODO FINISH IT I JUST DO IT FOR ENDOR!
+        PLANET GRAVITY
         if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.ENDOR)) {
             EntityGravity.gravitySystem(event.getEntityLiving(), 0.03F);
+        } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.TATOOINE)) {
+            EntityGravity.gravitySystem(event.getEntityLiving(), 0.03F);
+        } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.HOT)) {
+            EntityGravity.gravitySystem(event.getEntityLiving(), 0.03F);
+        } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.KAMINO)) {
+            EntityGravity.gravitySystem(event.getEntityLiving(), 0.03F);
         }
+         */
+
+        /** ORBIT GRAVITY
+        if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.TATOOINE_ORBIT)) {
+            EntityGravity.gravitySystem(event.getEntityLiving(), 0.02F);
+        } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.KAMINO_ORBIT)) {
+            EntityGravity.gravitySystem(event.getEntityLiving(), 0.02F);
+        } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.ENDOR_ORBIT)) {
+            EntityGravity.gravitySystem(event.getEntityLiving(), 0.02F);
+        } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.HOT_ORBIT)) {
+            EntityGravity.gravitySystem(event.getEntityLiving(), 0.02F);
+        }
+
+
     }
+
 
     @SubscribeEvent
     public static void itemGravity(ItemEntityTickEndEvent event) {
         ItemEntity entity = event.getEntityItem();
         Level level = entity.level;
 
-        /** ITEM ENTITY GRAVITY SYSTEM */
-        //TODO FINISH IT I JUST DO IT FOR ENDOR!
+        /** ITEM ENTITY GRAVITY SYSTEM
         if (Methods.isWorld(level, PlanetsRegistry.ENDOR)) {
+            ItemGravity.gravitySystem(entity, 0.05F);
+        } else if (Methods.isWorld(level, PlanetsRegistry.HOT)) {
+            ItemGravity.gravitySystem(entity, 0.05F);
+        } else if (Methods.isWorld(level, PlanetsRegistry.KAMINO)) {
+            ItemGravity.gravitySystem(entity, 0.05F);
+        } else if (Methods.isWorld(level, PlanetsRegistry.TATOOINE)) {
             ItemGravity.gravitySystem(entity, 0.05F);
         }
     }
+*/
 
     @SubscribeEvent
     public static void entityGravityFallDamageHandler(LivingFallEvent event) {
         LivingEntity entity = event.getEntityLiving();
         Level level = entity.level;
 
-        //TODO FINISH IT I JUST DO IT NOW FOR ENDOR!
         if (Methods.isWorld(level, PlanetsRegistry.ENDOR)) {
             event.setDistance(event.getDistance() - 5.5F);
+        } else if (Methods.isWorld(level, PlanetsRegistry.TATOOINE)) {
+            event.setDistance(event.getDistance() - 5.5F);
+        } else if (Methods.isWorld(level, PlanetsRegistry.HOT)) {
+            event.setDistance(event.getDistance() - 5.5F);
+        } else if (Methods.isWorld(level, PlanetsRegistry.KAMINO)) {
+            event.setDistance(event.getDistance() - 5.5F);
         }
+
+
+
     }
 
     @SubscribeEvent
@@ -64,6 +99,11 @@ public class Event {
             /** LANDER ORBIT TELEPORT SYSTEM */
             if (player.getVehicle() instanceof LanderEntity) {
                 PlanetsMethods.landerTeleportOrbit(player, world);
+            }
+
+
+            if (Methods.isWorld(world, PlanetsRegistry.ENDOR)) {
+                world.setRainLevel(2);
             }
         }
     }

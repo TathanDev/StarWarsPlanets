@@ -15,9 +15,9 @@ plugins {
 
 apply plugin: 'net.minecraftforge.gradle'
 
-version = '1.3'
+version = '1.5'
 group = 'fr.tathan.SWPlanets'
-archivesBaseName = 'StarWarsPlanets-BETA'
+archivesBaseName = 'StarWarsPlanets'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
