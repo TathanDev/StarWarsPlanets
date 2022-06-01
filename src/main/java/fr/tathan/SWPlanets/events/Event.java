@@ -22,11 +22,11 @@ import net.mrscauthd.beyond_earth.events.forge.LivingEntityTickEndEvent;
 @Mod.EventBusSubscriber(modid = SWPlanets.MODID)
 public class Event {
 
-    /**
+
     @SubscribeEvent
     public static void entityGravity(LivingEntityTickEndEvent event) {
 
-        PLANET GRAVITY
+        /**
         if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.ENDOR)) {
             EntityGravity.gravitySystem(event.getEntityLiving(), 0.03F);
         } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.TATOOINE)) {
@@ -36,9 +36,8 @@ public class Event {
         } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.KAMINO)) {
             EntityGravity.gravitySystem(event.getEntityLiving(), 0.03F);
         }
-         */
-
-        /** ORBIT GRAVITY
+*/
+         //ORBIT GRAVITY
         if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.TATOOINE_ORBIT)) {
             EntityGravity.gravitySystem(event.getEntityLiving(), 0.02F);
         } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.KAMINO_ORBIT)) {
@@ -58,18 +57,18 @@ public class Event {
         ItemEntity entity = event.getEntityItem();
         Level level = entity.level;
 
-        /** ITEM ENTITY GRAVITY SYSTEM
-        if (Methods.isWorld(level, PlanetsRegistry.ENDOR)) {
+        // ITEM ENTITY GRAVITY SYSTEM
+        if (Methods.isWorld(level, PlanetsRegistry.ENDOR_ORBIT)) {
             ItemGravity.gravitySystem(entity, 0.05F);
-        } else if (Methods.isWorld(level, PlanetsRegistry.HOT)) {
+        } else if (Methods.isWorld(level, PlanetsRegistry.HOT_ORBIT)) {
             ItemGravity.gravitySystem(entity, 0.05F);
-        } else if (Methods.isWorld(level, PlanetsRegistry.KAMINO)) {
+        } else if (Methods.isWorld(level, PlanetsRegistry.KAMINO_ORBIT)) {
             ItemGravity.gravitySystem(entity, 0.05F);
-        } else if (Methods.isWorld(level, PlanetsRegistry.TATOOINE)) {
+        } else if (Methods.isWorld(level, PlanetsRegistry.TATOOINE_ORBIT)) {
             ItemGravity.gravitySystem(entity, 0.05F);
         }
     }
-*/
+
 
     @SubscribeEvent
     public static void entityGravityFallDamageHandler(LivingFallEvent event) {

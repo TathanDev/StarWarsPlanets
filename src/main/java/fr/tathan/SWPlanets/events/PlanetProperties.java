@@ -49,6 +49,7 @@ public class PlanetProperties {
             PlanetsRegistry.HOT_ORBIT
     );
 
+    /**
     @SubscribeEvent
     public static void init(FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
@@ -58,4 +59,5 @@ public class PlanetProperties {
             Methods.orbitWorlds = new ImmutableSet.Builder<ResourceKey<Level>>().addAll(Methods.orbitWorlds).addAll(orbitWorlds).build();
         });
     }
+    */
 }
