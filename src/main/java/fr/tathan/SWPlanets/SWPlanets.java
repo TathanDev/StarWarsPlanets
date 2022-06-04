@@ -2,6 +2,8 @@ package fr.tathan.SWPlanets;
 
 import com.mojang.logging.LogUtils;
 import  fr.tathan.SWPlanets.network.PlanetSelectionGuiNetworkHandler;
+import fr.tathan.SWPlanets.registries.BlocksRegistry;
+import fr.tathan.SWPlanets.registries.FeatureRegistry;
 import fr.tathan.SWPlanets.registries.ItemsRegistry;
 import fr.tathan.SWPlanets.registries.SoundsRegistry;
 import net.minecraft.network.FriendlyByteBuf;
@@ -36,6 +38,11 @@ public class SWPlanets {
 
         ItemsRegistry.ITEMS.register(bus);
         SoundsRegistry.SOUNDS.register(bus);
+        BlocksRegistry.BLOCKS.register(bus);
+        FeatureRegistry.FEATURES.register(bus);
+        FeatureRegistry.CONFIGURED_FEATURES.register(bus);
+        FeatureRegistry.PLACED_FEATURES.register(bus);
+
 
         // NETWORK
         SWPlanets.addNetworkMessage(PlanetSelectionGuiNetworkHandler.class, PlanetSelectionGuiNetworkHandler::encode, PlanetSelectionGuiNetworkHandler::decode, PlanetSelectionGuiNetworkHandler::handle);

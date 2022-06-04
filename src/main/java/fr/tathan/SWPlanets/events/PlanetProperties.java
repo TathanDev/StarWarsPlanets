@@ -1,14 +1,10 @@
 package fr.tathan.SWPlanets.events;
 
-import com.google.common.collect.ImmutableSet;
 import fr.tathan.SWPlanets.SWPlanets;
-import fr.tathan.SWPlanets.world.PlanetsRegistry;
+import fr.tathan.SWPlanets.registries.PlanetsRegistry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.mrscauthd.beyond_earth.events.Methods;
 
 import java.util.Set;
 

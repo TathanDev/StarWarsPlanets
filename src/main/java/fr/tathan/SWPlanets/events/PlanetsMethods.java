@@ -1,13 +1,11 @@
 package fr.tathan.SWPlanets.events;
 
-import fr.tathan.SWPlanets.world.PlanetsRegistry;
+import fr.tathan.SWPlanets.registries.PlanetsRegistry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.mrscauthd.beyond_earth.events.Methods;
-
-import java.util.Set;
 
 public class PlanetsMethods {
 

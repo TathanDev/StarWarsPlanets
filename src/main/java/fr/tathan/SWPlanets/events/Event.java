@@ -1,7 +1,7 @@
 package fr.tathan.SWPlanets.events;
 
 import fr.tathan.SWPlanets.SWPlanets;
-import fr.tathan.SWPlanets.world.PlanetsRegistry;
+import fr.tathan.SWPlanets.registries.PlanetsRegistry;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;

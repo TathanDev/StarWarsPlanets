@@ -1,6 +1,6 @@
 package  fr.tathan.SWPlanets.network;
 
-import  fr.tathan.SWPlanets.world.PlanetsRegistry;
+import fr.tathan.SWPlanets.registries.PlanetsRegistry;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkEvent;

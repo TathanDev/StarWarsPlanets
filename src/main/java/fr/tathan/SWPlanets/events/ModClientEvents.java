@@ -2,7 +2,7 @@ package fr.tathan.SWPlanets.events;
 
 import fr.tathan.SWPlanets.SWPlanets;
 import fr.tathan.SWPlanets.events.forge.PlanetOverlayEvent;
-import fr.tathan.SWPlanets.world.PlanetsRegistry;
+import fr.tathan.SWPlanets.registries.PlanetsRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
@@ -10,7 +10,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.mrscauthd.beyond_earth.BeyondEarthMod;
-import net.mrscauthd.beyond_earth.events.forge.*;
 
 @Mod.EventBusSubscriber(modid = SWPlanets.MODID, value = Dist.CLIENT)
 public class ModClientEvents {

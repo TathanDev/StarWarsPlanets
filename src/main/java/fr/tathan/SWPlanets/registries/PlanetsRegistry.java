@@ -1,4 +1,4 @@
-package fr.tathan.SWPlanets.world;
+package fr.tathan.SWPlanets.registries;
 
 import fr.tathan.SWPlanets.SWPlanets;
 import net.minecraft.core.Registry;

@@ -5,10 +5,10 @@ import net.minecraft.world.item.ItemStack;
 
 public class CreativeTabsRegistry {
 
-    public static final CreativeModeTab MUSIC_TAB = new CreativeModeTab("music_tab") {
+    public static final CreativeModeTab SWPLANETS_TAB = new CreativeModeTab("swplanets_tab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ItemsRegistry.STAR_WARS_OPENING_MUSIC_DISC.get());
+            return new ItemStack(ItemsRegistry.KYBER_CRYSTAL.get());
         }
     };
 }
