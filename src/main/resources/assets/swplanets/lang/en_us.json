@@ -23,6 +23,11 @@
   "item.swplanets.light_saber_red": "Red Light Saber",
   "item.swplanets.light_saber_blue": "Blue Light Saber ",
 
+  "tooltip.swplanets.jedilightsaber.tooltip.shift": "A weapon used by the greatest §1Jedi",
+  "tooltip.swplanets.jedilightsaber.tooltip.shift.two": "May the force be with you !",
+
+  "tooltip.swplanets.sithlightsaber.tooltip.shift": "A weapon used by the darkest §4Sith",
+  "tooltip.swplanets.sithlightsaber.tooltip.shift.two": "Join the dark side of the force !",
 
 
 

@@ -23,6 +23,11 @@
   "item.swplanets.light_saber_red": "Sabre Laser Rouge",
   "item.swplanets.light_saber_blue": "Sabre Laser Bleu",
 
+  "tooltip.swplanets.jedilightsaber.tooltip.shift": "Une arme utilisée par les plus grands §1Jedi",
+  "tooltip.swplanets.jedilightsaber.tooltip.shift.two": "Que le force soit avec toi !",
+
+  "tooltip.swplanets.sithlightsaber.tooltip.shift": "Une arme utilisée par les pires §4Sith",
+  "tooltip.swplanets.sithlightsaber.tooltip.shift.two": "Rejoins le côté obscur de la force !",
 
 
   "block.swplanets.kyber_crystal_ore": "Minerai de Kyber",
