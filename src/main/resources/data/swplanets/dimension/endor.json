@@ -3,7 +3,7 @@
   "forge:use_server_seed": true,
   "generator": {
     "biome_source": {
-      "biome": "minecraft:jungle",
+      "biome": "swplanets:endor_taiga",
       "type": "minecraft:fixed"
     },
     "seed": 286956243,

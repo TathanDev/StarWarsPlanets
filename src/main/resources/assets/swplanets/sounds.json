@@ -6,5 +6,37 @@
         "stream": false
       }
     ]
+  },
+  "saber_attack_sound_1": {
+    "sounds": [
+      {
+        "name": "swplanets:saber_attack_sound_1",
+        "stream": false
+      }
+    ]
+  },
+  "saber_attack_sound_2": {
+    "sounds": [
+      {
+        "name": "swplanets:saber_attack_sound_2",
+        "stream": false
+      }
+    ]
+  },
+  "saber_attack_sound_3": {
+    "sounds": [
+      {
+        "name": "swplanets:saber_attack_sound_3",
+        "stream": false
+      }
+    ]
+  },
+  "saber_attack_sound_4": {
+    "sounds": [
+      {
+        "name": "swplanets:saber_attack_sound_4",
+        "stream": false
+      }
+    ]
   }
 }

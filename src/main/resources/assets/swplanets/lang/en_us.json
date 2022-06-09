@@ -18,10 +18,17 @@
   "item.swplanets.star_wars_opening_music_disc.desc": "John Williams - Star Wars Opening",
   "item.swplanets.kyber_crystal": "Kyber Crystal",
   "item.swplanets.kyber_crystal_ore": "Kyber Crystal Ore",
+  "item.swplanets.kyber_crystal_ore_sandstone": "Sandstone Kyber Crystal Ore ",
+
 
   "item.swplanets.light_saber_base": "Light Saber Base",
   "item.swplanets.light_saber_red": "Red Light Saber",
   "item.swplanets.light_saber_blue": "Blue Light Saber ",
+  "item.swplanets.light_saber_green": "Green Light Saber ",
+  "item.swplanets.light_saber_violet": "Violet Light Saber ",
+
+
+
 
   "tooltip.swplanets.jedilightsaber.tooltip.shift": "A weapon used by the greatest §1Jedi",
   "tooltip.swplanets.jedilightsaber.tooltip.shift.two": "May the force be with you !",

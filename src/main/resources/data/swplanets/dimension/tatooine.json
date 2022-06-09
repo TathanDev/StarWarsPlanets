@@ -343,7 +343,7 @@
     },
     "biome_source": {
       "type": "minecraft:fixed",
-      "biome": "minecraft:desert"
+      "biome": "swplanets:tatooine_desert"
     }
   }
 }

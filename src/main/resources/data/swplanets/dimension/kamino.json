@@ -11,7 +11,7 @@
       "ore_veins_enabled": true,
       "legacy_random_source": false,
       "default_block": {
-        "Name": "minecraft:stone"
+        "Name": "minecraft:deepslate"
       },
       "default_fluid": {
         "Name": "minecraft:water"
@@ -345,7 +345,7 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "minecraft:deep_ocean",
+          "biome": "swplanets:kamino_ocean",
           "parameters": {
             "temperature": 1,
             "humidity": -1,
