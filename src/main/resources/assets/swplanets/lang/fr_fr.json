@@ -38,6 +38,8 @@
 
   "block.swplanets.kyber_crystal_ore": "Minerai de Kyber",
   "block.swplanets.kyber_crystal_cluster": "Cristal Kyber",
+  "block.swplanets.kyber_crystal_ore_sandstone": "Minerai de Kyber SandStone ",
+
 
   "itemGroup.swplanets_tab": "Star Wars Planètes"
 }
