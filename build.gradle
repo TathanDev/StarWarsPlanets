@@ -17,7 +17,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle'
 
 
-version = '1.6'
+version = '1.7'
 group = 'fr.tathan.SWPlanets'
 archivesBaseName = 'StarWarsPlanets'
 
