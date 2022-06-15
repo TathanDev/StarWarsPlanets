@@ -4,7 +4,6 @@ import fr.tathan.SWPlanets.SWPlanets;
 import fr.tathan.SWPlanets.registries.SoundsRegistry;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -67,8 +66,8 @@ public class SithLightSaber extends SwordItem {
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-            pTooltipComponents.add(new TranslatableComponent("tooltip.swplanets.sithlightsaber.tooltip.shift"));
-            pTooltipComponents.add(new TranslatableComponent("tooltip.swplanets.sithlightsaber.tooltip.shift.two"));
+            pTooltipComponents.add(Component.translatable("tooltip.swplanets.sithlightsaber.tooltip.shift"));
+            pTooltipComponents.add(Component.translatable("tooltip.swplanets.sithlightsaber.tooltip.shift.two"));
 
     }
 }

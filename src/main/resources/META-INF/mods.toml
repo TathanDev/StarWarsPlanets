@@ -11,6 +11,7 @@ displayURL="https://www.curseforge.com/minecraft/mc-mods/star-wars-planets"
 logoFile="logo.png"
 credits="TheRealM18, MrScautHD"
 authors="TATHAN"
+displayTest="MATCH_VERSION"
 description='''
 This Mod is a Addon for Beyond Earth.
 It add planets from Star Wars and Light Saber :)
@@ -19,13 +20,13 @@ It add planets from Star Wars and Light Saber :)
 [[dependencies.swplanets]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18.2]"
+    versionRange="[1.19]"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.swplanets]]
     modId="forge"
     mandatory=true
-    versionRange="[40.0.52,]"
+    versionRange="[41.0.30]"
     ordering="NONE"
     side="BOTH"

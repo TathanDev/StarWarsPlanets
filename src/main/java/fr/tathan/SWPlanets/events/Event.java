@@ -38,11 +38,11 @@ import java.util.List;
 @Mod.EventBusSubscriber(modid = SWPlanets.MODID)
 public class Event {
 
-
+    /**
     @SubscribeEvent
     public static void entityGravity(LivingEntityTickEndEvent event) {
 
-        /**
+
         if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.ENDOR)) {
             EntityGravity.gravitySystem(event.getEntityLiving(), 0.03F);
         } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.TATOOINE)) {
@@ -52,7 +52,7 @@ public class Event {
         } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.KAMINO)) {
             EntityGravity.gravitySystem(event.getEntityLiving(), 0.03F);
         }
-*/
+
          //ORBIT GRAVITY
         if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.TATOOINE_ORBIT)) {
             EntityGravity.gravitySystem(event.getEntityLiving(), 0.02F);
@@ -67,7 +67,7 @@ public class Event {
 
     }
 
-
+     /**
     @SubscribeEvent
     public static void itemGravity(ItemEntityTickEndEvent event) {
         ItemEntity entity = event.getEntityItem();
@@ -84,6 +84,7 @@ public class Event {
             ItemGravity.gravitySystem(entity, 0.05F);
         }
     }
+
 
 
     @SubscribeEvent
@@ -104,7 +105,7 @@ public class Event {
 
 
     }
-
+*/
     @SubscribeEvent
     public static void playerTick(TickEvent.PlayerTickEvent event) {
         if (event.phase == TickEvent.Phase.END) {

@@ -2,10 +2,7 @@ package fr.tathan.SWPlanets;
 
 import com.mojang.logging.LogUtils;
 import  fr.tathan.SWPlanets.network.PlanetSelectionGuiNetworkHandler;
-import fr.tathan.SWPlanets.registries.BlocksRegistry;
-import fr.tathan.SWPlanets.registries.FeatureRegistry;
-import fr.tathan.SWPlanets.registries.ItemsRegistry;
-import fr.tathan.SWPlanets.registries.SoundsRegistry;
+import fr.tathan.SWPlanets.registries.*;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -14,7 +11,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.simple.SimpleChannel;
-import org.slf4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 import java.util.function.BiConsumer;
 import java.util.function.Function;
@@ -24,7 +23,7 @@ import java.util.function.Supplier;
 public class SWPlanets {
 
     public static final String MODID = "swplanets";
-    public static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     /** PACKET HANDLER */
     private static final String PROTOCOL_VERSION = "1";
@@ -42,6 +41,8 @@ public class SWPlanets {
         FeatureRegistry.FEATURES.register(bus);
         FeatureRegistry.CONFIGURED_FEATURES.register(bus);
         FeatureRegistry.PLACED_FEATURES.register(bus);
+        StructureRegistry.DEFERRED_REGISTRY_STRUCTURE.register(bus);
+
 
 
         // NETWORK
