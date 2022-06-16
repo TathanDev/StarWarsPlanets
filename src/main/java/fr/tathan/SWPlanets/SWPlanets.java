@@ -1,8 +1,9 @@
 package fr.tathan.SWPlanets;
 
-import com.mojang.logging.LogUtils;
 import  fr.tathan.SWPlanets.network.PlanetSelectionGuiNetworkHandler;
 import fr.tathan.SWPlanets.registries.*;
+import fr.tathan.SWPlanets.world.modifer.PlanetBiomeModifier;
+import fr.tathan.SWPlanets.world.oregen.OreGeneration;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -38,10 +39,10 @@ public class SWPlanets {
         ItemsRegistry.ITEMS.register(bus);
         SoundsRegistry.SOUNDS.register(bus);
         BlocksRegistry.BLOCKS.register(bus);
-        FeatureRegistry.FEATURES.register(bus);
-        FeatureRegistry.CONFIGURED_FEATURES.register(bus);
-        FeatureRegistry.PLACED_FEATURES.register(bus);
-        StructureRegistry.DEFERRED_REGISTRY_STRUCTURE.register(bus);
+        PlanetBiomeModifier.BIOME_MODIFIERS.register(bus);
+        OreGeneration.CONFIGURED_FEATURES.register(bus);
+        OreGeneration.PLACED_FEATURES.register(bus);
+
 
 
 
