@@ -1,6 +1,7 @@
 package fr.tathan.SWPlanets;
 
 import com.mojang.logging.LogUtils;
+import fr.tathan.SWPlanets.config.Config;
 import  fr.tathan.SWPlanets.network.PlanetSelectionGuiNetworkHandler;
 import fr.tathan.SWPlanets.registries.BlocksRegistry;
 import fr.tathan.SWPlanets.registries.FeatureRegistry;
@@ -9,7 +10,9 @@ import fr.tathan.SWPlanets.registries.SoundsRegistry;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.network.NetworkRegistry;
@@ -35,6 +38,10 @@ public class SWPlanets {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
         bus.register(this);
+
+        //CONFIG
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC, "starwarsplanets-common.toml");
+
 
         ItemsRegistry.ITEMS.register(bus);
         SoundsRegistry.SOUNDS.register(bus);
