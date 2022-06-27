@@ -14,7 +14,7 @@ public class Config {
     static {
         BUILDER.push("Star Wars Planets Config");
 
-        GALAXYNAME = BUILDER.comment("What should be the name of the Star Wars Galaxy.\nDefault = The Galaxy (String)").define("Galaxy Name", "Andromede");
+        GALAXYNAME = BUILDER.comment("What should be the name of the Star Wars Galaxy. I hope you will don't touch this part of the config^^\nDefault = Starwarus (String)").define("Galaxy Name", "Starwarus");
         
 
         BUILDER.pop();

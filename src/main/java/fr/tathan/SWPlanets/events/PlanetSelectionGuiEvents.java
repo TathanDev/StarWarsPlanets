@@ -2,6 +2,7 @@ package fr.tathan.SWPlanets.events;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import fr.tathan.SWPlanets.SWPlanets;
+import fr.tathan.SWPlanets.config.Config;
 import fr.tathan.SWPlanets.network.PlanetSelectionGuiNetworkHandler;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -23,7 +24,7 @@ import java.util.List;
 public class PlanetSelectionGuiEvents {
 
     /** TEXT */
-    public static final Component SOLAR_SYSTEM_BUTTON_TEXT = tl("solar_system_button");
+    //public static final Component SOLAR_SYSTEM_BUTTON_TEXT = tl("solar_system_button");
     public static final Component TATOOINE_BUTTON_TEXT = tl("tatooine_button");
     public static final Component KAMINO_BUTTON_TEXT = tl("kamino_button");
     public static final Component ENDOR_BUTTON_TEXT = tl("endor_button");
@@ -161,7 +162,7 @@ public class PlanetSelectionGuiEvents {
         category = new CategoryHelper();
 
         /** SOLAR SYSTEM BUTTON */
-        solarSystemButton = PlanetSelectionGuiHelper.addCategoryButton(screen, category, 10, 1, 70, 20, 1, true, ImageButtonPlacer.Types.MILKY_WAY_CATEGORY, List.of(SOLAR_SYSTEM_BUTTON_TEXT.getString()), screen.BLUE_BUTTON_TEXTURE, screen.BLUE_LIGHT_BUTTON_TEXTURE, SOLAR_SYSTEM_BUTTON_TEXT);
+        solarSystemButton = PlanetSelectionGuiHelper.addCategoryButton(screen, category, 10, 1, 70, 20, 1, true, ImageButtonPlacer.Types.MILKY_WAY_CATEGORY, List.of(Config.GALAXYNAME.get()), screen.BLUE_BUTTON_TEXTURE, screen.BLUE_LIGHT_BUTTON_TEXTURE, Component.nullToEmpty(Config.GALAXYNAME.get()));
         screen.visibleButton(solarSystemButton, false);
 
         /** BACK BUTTON */
