@@ -1,15 +1,23 @@
 package fr.tathan.SWPlanets.events;
 
 import fr.tathan.SWPlanets.SWPlanets;
+import fr.tathan.SWPlanets.config.ClientConfigs;
 import fr.tathan.SWPlanets.events.forge.PlanetOverlayEvent;
 import fr.tathan.SWPlanets.registries.PlanetsRegistry;
+import fr.tathan.SWPlanets.util.CustomTitleScreenPlanet;
+import fr.tathan.SWPlanets.util.CustomTitleScreenStars;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.mrscauthd.beyond_earth.BeyondEarthMod;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.ScreenOpenEvent;
+
+
 
 @Mod.EventBusSubscriber(modid = SWPlanets.MODID, value = Dist.CLIENT)
 public class ModClientEvents {
@@ -36,4 +44,30 @@ public class ModClientEvents {
         }
     }
 
-}
+    @SubscribeEvent
+    @OnlyIn(Dist.CLIENT)
+    public static void openGui(ScreenOpenEvent event) {
+
+        if (ClientConfigs.CUSTOMEMENUACTIVATE.get()) {
+        //I think that when you see this code you will suffer (sorry)
+            if (ClientConfigs.CUSTOMEMENU.get() == 1) {
+
+                if (event.getScreen() instanceof TitleScreen && !(event.getScreen() instanceof CustomTitleScreenStars)) {
+                    event.setScreen(new CustomTitleScreenStars());
+                }
+                }
+                else if (ClientConfigs.CUSTOMEMENU.get() == 2) {
+                    if (event.getScreen() instanceof TitleScreen && !(event.getScreen() instanceof CustomTitleScreenPlanet)) {
+                        event.setScreen(new CustomTitleScreenPlanet());
+                    }
+                    } else {
+                        if (event.getScreen() instanceof TitleScreen && !(event.getScreen() instanceof CustomTitleScreenStars)) {
+                            event.setScreen(new CustomTitleScreenStars());
+                        }
+
+                    }
+                }
+            }
+        }
+
+

@@ -1,7 +1,8 @@
 package fr.tathan.SWPlanets;
 
 import com.mojang.logging.LogUtils;
-import fr.tathan.SWPlanets.config.Config;
+import fr.tathan.SWPlanets.config.ClientConfigs;
+import fr.tathan.SWPlanets.config.CommonConfig;
 import  fr.tathan.SWPlanets.network.PlanetSelectionGuiNetworkHandler;
 import fr.tathan.SWPlanets.registries.BlocksRegistry;
 import fr.tathan.SWPlanets.registries.FeatureRegistry;
@@ -39,8 +40,9 @@ public class SWPlanets {
 
         bus.register(this);
 
-        //CONFIG
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC, "starwarsplanets-common.toml");
+        //CONFIGS
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CommonConfig.SPEC, "starwarsplanets-common.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ClientConfigs.SPEC, "starwarsplanets-client.toml");
 
 
         ItemsRegistry.ITEMS.register(bus);
