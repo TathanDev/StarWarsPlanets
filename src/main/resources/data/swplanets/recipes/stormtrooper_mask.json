@@ -2,12 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "111",
-    "1 1",
+    "121",
     "   "
   ],
   "key": {
     "1": {
       "item": "swplanets:plastic_plate"
+    },
+    "2": {
+      "item": "minecraft:black_dye"
     }
   },
   "result": {
