@@ -49,25 +49,24 @@ public class ModClientEvents {
     public static void openGui(ScreenOpenEvent event) {
 
         if (ClientConfigs.CUSTOMEMENUACTIVATE.get()) {
-        //I think that when you see this code you will suffer (sorry)
+            //I think that when you see this code you will suffer (sorry)
             if (ClientConfigs.CUSTOMEMENU.get() == 1) {
 
                 if (event.getScreen() instanceof TitleScreen && !(event.getScreen() instanceof CustomTitleScreenStars)) {
                     event.setScreen(new CustomTitleScreenStars());
                 }
+            } else if (ClientConfigs.CUSTOMEMENU.get() == 2) {
+                if (event.getScreen() instanceof TitleScreen && !(event.getScreen() instanceof CustomTitleScreenPlanet)) {
+                    event.setScreen(new CustomTitleScreenPlanet());
                 }
-                else if (ClientConfigs.CUSTOMEMENU.get() == 2) {
-                    if (event.getScreen() instanceof TitleScreen && !(event.getScreen() instanceof CustomTitleScreenPlanet)) {
-                        event.setScreen(new CustomTitleScreenPlanet());
-                    }
-                    } else {
-                        if (event.getScreen() instanceof TitleScreen && !(event.getScreen() instanceof CustomTitleScreenStars)) {
-                            event.setScreen(new CustomTitleScreenStars());
-                        }
+            } else {
+                if (event.getScreen() instanceof TitleScreen && !(event.getScreen() instanceof CustomTitleScreenStars)) {
+                    event.setScreen(new CustomTitleScreenStars());
+                }
 
-                    }
-                }
             }
         }
+    }
+}
 
 
