@@ -19,8 +19,6 @@
   "item.swplanets.kyber_crystal": "Cristal Kyber",
   "item.swplanets.kyber_crystal_ore": "Minerai de Kyber",
   "item.swplanets.kyber_crystal_ore_sandstone": "Sandstone Kyber Crystal Ore ",
-  "item.swplanets.plastic_plate": "Plaque de Plastique ",
-
 
 
   "item.swplanets.light_saber_base": "Base de Sabre Laser",
@@ -33,6 +31,12 @@
   "item.swplanets.stormtrooper_chestplate": "Armure de Stormtrooper",
   "item.swplanets.stormtrooper_leggings": "Stormtrooper ChestPlate",
   "item.swplanets.stormtrooper_boots": "Stormtrooper ChestPlate",
+  "item.swplanets.plastic_plate": "Plaque de Plastique ",
+  "item.swplanets.speeder": "Speeder",
+
+  "entity.swplanets.speeder": "Speeder",
+
+
 
 
 
@@ -46,11 +50,13 @@
   "tooltip.swplanets.sithlightsaber.tooltip.shift.two": "Rejoins le côté obscur de la force !",
 
 
+
   "block.swplanets.kyber_crystal_ore": "Minerai de Kyber",
   "block.swplanets.kyber_crystal_cluster": "Cristal Kyber",
   "block.swplanets.kyber_crystal_ore_sandstone": "Minerai de Kyber SandStone ",
 
 
+
+
   "itemGroup.swplanets_tab": "Star Wars Planètes"
-  
 }

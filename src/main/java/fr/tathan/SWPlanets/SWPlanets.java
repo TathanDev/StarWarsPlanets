@@ -4,10 +4,7 @@ import com.mojang.logging.LogUtils;
 import fr.tathan.SWPlanets.config.ClientConfigs;
 import fr.tathan.SWPlanets.config.CommonConfig;
 import  fr.tathan.SWPlanets.network.PlanetSelectionGuiNetworkHandler;
-import fr.tathan.SWPlanets.registries.BlocksRegistry;
-import fr.tathan.SWPlanets.registries.FeatureRegistry;
-import fr.tathan.SWPlanets.registries.ItemsRegistry;
-import fr.tathan.SWPlanets.registries.SoundsRegistry;
+import fr.tathan.SWPlanets.registries.*;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -51,6 +48,10 @@ public class SWPlanets {
         FeatureRegistry.FEATURES.register(bus);
         FeatureRegistry.CONFIGURED_FEATURES.register(bus);
         FeatureRegistry.PLACED_FEATURES.register(bus);
+        EntitiesRegistry.ENTITIES.register(bus);
+        ScreensRegistry.SCREENS.register(bus);
+
+
 
 
         // NETWORK

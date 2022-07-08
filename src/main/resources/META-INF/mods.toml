@@ -5,7 +5,7 @@ license="All Rights Reserved unless otherwise explicitly stated"
 
 [[mods]]
 modId="swplanets"
-version="1.7"
+version="1.8"
 displayName="Star Wars Planets"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/star-wars-planets"
 logoFile="logo.png"
