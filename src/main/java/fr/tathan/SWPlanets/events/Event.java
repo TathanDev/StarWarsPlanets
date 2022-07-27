@@ -17,13 +17,9 @@ import net.minecraftforge.event.entity.living.LivingFallEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.mrscauthd.beyond_earth.entities.LanderEntity;
-import net.mrscauthd.beyond_earth.events.EntityGravity;
-import net.mrscauthd.beyond_earth.events.ItemGravity;
-import net.mrscauthd.beyond_earth.events.Methods;
-import net.mrscauthd.beyond_earth.events.forge.EntityTickEvent;
-import net.mrscauthd.beyond_earth.events.forge.ItemEntityTickEndEvent;
-import net.mrscauthd.beyond_earth.events.forge.LivingEntityTickEndEvent;
+import net.mrscauthd.beyond_earth.common.entities.LanderEntity;
+import net.mrscauthd.beyond_earth.common.events.forge.EntityTickEvent;
+import net.mrscauthd.beyond_earth.common.util.Methods;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.ItemStack;
@@ -105,30 +101,30 @@ public class Event {
 
 
     }
-*/
+
     @SubscribeEvent
     public static void playerTick(TickEvent.PlayerTickEvent event) {
         if (event.phase == TickEvent.Phase.END) {
             Player player = event.player;
             Level world = player.level;
 
-            /** LANDER ORBIT TELEPORT SYSTEM */
+            /** LANDER ORBIT TELEPORT SYSTEM
             if (player.getVehicle() instanceof LanderEntity) {
                 PlanetsMethods.landerTeleportOrbit(player, world);
             }
 
 
-            if (Methods.isWorld(world, PlanetsRegistry.ENDOR)) {
+            if (Methods.isLevel(world, PlanetsRegistry.ENDOR)) {
                 world.setRainLevel(2);
             }
         }
-    }
+    }   
     @SubscribeEvent
     public static void entityTick(EntityTickEvent event) {
         Entity entity = event.getEntity();
         Level level = entity.level;
 
-        /** ORBIT TELEPORT SYSTEM */
+        /** ORBIT TELEPORT SYSTEM
         if (entity.getY() < 1 && !(entity.getVehicle() instanceof LanderEntity)) {
 
             if ((entity instanceof LanderEntity) && entity.isVehicle()) {
@@ -138,6 +134,7 @@ public class Event {
             PlanetsMethods.entityFallToPlanet(level, entity);
         }
     }
+    */
 
     //CUSTOM TRADES
 

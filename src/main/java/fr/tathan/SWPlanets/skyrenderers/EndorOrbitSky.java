@@ -1,8 +1,10 @@
 package fr.tathan.SWPlanets.skyrenderers;
-
-import com.mojang.blaze3d.platform.GlStateManager;
+/**
 import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.vertex.*;
+import com.mojang.blaze3d.vertex.BufferBuilder;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.Tesselator;
+import com.mojang.blaze3d.vertex.VertexBuffer;
 import com.mojang.math.Matrix4f;
 import com.mojang.math.Vector3f;
 import fr.tathan.SWPlanets.SWPlanets;
@@ -14,25 +16,18 @@ import net.minecraft.client.renderer.FogRenderer;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.renderer.ShaderInstance;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.material.FogType;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.ICloudRenderHandler;
-import net.minecraftforge.client.ISkyRenderHandler;
-import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.mrscauthd.beyond_earth.BeyondEarthMod;
-import net.mrscauthd.beyond_earth.skyrenderers.helper.StarHelper;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.mrscauthd.beyond_earth.BeyondEarth;
+import net.mrscauthd.beyond_earth.client.skyrenderers.helper.SkyHelper;
+import net.mrscauthd.beyond_earth.client.skyrenderers.helper.StarHelper;
+import org.apache.commons.lang3.tuple.Triple;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber(modid = SWPlanets.MODID, bus = Bus.MOD, value = Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class EndorOrbitSky {
 
     private static final ResourceLocation DIM_RENDER_INFO = new ResourceLocation(SWPlanets.MODID, "endor_orbit");
@@ -40,7 +35,7 @@ public class EndorOrbitSky {
     @Nullable
     public static VertexBuffer starBuffer;
     private static final ResourceLocation ENDOR_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/sky/endor.png");
-    private static final ResourceLocation SUN_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/sky/no_a_sun.png");
+    private static final ResourceLocation SUN_TEXTURE = new ResourceLocation(BeyondEarth.MODID, "textures/sky/no_a_sun.png");
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void clientSetup(FMLClientSetupEvent event) {
@@ -196,3 +191,4 @@ public class EndorOrbitSky {
     }
 }
 
+ */

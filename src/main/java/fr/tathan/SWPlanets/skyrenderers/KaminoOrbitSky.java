@@ -1,5 +1,5 @@
 package fr.tathan.SWPlanets.skyrenderers;
-
+  /**
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.*;
@@ -39,7 +39,7 @@ public class KaminoOrbitSky {
 
     @Nullable
     public static VertexBuffer starBuffer;
-    private static final ResourceLocation TATOOINE_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/sky/kamino.png");
+    private static final ResourceLocation TATOOINE_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/sky/kamino.json.png");
     private static final ResourceLocation SUN_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/sky/no_a_sun.png");
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
@@ -196,3 +196,4 @@ public class KaminoOrbitSky {
     }
 }
 
+     */

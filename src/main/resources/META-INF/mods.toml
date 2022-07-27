@@ -26,6 +26,6 @@ It add planets from Star Wars and Light Saber :)
 [[dependencies.swplanets]]
     modId="forge"
     mandatory=true
-    versionRange="[41.0.30]"
+    versionRange="[${forge_version},]"
     ordering="NONE"
     side="BOTH"

@@ -1,5 +1,5 @@
 {
-  "ultrawarm": true,
+  "ultrawarm": false,
   "natural": false,
   "piglin_safe": false,
   "respawn_anchor_works": false,
@@ -13,7 +13,7 @@
   "infiniburn": "#minecraft:infiniburn_overworld",
   "min_y": 0,
   "height": 256,
+  "effects": "swplanets:kamino_orbit",
   "monster_spawn_light_level": 0,
-  "monster_spawn_block_light_limit": 0,
-  "effects": "swplanets:kamino_orbit"
+  "monster_spawn_block_light_limit": 0
 }
