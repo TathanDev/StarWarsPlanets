@@ -6,6 +6,12 @@
   </p>
 </a>
 
+<a href="https://www.curseforge.com/minecraft/mc-mods/star-wars-planets">
+  <p align="middle">
+      <img src="https://img.shields.io/badge/Curseforge-Click%20Me-red?style=for-the-badge" width="191"/> 
+  </p>
+</a>
+
 A Beyond Earth Addon adding star wars planets !
 
 For the moment, I working on Tatooine ⏳, Kamino 💧, Endor 🌴 and Hoth 🧊
