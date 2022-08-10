@@ -7,14 +7,16 @@ import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.NotNull;
 
 public class ItemsRegistry {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SWPlanets.MODID);
 
     public static final RegistryObject<Item> STAR_WARS_OPENING_MUSIC_DISC = ITEMS.register("star_wars_opening_music_disc",
-            () -> new RecordItem(4, SoundsRegistry.STAR_WARS_OPENING_MUSIC,
-                    new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB).stacksTo(1)));
+            () -> new RecordItem(4,() -> SoundsRegistry.STAR_WARS_OPENING_MUSIC.get(),
+                    new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB), 1780));
+
 
 
     public static final RegistryObject<Item> KYBER_CRYSTAL = ITEMS.register("kyber_crystal", () -> new Item(new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB).stacksTo(16)));

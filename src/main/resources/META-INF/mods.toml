@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[40,)"
+loaderVersion="[41,)"
 issueTrackerURL="https://github.com/TathanDev/StarWarsPlanets/issues"
 license="All Rights Reserved unless otherwise explicitly stated"
 
@@ -19,13 +19,20 @@ It add planets from Star Wars and Light Saber :)
 [[dependencies.swplanets]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19]"
+    versionRange="[1.19.2,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.swplanets]]
     modId="forge"
     mandatory=true
-    versionRange="[${forge_version},]"
+    versionRange="[${forge_version},)"
     ordering="NONE"
+    side="BOTH"
+
+[[dependencies.swplanets]]
+    modId="beyond_earth"
+    mandatory=true
+    versionRange="[6.3,)"
+    ordering="AFTER"
     side="BOTH"
