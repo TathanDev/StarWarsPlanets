@@ -1,4 +1,11 @@
 # Star Wars Planet
+
+<a href="https://discord.gg/nuDEYcFX4j">
+  <p align="center">
+      <img src="https://img.shields.io/discord/978715386033877112?    color=blue&label=Discord&logo=discord&logoColor=ffffff&style=for-the-badge" alt="Discord" width="191"/> 
+  </p>
+</a>
+
 A Beyond Earth Addon adding star wars planets !
 
 For the moment, I working on Tatooine ⏳, Kamino 💧, Endor 🌴 and Hoth 🧊
