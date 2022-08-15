@@ -90,7 +90,8 @@ repositories {
 
 dependencies {
     minecraft "net.minecraftforge:forge:1.19.2-${forge_version}"
-    //implementation fg.deobf("curse.maven:377448:VERSIONID")
+
+    
     implementation fg.deobf("net.mrscauthd:beyond_earth:1.19-6.3")
 }
 

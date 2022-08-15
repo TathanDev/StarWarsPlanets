@@ -4,8 +4,21 @@
     "type": "minecraft:noise",
     "settings": "swplanets:kamino",
     "biome_source": {
-      "type": "minecraft:fixed",
-      "biome": "swplanets:kamino_ocean"
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "swplanets:kamino_ocean",
+          "parameters": {
+            "temperature": -2,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        }
+      ]
     }
   }
 }
