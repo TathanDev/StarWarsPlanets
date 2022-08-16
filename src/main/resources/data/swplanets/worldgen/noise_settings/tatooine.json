@@ -5,7 +5,7 @@
   "ore_veins_enabled": false,
   "legacy_random_source": false,
   "default_block": {
-    "Name": "beyond_earth:moon_stone"
+    "Name": "minecraft:sandstone"
   },
   "default_fluid": {
     "Name": "minecraft:air"
@@ -299,7 +299,7 @@
           "if_true": {
             "type": "minecraft:biome",
             "biome_is": [
-              "beyond_earth:moon_desert"
+              "swplanets:tatooine_desert"
             ]
           },
           "then_run": {
@@ -314,7 +314,7 @@
             "then_run": {
               "type": "minecraft:block",
               "result_state": {
-                "Name": "beyond_earth:moon_sand"
+                "Name": "minecraft:sand"
               }
             }
           }

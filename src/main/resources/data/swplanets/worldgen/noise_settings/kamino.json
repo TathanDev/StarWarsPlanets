@@ -430,7 +430,7 @@
                     "if_true": {
                       "type": "minecraft:biome",
                       "biome_is": [
-                        "minecraft:wooded_badlands"
+                        "swplanets:kamino_ocean"
                       ]
                     },
                     "then_run": {

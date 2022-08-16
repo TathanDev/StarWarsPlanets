@@ -14,7 +14,7 @@
 
 A Beyond Earth Addon adding star wars planets !
 
-For the moment, I working on Tatooine ⏳, Kamino 💧, Endor 🌴 and Hoth 🧊
+For the moment, I'm working on Tatooine ⏳, Kamino 💧, Endor 🌴 and Hoth 🧊
 
 
 Planet i will add :
