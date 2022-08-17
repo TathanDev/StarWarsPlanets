@@ -9,6 +9,7 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
@@ -69,6 +70,13 @@ public class SithLightSaber extends SwordItem {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
             pTooltipComponents.add(new TranslatableComponent("tooltip.swplanets.sithlightsaber.tooltip.shift"));
             pTooltipComponents.add(new TranslatableComponent("tooltip.swplanets.sithlightsaber.tooltip.shift.two"));
+
+    }
+
+    @Override
+    public void onCraftedBy(ItemStack pStack, Level pLevel, Player player) {
+        super.onCraftedBy(pStack, pLevel, player);
+        player.playSound(SoundsRegistry.SABER_ATTACK_SOUND_3.get(), 1f, 1f);
 
     }
 }

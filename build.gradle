@@ -9,7 +9,6 @@ buildscript {
     }
 }
 
-//TODO put this here :             return super.mobInteract(p_30713_, p_30714_);
 
 plugins {
     id 'eclipse'
@@ -19,7 +18,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle'
 
 
-version = '1.8'
+version = '${mod_version}'
 group = 'fr.tathan.SWPlanets'
 archivesBaseName = 'StarWarsPlanets'
 

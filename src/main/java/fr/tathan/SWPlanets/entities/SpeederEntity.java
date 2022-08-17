@@ -1,5 +1,5 @@
 package fr.tathan.SWPlanets.entities;
-
+/**
 import fr.tathan.SWPlanets.SWPlanets;
 import fr.tathan.SWPlanets.gui.speeder.SpeederGUI;
 import fr.tathan.SWPlanets.registries.ItemsRegistry;
@@ -13,11 +13,13 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.tags.FluidTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.animal.FlyingAnimal;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -27,6 +29,7 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
@@ -45,12 +48,14 @@ public class SpeederEntity extends VehicleEntity {
     private double speed = 0;
 
     public float flyingSpeed = 0.02F;
+
+    private float FUEL_USE_TICK = 8;
+    private float FUEL_TIMER = 0;
+
     public float animationSpeedOld;
     public float animationSpeed;
     public float animationPosition;
 
-    private float FUEL_USE_TICK = 8;
-    private float FUEL_TIMER = 0;
 
     public static final EntityDataAccessor<Integer> FUEL = SynchedEntityData.defineId(SpeederEntity.class, EntityDataSerializers.INT);
 
@@ -123,7 +128,6 @@ public class SpeederEntity extends VehicleEntity {
         }
     }
 
-    /** Fuck */
     @Override
     public AABB getBoundingBoxForCulling() {
         return new AABB(this.getX(), this.getY(), this.getZ(), this.getX(), this.getY(), this.getZ()).inflate(4.5,4.5,4.5);
@@ -184,7 +188,6 @@ public class SpeederEntity extends VehicleEntity {
     }
 
 
-    /**End of Fuck */
 
 
     @Override
@@ -243,4 +246,69 @@ public class SpeederEntity extends VehicleEntity {
         return this.entityData.get(FORWARD);
     }
 
+    @Override
+    public float getFrictionInfluencedSpeed(float p_21331_) {
+        return this.onGround ? this.getSpeed() * (0.21600002F / (p_21331_ * p_21331_ * p_21331_)) : this.flyingSpeed;
+    }
+
+    @Override
+    public void travel(Vec3 p_21280_) {
+        if (!this.getPassengers().isEmpty() && this.getPassengers().get(0) instanceof Player) {
+
+            Player passanger = (Player) this.getPassengers().get(0);
+
+            this.flyingSpeed = this.getSpeed() * 0.15F;
+            this.maxUpStep = 1.0F;
+
+            double pmovement = passanger.zza;
+
+            if (pmovement == 0 || this.getEntityData().get(FUEL) == 0 || this.isEyeInFluid(FluidTags.WATER)) {
+                pmovement = 0;
+                this.setSpeed(0f);
+
+                if (speed != 0 && speed > 0.02) {
+                    speed = speed - 0.02;
+                }
+            }
+
+            if (this.entityData.get(FORWARD) && this.getEntityData().get(FUEL) != 0) {
+                if (this.getSpeed() >= 0.01) {
+                    if (speed <= 0.32) {
+                        speed = speed + 0.02;
+                    }
+                }
+
+                if (this.getSpeed() < 0.25) {
+                    this.setSpeed(this.getSpeed() + 0.02F);
+                }
+
+            }
+
+            if (!this.entityData.get(FORWARD)) {
+
+                if (this.getEntityData().get(FUEL) != 0 && !this.isEyeInFluid(FluidTags.WATER)) {
+
+                    if (this.getSpeed() <= 0.04) {
+                        this.setSpeed(this.getSpeed() + 0.02f);
+                    }
+                }
+
+                if (this.getSpeed() >= 0.08) {
+                    this.setSpeed(0f);
+                }
+            }
+
+            if (this.entityData.get(FORWARD)) {
+            } else {
+            }
+
+            super.travel(new Vec3(0, 0, pmovement));
+            return;
+        }
+
+        super.travel(new Vec3(0, 0, 0));
+    }
+
+
 }
+*/

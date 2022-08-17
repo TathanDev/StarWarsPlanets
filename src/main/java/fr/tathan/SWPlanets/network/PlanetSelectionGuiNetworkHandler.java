@@ -109,6 +109,24 @@ public class PlanetSelectionGuiNetworkHandler extends PlanetSelectionGuiNetworkH
                 message.deleteItems(player);
                 Methods.teleportButton(player, PlanetsRegistry.HOT_ORBIT, true);
                 break;
+
+            /** Mustafar */
+
+            case 12:
+                message.defaultOptions(player);
+                Methods.teleportButton(player, PlanetsRegistry.MUSTAFAR, false);
+                break;
+
+            case 13:
+                message.defaultOptions(player);
+                Methods.teleportButton(player, PlanetsRegistry.MUSTAFAR_ORBIT, false);
+                break;
+
+            case 14:
+                message.defaultOptions(player);
+                message.deleteItems(player);
+                Methods.teleportButton(player, PlanetsRegistry.MUSTAFAR_ORBIT, true);
+                break;
         }
 
         context.setPacketHandled(true);

@@ -3,7 +3,6 @@ package fr.tathan.SWPlanets.registries;
 import fr.tathan.SWPlanets.SWPlanets;
 import fr.tathan.SWPlanets.items.JediLightSaber;
 import fr.tathan.SWPlanets.items.SithLightSaber;
-import fr.tathan.SWPlanets.items.SpeederItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -62,7 +61,7 @@ public class ItemsRegistry {
 
 
     /** Speeder */
-    public static final RegistryObject<SpeederItem> SPEEDER_ITEM = ITEMS.register("speeder", () -> new SpeederItem(new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB).stacksTo(1)));
+   // public static final RegistryObject<SpeederItem> SPEEDER_ITEM = ITEMS.register("speeder", () -> new SpeederItem(new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB).stacksTo(1)));
 
 
 

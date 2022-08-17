@@ -1,5 +1,5 @@
 package fr.tathan.SWPlanets.items;
-
+/**
 import fr.tathan.SWPlanets.entities.SpeederEntity;
 import fr.tathan.SWPlanets.events.ClientEventBusSubscriber;
 import fr.tathan.SWPlanets.registries.EntitiesRegistry;
@@ -82,7 +82,7 @@ public class SpeederItem extends VehicleItem {
                 rover.setPos((double) pos.getX() + 0.5D,  pos.getY() + 1, (double) pos.getZ() + 0.5D);
                 double d0 = this.getYOffset(world, pos, true, rover.getBoundingBox());
 
-                /** ROTATION */
+                // ROTATION
                 float f = (float) Mth.floor((Mth.wrapDegrees(context.getRotation() - 180.0F) + 5.626F) / 11.25F) * 11.25F;
 
                 rover.moveTo((double)pos.getX() + 0.5D, (double)pos.getY() + d0, (double)pos.getZ() + 0.5D, f + 180.0F, 0.0F);
@@ -135,3 +135,4 @@ public class SpeederItem extends VehicleItem {
 
 
 }
+*/

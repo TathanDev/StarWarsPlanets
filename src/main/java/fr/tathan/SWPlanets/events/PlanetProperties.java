@@ -16,7 +16,10 @@ public class PlanetProperties {
             PlanetsRegistry.TATOOINE_ORBIT,
             PlanetsRegistry.KAMINO_ORBIT,
             PlanetsRegistry.ENDOR_ORBIT,
-            PlanetsRegistry.HOT_ORBIT
+            PlanetsRegistry.HOT_ORBIT,
+            PlanetsRegistry.MUSTAFAR_ORBIT,
+            PlanetsRegistry.MUSTAFAR
+
     );
 
 
@@ -24,8 +27,10 @@ public class PlanetProperties {
             PlanetsRegistry.KAMINO_ORBIT,
             PlanetsRegistry.TATOOINE_ORBIT,
             PlanetsRegistry.ENDOR_ORBIT,
-            PlanetsRegistry.HOT_ORBIT
-    );
+            PlanetsRegistry.HOT_ORBIT,
+            PlanetsRegistry.MUSTAFAR_ORBIT
+
+            );
 
     public static final Set<ResourceKey<Level>> spaceWorlds = Set.of(
             PlanetsRegistry.TATOOINE,
@@ -35,14 +40,18 @@ public class PlanetProperties {
             PlanetsRegistry.ENDOR,
             PlanetsRegistry.ENDOR_ORBIT,
             PlanetsRegistry.HOT_ORBIT,
-            PlanetsRegistry.HOT
+            PlanetsRegistry.HOT,
+            PlanetsRegistry.MUSTAFAR_ORBIT,
+            PlanetsRegistry.MUSTAFAR
+
     );
 
     private static final Set<ResourceKey<Level>> orbitWorlds = Set.of(
             PlanetsRegistry.KAMINO_ORBIT,
             PlanetsRegistry.TATOOINE_ORBIT,
             PlanetsRegistry.ENDOR_ORBIT,
-            PlanetsRegistry.HOT_ORBIT
+            PlanetsRegistry.HOT_ORBIT,
+            PlanetsRegistry.MUSTAFAR_ORBIT
     );
 
     /**

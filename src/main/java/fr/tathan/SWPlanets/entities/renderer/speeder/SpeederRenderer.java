@@ -1,6 +1,6 @@
 package fr.tathan.SWPlanets.entities.renderer.speeder;
 
-
+/**
 import fr.tathan.SWPlanets.SWPlanets;
 import fr.tathan.SWPlanets.entities.SpeederEntity;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -24,3 +24,4 @@ public class SpeederRenderer extends VehicleRenderer<SpeederEntity, SpeederModel
     }
 
 }
+*/

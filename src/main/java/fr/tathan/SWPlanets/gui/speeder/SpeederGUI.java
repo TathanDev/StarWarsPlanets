@@ -1,5 +1,5 @@
 package fr.tathan.SWPlanets.gui.speeder;
-
+/**
 import fr.tathan.SWPlanets.entities.SpeederEntity;
 import fr.tathan.SWPlanets.registries.ScreensRegistry;
 import net.minecraft.network.FriendlyByteBuf;
@@ -65,3 +65,4 @@ public class SpeederGUI {
         }
     }
 }
+*/

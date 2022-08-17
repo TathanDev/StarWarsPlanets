@@ -1,5 +1,5 @@
 package fr.tathan.SWPlanets.events;
-
+/**
 
 import fr.tathan.SWPlanets.SWPlanets;
 import fr.tathan.SWPlanets.entities.renderer.speeder.SpeederItemRenderer;
@@ -105,3 +105,4 @@ public class ClientEventBusSubscriber {
     }
 
     }
+*/

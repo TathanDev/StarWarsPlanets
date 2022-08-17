@@ -43,17 +43,17 @@ public class Event {
     public static void entityGravity(LivingEntityTickEndEvent event) {
 
         /**
-        if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.ENDOR)) {
-            EntityGravity.gravitySystem(event.getEntityLiving(), 0.03F);
-        } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.TATOOINE)) {
-            EntityGravity.gravitySystem(event.getEntityLiving(), 0.03F);
-        } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.HOT)) {
-            EntityGravity.gravitySystem(event.getEntityLiving(), 0.03F);
-        } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.KAMINO)) {
-            EntityGravity.gravitySystem(event.getEntityLiving(), 0.03F);
-        }
-*/
-         //ORBIT GRAVITY
+         if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.ENDOR)) {
+         EntityGravity.gravitySystem(event.getEntityLiving(), 0.03F);
+         } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.TATOOINE)) {
+         EntityGravity.gravitySystem(event.getEntityLiving(), 0.03F);
+         } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.HOT)) {
+         EntityGravity.gravitySystem(event.getEntityLiving(), 0.03F);
+         } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.KAMINO)) {
+         EntityGravity.gravitySystem(event.getEntityLiving(), 0.03F);
+         }
+         */
+        //ORBIT GRAVITY
         if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.TATOOINE_ORBIT)) {
             EntityGravity.gravitySystem(event.getEntityLiving(), 0.02F);
         } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.KAMINO_ORBIT)) {
@@ -62,11 +62,12 @@ public class Event {
             EntityGravity.gravitySystem(event.getEntityLiving(), 0.02F);
         } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.HOT_ORBIT)) {
             EntityGravity.gravitySystem(event.getEntityLiving(), 0.02F);
+        } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.MUSTAFAR_ORBIT)) {
+            EntityGravity.gravitySystem(event.getEntityLiving(), 0.02F);
+
+
         }
-
-
     }
-
 
     @SubscribeEvent
     public static void itemGravity(ItemEntityTickEndEvent event) {
@@ -81,6 +82,8 @@ public class Event {
         } else if (Methods.isWorld(level, PlanetsRegistry.KAMINO_ORBIT)) {
             ItemGravity.gravitySystem(entity, 0.05F);
         } else if (Methods.isWorld(level, PlanetsRegistry.TATOOINE_ORBIT)) {
+            ItemGravity.gravitySystem(entity, 0.05F);
+        } else if (Methods.isWorld(level, PlanetsRegistry.MUSTAFAR_ORBIT)) {
             ItemGravity.gravitySystem(entity, 0.05F);
         }
     }
@@ -98,6 +101,8 @@ public class Event {
         } else if (Methods.isWorld(level, PlanetsRegistry.HOT)) {
             event.setDistance(event.getDistance() - 5.5F);
         } else if (Methods.isWorld(level, PlanetsRegistry.KAMINO)) {
+            event.setDistance(event.getDistance() - 5.5F);
+        } else if (Methods.isWorld(level, PlanetsRegistry.MUSTAFAR)) {
             event.setDistance(event.getDistance() - 5.5F);
         }
 

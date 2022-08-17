@@ -1,5 +1,5 @@
 package fr.tathan.SWPlanets.entities.renderer.speeder;
-
+/**
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Vector3f;
@@ -41,7 +41,6 @@ public class SpeederItemRenderer<T extends SpeederEntity> extends BlockEntityWit
 
         VertexConsumer vertexBuilder;
 
-        /** TEXTURE BINDING */
         vertexBuilder = buffer.getBuffer(RenderType.entityCutoutNoCullZOffset(TEXTURE));
 
         if (this.model == null) {
@@ -55,3 +54,4 @@ public class SpeederItemRenderer<T extends SpeederEntity> extends BlockEntityWit
 
 
 }
+*/

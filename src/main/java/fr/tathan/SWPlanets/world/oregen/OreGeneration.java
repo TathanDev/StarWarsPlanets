@@ -38,7 +38,7 @@ public class OreGeneration {
 
     // KYBER ORE DEEPSLATE
     public static final RegistryObject<ConfiguredFeature<?, ?>> KYBER_ORE_DEEPSLATE_CONFIGURED = FeatureRegistry.CONFIGURED_FEATURES.register("kyber_crystal_ore_deepslate", () -> new ConfiguredFeature(Feature.ORE, new OreConfiguration(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlocksRegistry.CRYSTAL_KYBER_ORE.get().defaultBlockState(), kyber_vein_size)));
-    //public static final RegistryObject<PlacedFeature> KYBER_ORE = FeatureRegistry.PLACED_FEATURES.register("kyber_crystal_ore", () -> new PlacedFeature(KYBER_ORE_CONFIGURED.getHolder().get(), commonOrePlacement(7, HeightRangePlacement.triangle(VerticalAnchor.absolute(-80), VerticalAnchor.absolute(100)))));
+    public static final RegistryObject<PlacedFeature> KYBER_ORE = FeatureRegistry.PLACED_FEATURES.register("kyber_crystal_ore", () -> new PlacedFeature(KYBER_ORE_DEEPSLATE_CONFIGURED.getHolder().get(), commonOrePlacement(7, HeightRangePlacement.triangle(VerticalAnchor.absolute(-80), VerticalAnchor.absolute(100)))));
     public static final RegistryObject<PlacedFeature> KYBER_ORE_DEEPSLATE = FeatureRegistry.PLACED_FEATURES.register("kyber_crystal_ore_deepslate", () -> new PlacedFeature(KYBER_ORE_DEEPSLATE_CONFIGURED.getHolder().get(), commonOrePlacement(kyber_vein_common, HeightRangePlacement.triangle(VerticalAnchor.absolute(-80), VerticalAnchor.absolute(100)))));
 
     //KYBER ORE TATOOINE

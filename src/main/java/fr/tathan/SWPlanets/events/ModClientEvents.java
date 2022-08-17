@@ -26,6 +26,7 @@ public class ModClientEvents {
     private static final ResourceLocation HOT_BAR_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/planet_bar/glacio_planet_bar.png");
     private static final ResourceLocation TATOOINE_BAR_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/planet_bar/tatooine_planet_bar.png");
     private static final ResourceLocation KAMINO_BAR_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/planet_bar/kamino_planet_bar.png");
+    private static final ResourceLocation MUSTAFAR_BAR_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/planet_bar/venus_planet_bar.png");
 
     @SubscribeEvent
     public static void overlayChange(PlanetOverlayEvent event) {
@@ -41,6 +42,8 @@ public class ModClientEvents {
 
         } else if (level.dimension() == PlanetsRegistry.KAMINO) {
             event.setResourceLocation(KAMINO_BAR_TEXTURE);
+        } else if (level.dimension() == PlanetsRegistry.MUSTAFAR) {
+            event.setResourceLocation(MUSTAFAR_BAR_TEXTURE);
         }
     }
 

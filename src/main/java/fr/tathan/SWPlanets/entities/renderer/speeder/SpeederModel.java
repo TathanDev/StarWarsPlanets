@@ -1,3 +1,4 @@
+
 package fr.tathan.SWPlanets.entities.renderer.speeder;
 // Made with Blockbench 4.2.5
 // Exported for Minecraft version 1.17 - 1.18 with Mojang mappings
@@ -16,7 +17,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-
+/**
 @OnlyIn(Dist.CLIENT)
 public class SpeederModel<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
@@ -41,34 +42,36 @@ public class SpeederModel<T extends Entity> extends EntityModel<T> {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
-		PartDefinition Base = partdefinition.addOrReplaceChild("Base", CubeListBuilder.create().texOffs(0, 0).addBox(4.0F, -10.0F, -8.0F, 17.0F, 0.0F, 19.0F, new CubeDeformation(0.0F))
-		.texOffs(45, 36).addBox(21.0F, -18.0F, -13.0F, 1.0F, 8.0F, 30.0F, new CubeDeformation(0.0F))
-		.texOffs(45, 40).addBox(22.0F, -18.0F, -11.0F, 2.0F, 8.0F, 26.0F, new CubeDeformation(0.0F))
-		.texOffs(45, 42).addBox(24.0F, -18.0F, -10.0F, 2.0F, 8.0F, 24.0F, new CubeDeformation(0.0F))
-		.texOffs(50, 44).addBox(26.0F, -18.0F, -9.0F, 2.0F, 8.0F, 22.0F, new CubeDeformation(0.0F))
-		.texOffs(10, 34).addBox(-14.0F, -18.0F, -14.0F, 18.0F, 8.0F, 32.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 24.0F, 0.0F, 0.0F, 1.5708F, 0.0F));
+		PartDefinition Base = partdefinition.addOrReplaceChild("Base", CubeListBuilder.create().texOffs(11, 1).addBox(-5.0F, -1.0F, -11.0F, 17.0F, 0.0F, 21.0F, new CubeDeformation(0.0F))
+				.texOffs(0, 40).addBox(12.0F, -9.0F, -15.0F, 1.0F, 8.0F, 30.0F, new CubeDeformation(0.0F))
+				.texOffs(40, 52).addBox(13.0F, -9.0F, -13.0F, 2.0F, 8.0F, 26.0F, new CubeDeformation(0.0F))
+				.texOffs(68, 0).addBox(15.0F, -9.0F, -12.0F, 2.0F, 8.0F, 24.0F, new CubeDeformation(0.0F))
+				.texOffs(70, 40).addBox(17.0F, -9.0F, -11.0F, 2.0F, 8.0F, 22.0F, new CubeDeformation(0.0F))
+				.texOffs(59, 91).addBox(19.0F, -9.0F, -10.0F, 1.0F, 8.0F, 20.0F, new CubeDeformation(0.0F))
+				.texOffs(0, 0).addBox(-23.0F, -9.0F, -16.0F, 18.0F, 8.0F, 32.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 24.0F, 0.0F, 0.0F, 1.5708F, 0.0F));
 
-		PartDefinition cockpit = partdefinition.addOrReplaceChild("cockpit", CubeListBuilder.create().texOffs(42, 49).addBox(-13.0F, -18.0F, -21.0F, 5.0F, 8.0F, 17.0F, new CubeDeformation(0.0F))
-		.texOffs(37, 49).addBox(11.0F, -18.0F, -21.0F, 6.0F, 8.0F, 17.0F, new CubeDeformation(0.0F))
-		.texOffs(43, 28).addBox(-8.0F, -18.0F, -21.0F, 19.0F, 6.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
+		PartDefinition cockpit = partdefinition.addOrReplaceChild("cockpit", CubeListBuilder.create().texOffs(96, 32).addBox(-15.0F, -9.0F, -12.0F, 4.0F, 8.0F, 17.0F, new CubeDeformation(0.0F))
+				.texOffs(33, 86).addBox(10.0F, -9.0F, -12.0F, 5.0F, 8.0F, 17.0F, new CubeDeformation(0.0F))
+				.texOffs(96, 14).addBox(-10.0F, -9.0F, -12.0F, 20.0F, 6.0F, 2.0F, new CubeDeformation(0.0F))
+				.texOffs(39, 2).addBox(-11.0F, -9.0F, -12.0F, 2.0F, 4.0F, 17.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
 
-		PartDefinition Chairs = partdefinition.addOrReplaceChild("Chairs", CubeListBuilder.create().texOffs(23, 114).addBox(-8.0F, -23.0F, -6.0F, 19.0F, 12.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
+		PartDefinition Chairs = partdefinition.addOrReplaceChild("Chairs", CubeListBuilder.create().texOffs(96, 0).addBox(-10.0F, -14.0F, 3.0F, 19.0F, 12.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
 
-		PartDefinition Prupulseurs1 = partdefinition.addOrReplaceChild("Prupulseurs1", CubeListBuilder.create().texOffs(53, 42).addBox(-21.0F, -25.5F, -1.0F, 9.0F, 5.0F, 16.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
+		PartDefinition Prupulseurs1 = partdefinition.addOrReplaceChild("Prupulseurs1", CubeListBuilder.create().texOffs(80, 70).addBox(-23.0F, -16.5F, 8.0F, 9.0F, 5.0F, 16.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
 
 		PartDefinition Prupulseurs2 = partdefinition.addOrReplaceChild("Prupulseurs2", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, 24.0F, 0.0F, 0.0F, 1.5708F, 0.0F));
 
-		PartDefinition cube_r1 = Prupulseurs2.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(78, 42).addBox(-20.0F, -26.5F, -14.0F, 9.0F, 5.0F, 16.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 7.0F, 0.0F, 1.5708F, 0.0F));
+		PartDefinition cube_r1 = Prupulseurs2.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(0, 78).addBox(-18.0F, -16.5F, -23.0F, 9.0F, 5.0F, 16.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 7.0F, 0.0F, 1.5708F, 0.0F));
 
-		PartDefinition cube_r2 = Prupulseurs2.addOrReplaceChild("cube_r2", CubeListBuilder.create().texOffs(0, 14).addBox(-4.4431F, -1.9608F, 3.8663F, 6.0F, 4.0F, 9.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-5.0F, -11.0F, -10.0F, -3.1359F, 0.9685F, 1.6069F));
+		PartDefinition cube_r2 = Prupulseurs2.addOrReplaceChild("cube_r2", CubeListBuilder.create().texOffs(0, 0).addBox(2.4843F, -10.6678F, -2.6297F, 6.0F, 4.0F, 9.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-5.0F, -11.0F, -10.0F, -3.1359F, 0.9685F, 1.6069F));
 
-		PartDefinition cube_r3 = Prupulseurs2.addOrReplaceChild("cube_r3", CubeListBuilder.create().texOffs(0, 14).addBox(-1.2427F, -5.0461F, 5.3683F, 5.0F, 4.0F, 12.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-3.0F, -9.0F, 11.0F, 0.0F, 0.7854F, -1.5272F));
+		PartDefinition cube_r3 = Prupulseurs2.addOrReplaceChild("cube_r3", CubeListBuilder.create().texOffs(0, 99).addBox(-6.464F, -13.6449F, -2.6814F, 5.0F, 4.0F, 12.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-3.0F, -9.0F, 11.0F, 0.0F, 0.7854F, -1.5272F));
 
-		PartDefinition Prupulseurs3 = partdefinition.addOrReplaceChild("Prupulseurs3", CubeListBuilder.create().texOffs(75, 11).addBox(-25.0F, -27.5F, -3.0F, 16.0F, 6.0F, 9.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 24.0F, 0.0F, 0.0F, 1.5708F, 0.0F));
+		PartDefinition Prupulseurs3 = partdefinition.addOrReplaceChild("Prupulseurs3", CubeListBuilder.create().texOffs(81, 91).addBox(-34.0F, -18.5F, -5.0F, 16.0F, 6.0F, 9.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 24.0F, 0.0F, 0.0F, 1.5708F, 0.0F));
 
-		PartDefinition cube_r4 = Prupulseurs3.addOrReplaceChild("cube_r4", CubeListBuilder.create().texOffs(37, 0).addBox(-5.0F, -27.0F, -2.0F, 4.0F, 11.0F, 7.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, -0.48F));
+		PartDefinition cube_r4 = Prupulseurs3.addOrReplaceChild("cube_r4", CubeListBuilder.create().texOffs(0, 13).addBox(-17.1388F, -23.1726F, -4.0F, 4.0F, 11.0F, 7.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, -0.48F));
 
-		return LayerDefinition.create(meshdefinition, 128, 128);
+		return LayerDefinition.create(meshdefinition, 256, 256);
 	}
 
 	@Override
@@ -86,3 +89,4 @@ public class SpeederModel<T extends Entity> extends EntityModel<T> {
 		Prupulseurs3.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 }
+ */
