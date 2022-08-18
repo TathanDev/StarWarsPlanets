@@ -65,6 +65,7 @@ public class MustafarSky {
     private static final ResourceLocation CLOUD_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/sky/clouds.png");
     private static final ResourceLocation RAIN_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/sky/rain.png");
     private static final ResourceLocation SUN_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/sky/red_sun.png");
+    //private static final ResourceLocation EARTH_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/sky/earth.png");
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void clientSetup(FMLClientSetupEvent event) {
@@ -171,6 +172,7 @@ public class MustafarSky {
 
 
                             RenderSystem.disableTexture();
+
 
                             /** STAR */
                             float f10 = level.getStarBrightness(p_181412_) * 1.0F - level.getRainLevel(p_181412_);

@@ -63,8 +63,6 @@
       "minecraft:ore_lapis",
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
-      "minecraft:disk_sand",
-      "minecraft:disk_clay",
       "minecraft:disk_gravel"
     ],
     [],
@@ -77,7 +75,6 @@
       "minecraft:patch_large_fern",
       "minecraft:trees_old_growth_pine_taiga",
       "minecraft:flower_default",
-      "minecraft:patch_grass_taiga",
       "minecraft:patch_dead_bush",
       "minecraft:brown_mushroom_old_growth",
       "minecraft:red_mushroom_old_growth",

@@ -2,7 +2,7 @@
   "display": {
     "background": "minecraft:textures/block/magma_block.png",
     "icon": {
-      "item": "minecraft:fire"
+      "item": "minecraft:fire_charge"
     },
     "title": {
       "translate": "advancements.mustafar.title"

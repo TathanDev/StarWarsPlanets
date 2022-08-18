@@ -166,7 +166,7 @@ public class PlanetSelectionGuiEvents {
         }
 
         /** LARGE MENU RENDERER */
-        if (PlanetSelectionGuiHelper.categoryRange(category.get(), 2, 5)) {
+        if (PlanetSelectionGuiHelper.categoryRange(category.get(), 2, 6)) {
             PlanetSelectionGuiHelper.addTexture(poseStack, 0, (screen.height / 2) - 177 / 2, 215, 177, PlanetSelectionGuiWindow.LARGE_MENU_TEXTURE);
         }
 

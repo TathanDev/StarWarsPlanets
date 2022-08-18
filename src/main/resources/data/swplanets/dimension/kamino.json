@@ -1,6 +1,6 @@
 {
   "type": "swplanets:kamino",
-  "forge:use_server_seed": true,
+  "forge:use_server_seed": false,
   "generator": {
     "type": "beyond_earth:planet_noise",
     "seed": 12345,
