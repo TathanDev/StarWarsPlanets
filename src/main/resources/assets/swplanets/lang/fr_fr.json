@@ -24,6 +24,9 @@
   "item.swplanets.kyber_crystal": "Cristal Kyber",
   "item.swplanets.kyber_crystal_ore": "Minerai de Kyber",
   "item.swplanets.kyber_crystal_ore_sandstone": "Sandstone Kyber Crystal Ore ",
+  "item.swplanets.mustafar_stone": "Pierre de Mustafar",
+  "item.swplanets.mustafar_sand": "Sable de Mustafar",
+
 
 
   "item.swplanets.light_saber_base": "Base de Sabre Laser",
@@ -52,6 +55,9 @@
   "block.swplanets.kyber_crystal_ore": "Minerai de Kyber",
   "block.swplanets.kyber_crystal_cluster": "Cristal Kyber",
   "block.swplanets.kyber_crystal_ore_sandstone": "Minerai de Kyber SandStone ",
+  "block.swplanets.mustafar_stone": "Pierre de Mustafar",
+  "block.swplanets.mustafar_sand": "Sable de Mustafar",
+
 
 
 
