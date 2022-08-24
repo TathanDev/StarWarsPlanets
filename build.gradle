@@ -36,6 +36,9 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+
 
             property 'forge.enabledGameTestNamespaces', 'swplanets'
             mods {
@@ -84,7 +87,6 @@ minecraft {
     }
 }
 
-//Beyond Earth API:
 repositories {
     maven {
         name "Local"
@@ -92,12 +94,22 @@ repositories {
 
     }
 
+    maven { url 'https://maven.blamejared.com' }
+
+
+
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.1.25'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.1.73'
     //Beyond Earth API:
     implementation fg.deobf("net.mrscauthd:beyond_earth:1.18.2-6.2")
+
+    /** Patchouli */
+    compileOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_mc_version}-${patchouli_version}:api")
+    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_mc_version}-${patchouli_version}")
+
+
 
 }
 
@@ -128,6 +140,8 @@ publishing {
             url "file://${project.projectDir}/mcmodsrepo"
         }
     }
+
+
 }
 
 tasks.withType(JavaCompile).configureEach {
