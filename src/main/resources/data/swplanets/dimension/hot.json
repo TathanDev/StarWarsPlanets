@@ -372,7 +372,8 @@
                 "minecraft:deep_frozen_ocean",
                 "minecraft:frozen_ocean",
                 "minecraft:ice_spikes",
-                "minecraft:frozen_peaks"
+                "minecraft:frozen_peaks",
+                "swplanets:hot_desert"
               ]
             },
             "then_run": {
@@ -528,6 +529,18 @@
         },
         {
           "biome": "minecraft:frozen_peaks",
+          "parameters": {
+            "temperature": -0.5,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": -1.5,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "swplanets:hot_desert",
           "parameters": {
             "temperature": -0.5,
             "humidity": 0,
