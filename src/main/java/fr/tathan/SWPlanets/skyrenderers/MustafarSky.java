@@ -52,8 +52,9 @@ import net.mrscauthd.beyond_earth.registries.ParticlesRegistry;
 
 import javax.annotation.Nullable;
 import java.util.Random;
-
+/**
 @Mod.EventBusSubscriber(modid = SWPlanets.MODID, bus = Bus.MOD, value = Dist.CLIENT)
+
 public class MustafarSky {
 
     private static final float[] rainSizeX = new float[1024];
@@ -111,11 +112,11 @@ public class MustafarSky {
                             ShaderInstance shaderinstance = RenderSystem.getShader();
                             minecraft.levelRenderer.skyBuffer.drawWithShader(p_181410_.last().pose(), matrix4f, shaderinstance);
 
-                            /** ENABLE BLEND SYSTEM */
+                            /** ENABLE BLEND SYSTEM
                             RenderSystem.enableBlend();
                             RenderSystem.defaultBlendFunc();
 
-                            /** COLOR SYSTEM */
+                            /** COLOR SYSTEM
                             float[] afloat = level.effects().getSunriseColor(level.getTimeOfDay(p_181412_), p_181412_);
                             if (afloat != null) {
                                 RenderSystem.setShader(GameRenderer::getPositionColorShader);
@@ -151,14 +152,14 @@ public class MustafarSky {
                             RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
                             RenderSystem.enableTexture();
 
-                            /** DEFAULT ROT */
+                            /** DEFAULT ROT *
                             p_181410_.mulPose(Vector3f.YP.rotationDegrees(-90.0F));
                             p_181410_.mulPose(Vector3f.XP.rotationDegrees(level.getTimeOfDay(p_181412_) * 360.0F));
                             Matrix4f matrix4f1 = p_181410_.last().pose();
 
                             RenderSystem.setShader(GameRenderer::getPositionTexShader);
 
-                            /** SUN */
+                            /** SUN
                             float f12 = 20.0F;
 
                             RenderSystem.setShaderTexture(0, SUN_TEXTURE);
@@ -174,7 +175,7 @@ public class MustafarSky {
                             RenderSystem.disableTexture();
 
 
-                            /** STAR */
+                            /** STAR
                             float f10 = level.getStarBrightness(p_181412_) * 1.0F - level.getRainLevel(p_181412_);
                             if (f10 > 0.0F) {
                                 RenderSystem.setShaderColor(f10, f10, f10, f10);
@@ -186,7 +187,7 @@ public class MustafarSky {
                             RenderSystem.disableBlend();
                             p_181410_.popPose();
 
-                            /** CUT AWAY SYSTEM */
+                            /** CUT AWAY SYSTEM
                             RenderSystem.disableTexture();
                             RenderSystem.setShaderColor(0.0F, 0.0F, 0.0F, 1.0F);
 
@@ -454,3 +455,4 @@ public class MustafarSky {
 
 
 }
+                 */
