@@ -156,7 +156,7 @@ public class PlanetSelectionGuiEvents {
             PlanetSelectionGuiHelper.addRotatedObject(screen, poseStack, KAMINO_TEXTURE, -37, -37, 10, 10, screen.rotationMars);
             PlanetSelectionGuiHelper.addRotatedObject(screen, poseStack, ENDOR_TEXTURE, -54, -54, 10, 10, screen.rotationVenus);
             PlanetSelectionGuiHelper.addRotatedObject(screen, poseStack, HOT_TEXTURE, -70, -70, 10, 10, screen.rotationMercury);
-            PlanetSelectionGuiHelper.addRotatedObject(screen, poseStack, MUSTAFAR_TEXTURE, -70, -70, 10, 10, screen.rotationMercury);
+            PlanetSelectionGuiHelper.addRotatedObject(screen, poseStack, MUSTAFAR_TEXTURE, -100, -70, 10, 10, screen.rotationVenus);
 
         }
 

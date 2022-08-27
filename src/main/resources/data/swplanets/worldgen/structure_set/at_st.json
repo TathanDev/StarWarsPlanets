@@ -3,13 +3,13 @@
   // If two or more structures in this list can spawn in a biome at a spot, a random one based on weight is chosen to spawn
   "structures": [
     {
-      "structure": "swplanets:at_at",
+      "structure": "swplanets:at_st",
       "weight": 1
     }
   ],
   "placement": {
     // Make sure this is unique and does not match any other structure set's salt
-    "salt": 1694000080,
+    "salt": 1694420790,
 
     // The average distance apart in chunks for spawn attempts
     "spacing": 28,

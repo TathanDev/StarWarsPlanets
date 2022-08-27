@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 3,
+      "bonus_rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "swplanets:kyber_crystal"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "swplanets:stormtrooper_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "swplanets:stormtrooper_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "swplanets:stormtrooper_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "swplanets:stormtrooper_mask"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "swplanets:plastic_plates"
+        }
+      ]
+    }
+  ]
+}
