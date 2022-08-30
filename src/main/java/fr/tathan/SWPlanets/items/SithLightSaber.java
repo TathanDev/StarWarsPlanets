@@ -68,8 +68,8 @@ public class SithLightSaber extends SwordItem {
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-            pTooltipComponents.add(new TranslatableComponent("tooltip.swplanets.sithlightsaber.tooltip.shift"));
-            pTooltipComponents.add(new TranslatableComponent("tooltip.swplanets.sithlightsaber.tooltip.shift.two"));
+        pTooltipComponents.add(new TranslatableComponent("tooltip.swplanets.sithlightsaber.tooltip.shift"));
+        pTooltipComponents.add(new TranslatableComponent("tooltip.swplanets.sithlightsaber.tooltip.shift.two"));
 
     }
 

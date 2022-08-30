@@ -93,8 +93,16 @@ repositories {
         url uri("${projectDir}/libs")
 
     }
+    maven { url 'https://maven.enginehub.org/repo' }
 
     maven { url 'https://maven.blamejared.com' }
+    
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
 
 
 
@@ -108,6 +116,11 @@ dependencies {
     /** Patchouli */
     compileOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_mc_version}-${patchouli_version}:api")
     runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_mc_version}-${patchouli_version}")
+
+    //implementation ("com.sk89q.worldedit:worldedit-forge-mc1.18.2:7.3.0-SNAPSHOT")
+    implementation fg.deobf("net.darkhax.tips:Tips-Forge-1.18.2:5.0.8")
+    implementation fg.deobf("net.darkhax.bookshelf:Bookshelf-Forge-1.18.2:13.2.49")
+
 
 
 

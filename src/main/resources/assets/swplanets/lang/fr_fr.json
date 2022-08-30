@@ -60,8 +60,18 @@
   "block.swplanets.mustafar_stone": "Pierre de Mustafar",
   "block.swplanets.mustafar_sand": "Sable de Mustafar",
 
-
+  "message.swplanets.error.patchouli": "Je pense que le mod &4patchouli&r n'est pas installé. Vous devez avoir ce mod pour utiliser cet item.",
   "itemGroup.swplanets_tab": "Star Wars Planètes",
-  "message.swplanets.error.patchouli": "Je pense que le mod &4patchouli&r n'est pas installé. Vous devez avoir ce mod pour utiliser cet item."
 
+  "swplanets.tip.kyber_crystal.title": "Cristaux Kybers",
+  "swplanets.tip.kyber_crystal": "Les cristaux Kybers sont une source d'énergie inépuisable",
+
+  "swplanets.tip.sith_saber": "The most dangerous weapon in the galaxy used by the most dangerous people in the galaxy",
+  "swplanets.tip.sith_saber.title": "Sabre Lasers des Sith",
+
+  "swplanets.tip.jedi_saber": "L'arme la plus dangereuse de la galaxie utilisé pour maintenir la paix dans la galaxie",
+  "swplanets.tip.jedi_saber.title": "Sabre Lasers des Jedi",
+
+  "swplanets.tip.tatooine_houses": "  Vous pouvez trouver des communautés d'habitants de Tatooine dans le désert.",
+  "swplanets.tip.tatooine_houses.title": "Maisons de Tatooine"
 }

@@ -47,13 +47,6 @@
 
   "entity.swplanets.speeder": "Speeder",
 
-
-
-
-
-
-
-
   "tooltip.swplanets.jedilightsaber.tooltip.shift": "A weapon used by the greatest §1Jedi",
   "tooltip.swplanets.jedilightsaber.tooltip.shift.two": "May the force be with you !",
 
@@ -74,5 +67,20 @@
   "message.swplanets.error.patchouli": "I think &4patchouli&r is not installed. You need this mod to use this item",
 
 
-  "itemGroup.swplanets_tab": "Star Wars Planets"
+  "itemGroup.swplanets_tab": "Star Wars Planets",
+
+  "swplanets.tip.kyber_crystal.title": "Kyber Crystals",
+  "swplanets.tip.kyber_crystal": "Kyber Crystals are an inexhaustible source of energy",
+
+  "swplanets.tip.sith_saber": "The most dangerous weapon in the galaxy used by the most dangerous people in the galaxy",
+  "swplanets.tip.sith_saber.title": "Sith Light Saber",
+
+  "swplanets.tip.jedi_saber": "The most dangerous weapon in the galaxy used to keep the peace in the galaxy",
+  "swplanets.tip.jedi_saber.title": "Jedi Light Saber",
+
+  "swplanets.tip.tatooine_houses": "You can find communities of tatooine inhabitants in the desert",
+  "swplanets.tip.tatooine_houses.title": "Tatooine Houses"
+
+
+
 }
