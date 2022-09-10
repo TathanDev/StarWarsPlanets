@@ -109,11 +109,11 @@ public class PlanetSelectionGuiEvents {
     }
 
     @SubscribeEvent
-    public static void backgroundRenderPost(PlanetSelectionScreenBackgroundRenderEvent.Post event) {
+    public static void backgroundFucRenderPost(PlanetSelectionScreenBackgroundRenderEvent.Post event) {
         PlanetSelectionScreen screen = (PlanetSelectionScreen) event.getScreen();
         PoseStack poseStack = event.getPoseStack();
 
-        System.out.println("FUCK IT IS NULL " + category.get() + " " + screen.category.get());
+        //System.out.println("FUCK IT IS NULL " + category.get() + " " + screen.category.get());
 
         /** ENABLE BLEND */
         PlanetSelectionScreenHelper.enableRenderSystem();

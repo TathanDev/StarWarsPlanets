@@ -4,6 +4,8 @@
   "gui.swplanets.planet_selection.kamino_button": "Kamino",
   "gui.swplanets.planet_selection.endor_button": "Endor",
   "gui.swplanets.planet_selection.hot_button": "Hot",
+  "gui.swplanets.planet_selection.mustafar_button": "Mustafar",
+
 
   "advancements.tatooine.title": "Tatooine",
   "advancements.tatooine.descr": "Welcome to Tatooine !",
@@ -13,12 +15,18 @@
   "advancements.endor.descr": "Welcome to Endor !",
   "advancements.hot.title": "Hot !",
   "advancements.hot.descr": "You're Hot !",
+  "advancements.mustafar.descr": "Welcome to Mustafar !",
+  "advancements.mustafar.title": "Mustafar !",
+
 
   "item.swplanets.star_wars_opening_music_disc": "Music Disc",
   "item.swplanets.star_wars_opening_music_disc.desc": "John Williams - Star Wars Opening",
   "item.swplanets.kyber_crystal": "Kyber Crystal",
   "item.swplanets.kyber_crystal_ore": "Kyber Crystal Ore",
   "item.swplanets.kyber_crystal_ore_sandstone": "Sandstone Kyber Crystal Ore ",
+  "item.swplanets.mustafar_stone": "Mustafar Stone",
+  "item.swplanets.mustafar_sand": "Mustafar Sand",
+
 
 
   "item.swplanets.light_saber_base": "Light Saber Base",
@@ -26,9 +34,18 @@
   "item.swplanets.light_saber_blue": "Blue Light Saber ",
   "item.swplanets.light_saber_green": "Green Light Saber ",
   "item.swplanets.light_saber_violet": "Violet Light Saber ",
+  "item.swplanets.star_manual": "Star Manual ",
 
 
 
+  "item.swplanets.stormtrooper_mask": "Stormtrooper Helmet",
+  "item.swplanets.stormtrooper_chestplate": "Stormtrooper ChestPlate",
+  "item.swplanets.stormtrooper_leggings": "Stormtrooper Legging",
+  "item.swplanets.stormtrooper_boots": "Stormtrooper Boots",
+  "item.swplanets.plastic_plate": "Plastic Plate ",
+  "item.swplanets.speeder": "Speeder",
+
+  "entity.swplanets.speeder": "Speeder",
 
   "tooltip.swplanets.jedilightsaber.tooltip.shift": "A weapon used by the greatest §1Jedi",
   "tooltip.swplanets.jedilightsaber.tooltip.shift.two": "May the force be with you !",
@@ -41,9 +58,29 @@
   "block.swplanets.kyber_crystal_ore": "Kyber Crystal Ore",
   "block.swplanets.kyber_crystal_cluster": "Kyber Crystal Cluster",
   "block.swplanets.kyber_crystal_ore_sandstone": "Sandstone Kyber Crystal Ore ",
+  "block.swplanets.mustafar_stone": "Mustafar Stone",
+  "block.swplanets.mustafar_sand": "Mustafar Sand",
 
 
 
 
-  "itemGroup.swplanets_tab": "Star Wars Planets"
+  "message.swplanets.error.patchouli": "I think &4patchouli&r is not installed. You need this mod to use this item",
+
+
+  "itemGroup.swplanets_tab": "Star Wars Planets",
+
+  "swplanets.tip.kyber_crystal.title": "Kyber Crystals",
+  "swplanets.tip.kyber_crystal": "Kyber Crystals are an inexhaustible source of energy",
+
+  "swplanets.tip.sith_saber": "The most dangerous weapon in the galaxy used by the most dangerous people in the galaxy",
+  "swplanets.tip.sith_saber.title": "Sith Light Saber",
+
+  "swplanets.tip.jedi_saber": "The most dangerous weapon in the galaxy used to keep the peace in the galaxy",
+  "swplanets.tip.jedi_saber.title": "Jedi Light Saber",
+
+  "swplanets.tip.tatooine_houses": "You can find communities of tatooine inhabitants in the desert",
+  "swplanets.tip.tatooine_houses.title": "Tatooine Houses"
+
+
+
 }

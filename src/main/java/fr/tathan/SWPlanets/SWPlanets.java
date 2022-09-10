@@ -1,10 +1,14 @@
 package fr.tathan.SWPlanets;
 
+import fr.tathan.SWPlanets.config.ClientConfigs;
+import fr.tathan.SWPlanets.config.CommonConfig;
 import fr.tathan.SWPlanets.network.SWPlanetsNetworkRegistry;
 import fr.tathan.SWPlanets.registries.*;
 import fr.tathan.SWPlanets.world.oregen.OreGeneration;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,15 +29,18 @@ public class SWPlanets {
 
         bus.register(this);
 
-        SWPlanetsNetworkRegistry.register();
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CommonConfig.SPEC, "starwarsplanets-common.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ClientConfigs.SPEC, "starwarsplanets-client.toml");
+
 
         ItemsRegistry.ITEMS.register(bus);
         SoundsRegistry.SOUNDS.register(bus);
         BlocksRegistry.BLOCKS.register(bus);
-        //PlanetBiomeModifier.BIOME_MODIFIERS.register(bus);
-        OreGeneration.CONFIGURED_FEATURES.register(bus);
-        OreGeneration.PLACED_FEATURES.register(bus);
+        FeatureRegistry.FEATURES.register(bus);
+        FeatureRegistry.CONFIGURED_FEATURES.register(bus);
+        FeatureRegistry.PLACED_FEATURES.register(bus);
 
+        SWPlanetsNetworkRegistry.register();
 
 
 

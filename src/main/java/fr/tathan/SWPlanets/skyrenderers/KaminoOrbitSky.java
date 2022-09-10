@@ -39,7 +39,7 @@ public class KaminoOrbitSky {
 
     @Nullable
     public static VertexBuffer starBuffer;
-    private static final ResourceLocation TATOOINE_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/sky/kamino.json.png");
+    private static final ResourceLocation TATOOINE_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/sky/kamino.old.json.png");
     private static final ResourceLocation SUN_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/sky/no_a_sun.png");
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)

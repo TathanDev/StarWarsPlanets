@@ -5,7 +5,7 @@ plugins {
 }
 
 version = "${mc_version}-${mod_version}"
-group = "frfr.tathan.SWPlanets"
+group = "fr.tathan.SWPlanets"
 archivesBaseName = "StarWarsPlanets"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)

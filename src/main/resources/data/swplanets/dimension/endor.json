@@ -1,6 +1,6 @@
 {
-  "type": "minecraft:overworld",
-  "forge:use_server_seed": true,
+  "type": "swplanets:endor",
+  "forge:use_server_seed": false,
   "generator": {
     "biome_source": {
       "biome": "swplanets:endor_taiga",

@@ -3,6 +3,8 @@ package fr.tathan.SWPlanets.registries;
 import fr.tathan.SWPlanets.SWPlanets;
 import fr.tathan.SWPlanets.items.JediLightSaber;
 import fr.tathan.SWPlanets.items.SithLightSaber;
+import fr.tathan.SWPlanets.items.StarManual;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -36,6 +38,33 @@ public class ItemsRegistry {
     /** Block */
     public static final RegistryObject<BlockItem> KYBER_CRYSTAl_ORE_ITEM = ITEMS.register("kyber_crystal_ore", () -> new BlockItem(BlocksRegistry.CRYSTAL_KYBER_ORE.get(), new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB)));
     public static final RegistryObject<BlockItem> KYBER_CRYSTAl_ORE_SANDSTONE_ITEM = ITEMS.register("kyber_crystal_ore_sandstone", () -> new BlockItem(BlocksRegistry.CRYSTAL_KYBER_ORE_SANDSTONE.get(), new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB)));
+    public static final RegistryObject<BlockItem> MUSTAFAR_STONE_ITEM = ITEMS.register("mustafar_stone", () -> new BlockItem(BlocksRegistry.MUSTAFAR_STONE.get(), new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB)));
+    public static final RegistryObject<BlockItem> MUSTAFAR_SAND_ITEM = ITEMS.register("mustafar_sand", () -> new BlockItem(BlocksRegistry.MUSTAFAR_SAND.get(), new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB)));
+
+    /** Armors */
+    public static final RegistryObject<Item> STORMTROOPER_MASK = ITEMS.register("stormtrooper_mask",
+            () -> new ArmorItem(ArmorMaterials.STORMTROOPER, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB)));
+
+    public static final RegistryObject<Item> STORMTROOPER_CHESTPLATE = ITEMS.register("stormtrooper_chestplate",
+            () -> new ArmorItem(ArmorMaterials.STORMTROOPER, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB)));
+    public static final RegistryObject<Item> STORMTROOPER_LEGGINGS = ITEMS.register("stormtrooper_leggings",
+            () -> new ArmorItem(ArmorMaterials.STORMTROOPER, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB)));
+    public static final RegistryObject<Item> STORMTROOPER_BOOTS = ITEMS.register("stormtrooper_boots",
+            () -> new ArmorItem(ArmorMaterials.STORMTROOPER, EquipmentSlot.FEET,
+                    new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB)));
+
+    /** Plates */
+    public static final RegistryObject<Item> PLASTIC_PLATE = ITEMS.register("plastic_plate", () -> new Item(new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB).stacksTo(64)));
+
+
+    /** Speeder */
+    // public static final RegistryObject<SpeederItem> SPEEDER_ITEM = ITEMS.register("speeder", () -> new SpeederItem(new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB).stacksTo(1)));
+
+    /** Manuals */
+    public static final RegistryObject<Item> STAR_MANUAL = ITEMS.register("star_manual", () -> new StarManual(new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB).stacksTo(1)));
 
 
 }
