@@ -2,7 +2,7 @@
   "ultrawarm": true,
   "natural": false,
   "piglin_safe": false,
-  "respawn_anchor_works": true,
+  "respawn_anchor_works": false,
   "bed_works": true,
   "has_raids": false,
   "has_skylight": true,
@@ -13,5 +13,13 @@
   "infiniburn": "#minecraft:infiniburn_overworld",
   "min_y": -64,
   "height": 384,
-  "effects": "swplanets:mustafar"
+  "effects": "swplanets:mustafar",
+  "monster_spawn_light_level": {
+    "type": "minecraft:uniform",
+    "value": {
+      "min_inclusive": 0,
+      "max_inclusive": 7
+    }
+  },
+  "monster_spawn_block_light_limit": 0
 }

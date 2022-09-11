@@ -13,7 +13,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class StructuresRegistry {
 
-    public static final DeferredRegister<StructureType<?>> DEFERRED_REGISTRY_STRUCTURE
+    public static final DeferredRegister<StructureType<?>> STRUCTURES
             = DeferredRegister.create(Registry.STRUCTURE_TYPE_REGISTRY, SWPlanets.MODID);
 
 
@@ -22,7 +22,7 @@ public class StructuresRegistry {
      * this base structure will have the resourcelocation of structure_tutorial:sky_structures. */
 
     public static final RegistryObject<StructureType<?>> TATOOINE_HOUSES =
-            DEFERRED_REGISTRY_STRUCTURE.register("tatooine_houses",  () -> typeConvert(TatooineHouses.CODEC));
+            STRUCTURES.register("tatooine_houses",  () -> typeConvert(TatooineHouses.CODEC));
 
     private static <S extends Structure> StructureType<S> typeConvert(Codec<S> codec) {
         return () -> codec;

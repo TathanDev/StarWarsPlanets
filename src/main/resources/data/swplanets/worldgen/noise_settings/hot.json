@@ -330,6 +330,56 @@
       "y_scale": 1
     }
   },
+  "spawn_target": [
+    {
+      "temperature": [
+        -1,
+        1
+      ],
+      "humidity": [
+        -1,
+        1
+      ],
+      "continentalness": [
+        -0.11,
+        1
+      ],
+      "erosion": [
+        -1,
+        1
+      ],
+      "weirdness": [
+        -1,
+        -0.16
+      ],
+      "depth": 0,
+      "offset": 0
+    },
+    {
+      "temperature": [
+        -1,
+        1
+      ],
+      "humidity": [
+        -1,
+        1
+      ],
+      "continentalness": [
+        -0.11,
+        1
+      ],
+      "erosion": [
+        -1,
+        1
+      ],
+      "weirdness": [
+        0.16,
+        1
+      ],
+      "depth": 0,
+      "offset": 0
+    }
+  ],
   "surface_rule": {
     "type": "minecraft:sequence",
     "sequence": [
@@ -352,18 +402,16 @@
           }
         }
       },
-
       {
         "type": "minecraft:condition",
         "if_true": {
           "type": "minecraft:biome",
           "biome_is": [
-            "beyond_earth:glacio",
-            "beyond_earth:glacio_ice_spikes",
             "minecraft:deep_frozen_ocean",
             "minecraft:frozen_ocean",
             "minecraft:ice_spikes",
-            "minecraft:frozen_peaks"
+            "minecraft:frozen_peaks",
+            "swplanets:hot_desert"
           ]
         },
         "then_run": {
@@ -452,55 +500,6 @@
         }
       }
     ]
-  },
-  "spawn_target": [
-    {
-      "temperature": [
-        -1,
-        1
-      ],
-      "humidity": [
-        -1,
-        1
-      ],
-      "continentalness": [
-        -0.11,
-        1
-      ],
-      "erosion": [
-        -1,
-        1
-      ],
-      "weirdness": [
-        -1,
-        -0.16
-      ],
-      "depth": 0,
-      "offset": 0
-    },
-    {
-      "temperature": [
-        -1,
-        1
-      ],
-      "humidity": [
-        -1,
-        1
-      ],
-      "continentalness": [
-        -0.11,
-        1
-      ],
-      "erosion": [
-        -1,
-        1
-      ],
-      "weirdness": [
-        0.16,
-        1
-      ],
-      "depth": 0,
-      "offset": 0
-    }
-  ]
+  }
 }
+  
