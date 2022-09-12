@@ -1,6 +1,7 @@
 package fr.tathan.SWPlanets.events;
 
 import com.google.common.collect.ImmutableSet;
+import com.mojang.datafixers.util.Pair;
 import fr.tathan.SWPlanets.SWPlanets;
 import fr.tathan.SWPlanets.registries.PlanetsRegistry;
 import net.minecraft.resources.ResourceKey;
@@ -11,6 +12,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.mrscauthd.beyond_earth.common.registries.LevelRegistry;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 
 @Mod.EventBusSubscriber(modid = SWPlanets.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -55,14 +58,15 @@ public class PlanetProperties {
 
     );
 
-    private static final Set<ResourceKey<Level>> LEVELS_WITH_ORBIT = Set.of(
-            PlanetsRegistry.KAMINO,
-            PlanetsRegistry.TATOOINE,
-            PlanetsRegistry.ENDOR,
-            PlanetsRegistry.HOT,
-            PlanetsRegistry.MUSTAFAR
+    public static List<Pair<ResourceKey<Level>, ResourceKey<Level>>> LEVELS_WITH_ORBIT = Arrays.asList(
+            new Pair<>(PlanetsRegistry.TATOOINE, PlanetsRegistry.TATOOINE_ORBIT),
+            new Pair<>(PlanetsRegistry.ENDOR, PlanetsRegistry.ENDOR_ORBIT),
+            new Pair<>(PlanetsRegistry.KAMINO, PlanetsRegistry.KAMINO_ORBIT),
+            new Pair<>(PlanetsRegistry.HOT, PlanetsRegistry.HOT_ORBIT),
+            new Pair<>(PlanetsRegistry.MUSTAFAR, PlanetsRegistry.MUSTAFAR_ORBIT)
 
-    );
+
+            );
 
 
 
@@ -80,7 +84,7 @@ public class PlanetProperties {
             LevelRegistry.SPACE_LEVELS.addAll(SPACE_LEVELS);
 
             LevelRegistry.LEVELS_WITH_ORBIT = new ArrayList<>(LevelRegistry.LEVELS_WITH_ORBIT);
-            //LevelRegistry.LEVELS_WITH_ORBIT.addAll(LEVELS_WITH_ORBIT);
+            LevelRegistry.LEVELS_WITH_ORBIT.addAll(LEVELS_WITH_ORBIT);
 
             LevelRegistry.ORBIT_LEVELS = new ArrayList<>(LevelRegistry.ORBIT_LEVELS);
             LevelRegistry.ORBIT_LEVELS.addAll(ORBIT_LEVELS);
