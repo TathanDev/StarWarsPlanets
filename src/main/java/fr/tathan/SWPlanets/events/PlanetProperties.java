@@ -21,7 +21,10 @@ public class PlanetProperties {
             PlanetsRegistry.TATOOINE_ORBIT,
             PlanetsRegistry.KAMINO_ORBIT,
             PlanetsRegistry.ENDOR_ORBIT,
-            PlanetsRegistry.HOT_ORBIT
+            PlanetsRegistry.HOT_ORBIT,
+            PlanetsRegistry.MUSTAFAR,
+            PlanetsRegistry.MUSTAFAR_ORBIT
+
     );
 
 
@@ -29,32 +32,36 @@ public class PlanetProperties {
             PlanetsRegistry.KAMINO_ORBIT,
             PlanetsRegistry.TATOOINE_ORBIT,
             PlanetsRegistry.ENDOR_ORBIT,
-            PlanetsRegistry.HOT_ORBIT
+            PlanetsRegistry.HOT_ORBIT,
+            PlanetsRegistry.MUSTAFAR_ORBIT
+
     );
 
     public static final Set<ResourceKey<Level>> SPACE_LEVELS = Set.of(
-            PlanetsRegistry.TATOOINE,
-            PlanetsRegistry.KAMINO,
             PlanetsRegistry.KAMINO_ORBIT,
             PlanetsRegistry.TATOOINE_ORBIT,
-            PlanetsRegistry.ENDOR,
             PlanetsRegistry.ENDOR_ORBIT,
             PlanetsRegistry.HOT_ORBIT,
-            PlanetsRegistry.HOT
+            PlanetsRegistry.MUSTAFAR_ORBIT
+
     );
 
     private static final Set<ResourceKey<Level>> ORBIT_LEVELS = Set.of(
             PlanetsRegistry.KAMINO_ORBIT,
             PlanetsRegistry.TATOOINE_ORBIT,
             PlanetsRegistry.ENDOR_ORBIT,
-            PlanetsRegistry.HOT_ORBIT
+            PlanetsRegistry.HOT_ORBIT,
+            PlanetsRegistry.MUSTAFAR_ORBIT
+
     );
 
     private static final Set<ResourceKey<Level>> LEVELS_WITH_ORBIT = Set.of(
             PlanetsRegistry.KAMINO,
             PlanetsRegistry.TATOOINE,
             PlanetsRegistry.ENDOR,
-            PlanetsRegistry.HOT
+            PlanetsRegistry.HOT,
+            PlanetsRegistry.MUSTAFAR
+
     );
 
 
@@ -73,7 +80,7 @@ public class PlanetProperties {
             LevelRegistry.SPACE_LEVELS.addAll(SPACE_LEVELS);
 
             LevelRegistry.LEVELS_WITH_ORBIT = new ArrayList<>(LevelRegistry.LEVELS_WITH_ORBIT);
-          //LevelRegistry.LEVELS_WITH_ORBIT.addAll(LEVELS_WITH_ORBIT);
+            //LevelRegistry.LEVELS_WITH_ORBIT.addAll(LEVELS_WITH_ORBIT);
 
             LevelRegistry.ORBIT_LEVELS = new ArrayList<>(LevelRegistry.ORBIT_LEVELS);
             LevelRegistry.ORBIT_LEVELS.addAll(ORBIT_LEVELS);

@@ -1,8 +1,8 @@
 {
-  "type": "swplanets:kamino",
+  "type": "swplanets:hot",
   "generator": {
     "type": "minecraft:noise",
-    "settings": "swplanets:kamino",
+    "settings": "swplanets:hot",
     "biome_source": {
       "type": "minecraft:multi_noise",
       "biomes": [
@@ -18,18 +18,7 @@
             "offset": 0
           }
         },
-        {
-          "biome": "minecraft:deep_frozen_ocean",
-          "parameters": {
-            "temperature": -0.5,
-            "humidity": 0,
-            "continentalness": 0,
-            "erosion": 0,
-            "weirdness": -1.5,
-            "depth": 0,
-            "offset": 0
-          }
-        },
+
         {
           "biome": "minecraft:frozen_ocean",
           "parameters": {
