@@ -16,7 +16,6 @@ import net.minecraftforge.fml.ModList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 
-import vazkii.patchouli.api.PatchouliAPI;
 
 
 public class StarManual extends Item {
@@ -32,7 +31,7 @@ public class StarManual extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player playerIn, InteractionHand handIn) {
         if (ModList.get().isLoaded("patchouli")) {
             if (level.isClientSide) {
-                PatchouliAPI.get().openBookGUI(new ResourceLocation("swplanets:star_manual"));
+                vazkii.patchouli.api.PatchouliAPI.get().openBookGUI(new ResourceLocation("swplanets:star_manual"));
             }
         } else {
             if (level.isClientSide) {

@@ -1,12 +1,11 @@
 package fr.tathan.SWPlanets.skyrenderers;
 
-
-
 import com.mojang.blaze3d.vertex.*;
 import com.mojang.math.Matrix4f;
 import com.mojang.math.Vector3f;
 import fr.tathan.SWPlanets.SWPlanets;
 import net.minecraft.client.Camera;
+import net.minecraft.client.CloudStatus;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
 import net.minecraft.client.renderer.GameRenderer;
@@ -18,6 +17,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.material.FogType;
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.common.Mod;
@@ -35,27 +35,22 @@ import com.mojang.blaze3d.platform.GlStateManager;
 import net.mrscauthd.beyond_earth.BeyondEarthMod;
 import org.jetbrains.annotations.Nullable;
 
-import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.platform.GlStateManager;
-import net.mrscauthd.beyond_earth.BeyondEarthMod;
-import net.mrscauthd.beyond_earth.skyrenderers.helper.StarHelper;
-
 @Mod.EventBusSubscriber(modid = SWPlanets.MODID, bus = Bus.MOD, value = Dist.CLIENT)
-public class TatooineOrbitSky {
+public class TatooineSky {
 
-    private static final ResourceLocation DIM_RENDER_INFO = new ResourceLocation(SWPlanets.MODID, "tatooine_orbit");
+    private static final ResourceLocation DIM_RENDER_INFO = new ResourceLocation(SWPlanets.MODID, "tatooine");
 
-    @Nullable
-    public static VertexBuffer starBuffer;
-    private static final ResourceLocation TATOOINE_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/sky/tatooine.png");
-    private static final ResourceLocation SUN_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/sky/no_a_sun.png");
+    private static final ResourceLocation SUN_2_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/sky/red_sun.png");
+    private static final ResourceLocation SUN_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/sky/sun.png");
+
+    private static final float[] sunriseCol = new float[4];
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void clientSetup(FMLClientSetupEvent event) {
-        DimensionSpecialEffects.EFFECTS.put(DIM_RENDER_INFO, new DimensionSpecialEffects(192, false, DimensionSpecialEffects.SkyType.NORMAL, false, false) {
+        DimensionSpecialEffects.EFFECTS.put(DIM_RENDER_INFO, new DimensionSpecialEffects(192, true, DimensionSpecialEffects.SkyType.NORMAL, false, false) {
             @Override
             public Vec3 getBrightnessDependentFogColor(Vec3 p_108878_, float p_108879_) {
-                return p_108878_;
+                return p_108878_.multiply(p_108879_ * 0.867058823529 + 0.03, p_108879_ * 0.770980392157 + 0.03, p_108879_ * 0.494901960784 + 0.06);
             }
 
             @Override
@@ -73,9 +68,24 @@ public class TatooineOrbitSky {
                 };
             }
 
+            @Nullable
             @Override
             public float[] getSunriseColor(float p_108872_, float p_108873_) {
-                return null;
+                float f = 0.4F;
+                float f1 = Mth.cos(p_108872_ * ((float)Math.PI * 2F)) - 0.0F;
+                float f2 = -0.0F;
+                if (f1 >= -0.4F && f1 <= 0.4F) {
+                    float f3 = (f1 - -0.0F) / 0.4F * 0.5F + 0.5F;
+                    float f4 = 1.0F - (1.0F - Mth.sin(f3 * (float)Math.PI)) * 0.99F;
+                    f4 *= f4;
+                    sunriseCol[0] = f3 * 0.3F + 0.7F;
+                    sunriseCol[1] = f3 * f3 * 0.6F + 0.4F;
+                    sunriseCol[2] = f3 * f3 * 0.0F + 0.4F;
+                    sunriseCol[3] = f4;
+                    return sunriseCol;
+                } else {
+                    return null;
+                }
             }
 
             @Override
@@ -109,22 +119,40 @@ public class TatooineOrbitSky {
                             ShaderInstance shaderinstance = RenderSystem.getShader();
                             minecraft.levelRenderer.skyBuffer.drawWithShader(p_181410_.last().pose(), matrix4f, shaderinstance);
 
-                            //ENABLE BLEND SYSTEM
+                            /** ENABLE BLEND SYSTEM */
                             RenderSystem.enableBlend();
                             RenderSystem.defaultBlendFunc();
 
-                            // STAR ROT
-                            p_181410_.pushPose();
-                            p_181410_.mulPose(Vector3f.YP.rotationDegrees(0.0F));
-                            p_181410_.mulPose(Vector3f.ZP.rotationDegrees(level.getTimeOfDay(p_181412_) * 360.0F));
-                            p_181410_.mulPose(Vector3f.XP.rotationDegrees(-30.0F));
+                            /** COLOR SYSTEM */
+                            float[] afloat = level.effects().getSunriseColor(level.getTimeOfDay(p_181412_), p_181412_);
+                            if (afloat != null) {
+                                RenderSystem.setShader(GameRenderer::getPositionColorShader);
+                                RenderSystem.disableTexture();
+                                RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+                                p_181410_.pushPose();
+                                p_181410_.mulPose(Vector3f.XP.rotationDegrees(90.0F));
+                                float f3 = Mth.sin(level.getSunAngle(p_181412_)) < 0.0F ? 180.0F : 0.0F;
+                                p_181410_.mulPose(Vector3f.ZP.rotationDegrees(f3));
+                                p_181410_.mulPose(Vector3f.ZP.rotationDegrees(90.0F));
+                                float f4 = afloat[0];
+                                float f5 = afloat[1];
+                                float f6 = afloat[2];
+                                matrix4f = p_181410_.last().pose();
+                                bufferbuilder.begin(VertexFormat.Mode.TRIANGLE_FAN, DefaultVertexFormat.POSITION_COLOR);
+                                bufferbuilder.vertex(matrix4f, 0.0F, 100.0F, 0.0F).color(f4, f5, f6, afloat[3]).endVertex();
+                                int i = 16;
 
-                            // STAR
-                            starBuffer = StarHelper.createStars(starBuffer, 0.075F, 6000, 13000, false);
-                            RenderSystem.setShaderColor(0.8F, 0.8F, 0.8F, 0.8F);
-                            FogRenderer.setupNoFog();
-                            starBuffer.drawWithShader(p_181410_.last().pose(), starMatrix4f, GameRenderer.getPositionShader());
-                            p_181410_.popPose();
+                                for (int j = 0; j <= 16; ++j) {
+                                    float f7 = (float) j * ((float) Math.PI * 2F) / 16.0F;
+                                    float f8 = Mth.sin(f7);
+                                    float f9 = Mth.cos(f7);
+                                    bufferbuilder.vertex(matrix4f, f8 * 120.0F, f9 * 120.0F, -f9 * 40.0F * afloat[3]).color(afloat[0], afloat[1], afloat[2], 0.0F).endVertex();
+                                }
+
+                                bufferbuilder.end();
+                                BufferUploader.end(bufferbuilder);
+                                p_181410_.popPose();
+                            }
 
                             RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 
@@ -132,17 +160,17 @@ public class TatooineOrbitSky {
                             RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
                             RenderSystem.enableTexture();
 
-                            RenderSystem.setShader(GameRenderer::getPositionTexShader);
 
-                            // DEFAULT ROT
-                            p_181410_.pushPose();
+
+                            /** DEFAULT ROT */
                             p_181410_.mulPose(Vector3f.YP.rotationDegrees(-90.0F));
                             p_181410_.mulPose(Vector3f.XP.rotationDegrees(level.getTimeOfDay(p_181412_) * 360.0F));
                             Matrix4f matrix4f1 = p_181410_.last().pose();
-                            p_181410_.popPose();
 
-                            // SUN
-                            float f12 = 30.0F;
+                            RenderSystem.setShader(GameRenderer::getPositionTexShader);
+
+                            /** SUN */
+                            float f12 = 20.0F;
 
                             RenderSystem.setShaderTexture(0, SUN_TEXTURE);
                             bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
@@ -154,39 +182,43 @@ public class TatooineOrbitSky {
                             BufferUploader.end(bufferbuilder);
 
 
-                            // VENUS ROT
-                            p_181410_.mulPose(Vector3f.YP.rotationDegrees(0.0F));
-                            p_181410_.mulPose(Vector3f.XP.rotationDegrees(0.0F));
-                            matrix4f1 = p_181410_.last().pose();
 
-                            // VENUS
-                            RenderSystem.disableBlend();
+                            /** SUN 2 */
+                           //p_181410_.mulPose(Vector3f.ZP.rotationDegrees(10.0F));
 
-                            float var20 = -3000.0F + (float) Minecraft.getInstance().player.getY() * 6F;
 
-                            float scale = 100 * (0.2F - var20 / 10000.0F);
-                            scale = Math.max(scale, 4.0F);
-
-                            RenderSystem.setShaderTexture(0, TATOOINE_TEXTURE);
+                            RenderSystem.setShaderTexture(0, SUN_2_TEXTURE);
                             bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
-                            bufferbuilder.vertex(matrix4f1, -scale, -100.0F, scale).uv(0.0F, 0.0F).endVertex();
-                            bufferbuilder.vertex(matrix4f1, scale, -100.0F, scale).uv(1.0F, 0.0F).endVertex();
-                            bufferbuilder.vertex(matrix4f1, scale, -100.0F, -scale).uv(1.0F, 1.0F).endVertex();
-                            bufferbuilder.vertex(matrix4f1, -scale, -100.0F, -scale).uv(0.0F, 1.0F).endVertex();
+
+                            bufferbuilder.vertex(matrix4f1, -f12 - 20, 130.0F, -f12).uv(0.0F, 0.0F).endVertex();
+                            bufferbuilder.vertex(matrix4f1, f12 - 20, 130.0F, -f12).uv(1.0F, 0.0F).endVertex();
+                            bufferbuilder.vertex(matrix4f1, f12 - 20, 130.0F, f12).uv(1.0F, 1.0F).endVertex();
+                            bufferbuilder.vertex(matrix4f1, -f12 - 20, 130.0F, f12).uv(0.0F, 1.0F).endVertex();
                             bufferbuilder.end();
                             BufferUploader.end(bufferbuilder);
-                            
 
-                            RenderSystem.enableBlend();
 
                             RenderSystem.disableTexture();
+
+
+
+
                             RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
                             RenderSystem.disableBlend();
                             p_181410_.popPose();
 
-                            // CUT WAY SYSTEM
+                            /** CUT AWAY SYSTEM */
                             RenderSystem.disableTexture();
                             RenderSystem.setShaderColor(0.0F, 0.0F, 0.0F, 1.0F);
+
+                            double d0 = minecraft.player.getEyePosition(p_181412_).y - level.getLevelData().getHorizonHeight(level);
+
+                            if (d0 < 0.0D) {
+                                p_181410_.pushPose();
+                                p_181410_.translate(0.0D, 12.0D, 0.0D);
+                                minecraft.levelRenderer.darkBuffer.drawWithShader(p_181410_.last().pose(), matrix4f, shaderinstance);
+                                p_181410_.popPose();
+                            }
 
                             if (level.effects().hasGround()) {
                                 RenderSystem.setShaderColor(f * 0.2F + 0.04F, f1 * 0.2F + 0.04F, f2 * 0.6F + 0.1F, 1.0F);
@@ -196,16 +228,11 @@ public class TatooineOrbitSky {
 
                             RenderSystem.enableTexture();
                             RenderSystem.depthMask(true);
-
                         }
                     }
                 };
             }
-
-
-
         });
     }
-    
-}
 
+}
