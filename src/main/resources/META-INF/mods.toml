@@ -29,3 +29,10 @@ It add planets from Star Wars and Light Saber :)
     versionRange="[40.0.52,]"
     ordering="NONE"
     side="BOTH"
+
+[[dependencies.swplanets]]
+    modId="beyond_earth"
+    mandatory=false
+    versionRange="[6.2,)"
+    ordering="AFTER"
+    side="BOTH"

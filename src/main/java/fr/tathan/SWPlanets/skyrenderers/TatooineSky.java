@@ -40,8 +40,8 @@ public class TatooineSky {
 
     private static final ResourceLocation DIM_RENDER_INFO = new ResourceLocation(SWPlanets.MODID, "tatooine");
 
-    private static final ResourceLocation SUN_2_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/sky/red_sun.png");
-    private static final ResourceLocation SUN_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/sky/sun.png");
+    private static final ResourceLocation SUN_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/sky/red_sun.png");
+    private static final ResourceLocation SUN_2_TEXTURE = new ResourceLocation(BeyondEarthMod.MODID, "textures/sky/sun.png");
 
     private static final float[] sunriseCol = new float[4];
 
@@ -184,16 +184,15 @@ public class TatooineSky {
 
 
                             /** SUN 2 */
-                           //p_181410_.mulPose(Vector3f.ZP.rotationDegrees(10.0F));
 
 
                             RenderSystem.setShaderTexture(0, SUN_2_TEXTURE);
                             bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
 
-                            bufferbuilder.vertex(matrix4f1, -f12 - 20, 130.0F, -f12).uv(0.0F, 0.0F).endVertex();
-                            bufferbuilder.vertex(matrix4f1, f12 - 20, 130.0F, -f12).uv(1.0F, 0.0F).endVertex();
-                            bufferbuilder.vertex(matrix4f1, f12 - 20, 130.0F, f12).uv(1.0F, 1.0F).endVertex();
-                            bufferbuilder.vertex(matrix4f1, -f12 - 20, 130.0F, f12).uv(0.0F, 1.0F).endVertex();
+                            bufferbuilder.vertex(matrix4f1, -f12 - 30, 200.0F, -f12).uv(0.0F, 0.0F).endVertex();
+                            bufferbuilder.vertex(matrix4f1, f12 - 30, 200.0F, -f12).uv(1.0F, 0.0F).endVertex();
+                            bufferbuilder.vertex(matrix4f1, f12 - 30, 200.0F, f12).uv(1.0F, 1.0F).endVertex();
+                            bufferbuilder.vertex(matrix4f1, -f12 - 30, 200.0F, f12).uv(0.0F, 1.0F).endVertex();
                             bufferbuilder.end();
                             BufferUploader.end(bufferbuilder);
 

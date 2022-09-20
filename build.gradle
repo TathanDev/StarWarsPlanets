@@ -1,10 +1,12 @@
 buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net' }
+        maven { url = 'https://maven.parchmentmc.org' }
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+       // classpath 'org.parchmentmc:librarian:1.+'
 
     }
 }
@@ -16,9 +18,11 @@ plugins {
 }
 
 apply plugin: 'net.minecraftforge.gradle'
+//apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
 
-version = '${mod_version}'
+
+version = '1.12'
 group = 'fr.tathan.SWPlanets'
 archivesBaseName = 'StarWarsPlanets'
 
@@ -28,6 +32,8 @@ println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty '
 minecraft {
 
     mappings channel: 'official', version: '1.18.2'
+    //mappings channel: 'parchement', version: '1.18.2-2022.08.07-1.18.2'
+
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
 
@@ -111,7 +117,8 @@ repositories {
 dependencies {
     minecraft 'net.minecraftforge:forge:1.18.2-40.1.73'
     //Beyond Earth API:
-    implementation fg.deobf("net.mrscauthd:beyond_earth:1.18.2-6.2")
+    //implementation fg.deobf("net.mrscauthd:beyond_earth:1.18.2-6.2")
+    implementation fg.deobf("curse.maven:beyond_earth-377448:3807783")
 
     /** Patchouli */
     compileOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_mc_version}-${patchouli_version}:api")
