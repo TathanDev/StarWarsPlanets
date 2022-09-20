@@ -34,6 +34,9 @@
   "item.swplanets.light_saber_blue": "Blue Light Saber ",
   "item.swplanets.light_saber_green": "Green Light Saber ",
   "item.swplanets.light_saber_violet": "Violet Light Saber ",
+  "item.swplanets.light_saber_dark_maul": "Darth Maul's lightsaber ",
+  "item.swplanets.light_kylo_ren": "Kylo Ren's lightsaber ",
+
   "item.swplanets.star_manual": "Star Manual ",
 
 
@@ -79,7 +82,16 @@
   "swplanets.tip.jedi_saber.title": "Jedi Light Saber",
 
   "swplanets.tip.tatooine_houses": "You can find communities of tatooine inhabitants in the desert",
-  "swplanets.tip.tatooine_houses.title": "Tatooine Houses"
+  "swplanets.tip.tatooine_houses.title": "Tatooine Houses",
+
+  "biome.swplanets.endor_taige": "Taiga of Endor",
+  "biome.swplanets.hot_desert": "Desert of Hot",
+  "biome.swplanets.kamino_ocean": "Ocean of Kamino",
+  "biome.swplanets.mustafar_hill": "Mustafar Hills",
+  "biome.swplanets.tatooine_desert": "Tatooine Desert"
+
+
+
 
 
 

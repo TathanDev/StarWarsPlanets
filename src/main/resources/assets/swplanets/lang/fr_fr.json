@@ -34,6 +34,9 @@
   "item.swplanets.light_saber_blue": "Sabre Laser Bleu",
   "item.swplanets.light_saber_green": "Sabre Laser Vert",
   "item.swplanets.light_saber_violet": "Sabre Laser Violet ",
+  "item.swplanets.light_saber_dark_maul": "Sabre Laser de Dark Maul ",
+  "item.swplanets.light_kylo_ren": "Sabre Laser de Kylo Ren ",
+
   "item.swplanets.star_manual": "Star Manual ",
 
 
@@ -73,5 +76,12 @@
   "swplanets.tip.jedi_saber.title": "Sabre Lasers des Jedi",
 
   "swplanets.tip.tatooine_houses": "  Vous pouvez trouver des communautés d'habitants de Tatooine dans le désert.",
-  "swplanets.tip.tatooine_houses.title": "Maisons de Tatooine"
+  "swplanets.tip.tatooine_houses.title": "Maisons de Tatooine",
+
+  "biome.swplanets.endor_taige": "Taiga d'Endor",
+  "biome.swplanets.hot_desert": "Desert de Hot",
+  "biome.swplanets.kamino_ocean": "Ocean de Kamino",
+  "biome.swplanets.mustafar_hill": "Collines de Mustafar",
+  "biome.swplanets.tatooine_desert": "Desert de Tatooine"
+
 }
