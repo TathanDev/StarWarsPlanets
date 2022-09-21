@@ -10,10 +10,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 
-
-
-
-
 public class BlocksRegistry {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, SWPlanets.MODID);
@@ -31,25 +27,14 @@ public class BlocksRegistry {
     public static final RegistryObject<Block> CRYSTAL_KYBER_CLUSTER = registerBlock("kyber_crystal_cluster",
             () -> new CristalKyberBlock(BlockBehaviour.Properties.of(Material.AMETHYST).randomTicks().strength(1.5F).sound(SoundType.NETHER_ORE).requiresCorrectToolForDrops()), CreativeTabsRegistry.SWPLANETS_TAB);
 
-
-
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn, tab);
-        return toReturn;
-    }
-    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
-        return ItemsRegistry.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().tab(tab)));
-    }
-    public static void register(IEventBus eventBus) {
-        BLOCKS.register(eventBus);
-    }
-
 */
 
 
     /** Mustafar Blocks */
     public static final RegistryObject<Block> MUSTAFAR_STONE = BLOCKS.register("mustafar_stone", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.TERRACOTTA_ORANGE).sound(SoundType.STONE).strength(1.5f, 1f).requiresCorrectToolForDrops()));
+
+
+    /** Globes */
+    //public static final RegistryObject<Block> TATOOINE_GLOBE_BLOCK = BLOCKS.register("tatooine_globe",() -> new GlobeBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3.5F).sound(SoundType.STONE).noOcclusion().requiresCorrectToolForDrops()));
 
 }

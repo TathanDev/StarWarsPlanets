@@ -18,7 +18,7 @@ public class ClientConfigs {
 
         CUSTOMEMENUACTIVATE = BUILDER.comment("Should the menu need to be change ?\nDefault = true (Boolean)\n").define("Custom Screen", true);
         
-        CUSTOMEMENU = BUILDER.comment("Which Menu do you want? Star = 1\nPlanet = 2\nDefault = 1 (1-2)").define("Custom Screen number", 1);
+        CUSTOMEMENU = BUILDER.comment("Which Menu do you want?\n Star = 1\nPlanet = 2\nDefault = 2 (1-2)").define("Custom Screen number", 2);
 
         
         BUILDER.pop();

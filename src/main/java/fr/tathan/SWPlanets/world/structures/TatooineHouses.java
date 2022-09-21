@@ -1,6 +1,5 @@
 package fr.tathan.SWPlanets.world.structures;
 
-import fr.tathan.SWPlanets.SWPlanets;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.levelgen.GenerationStep;
@@ -13,7 +12,6 @@ import net.minecraft.world.level.levelgen.structure.PostPlacementProcessor;
 import net.minecraft.world.level.levelgen.structure.pieces.PieceGenerator;
 import net.minecraft.world.level.levelgen.structure.pieces.PieceGeneratorSupplier;
 import net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement;
-import org.apache.logging.log4j.Level;
 
 import java.util.Optional;
 

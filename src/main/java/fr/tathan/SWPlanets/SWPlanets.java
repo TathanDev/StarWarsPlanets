@@ -49,8 +49,8 @@ public class SWPlanets {
         FeatureRegistry.CONFIGURED_FEATURES.register(bus);
         FeatureRegistry.PLACED_FEATURES.register(bus);
         EntitiesRegistry.ENTITIES.register(bus);
-        ScreensRegistry.SCREENS.register(bus);
         StructuresRegistry.DEFERRED_REGISTRY_STRUCTURE.register(bus);
+        
 
 
 

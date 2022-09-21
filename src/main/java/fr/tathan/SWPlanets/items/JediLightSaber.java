@@ -4,8 +4,6 @@ import fr.tathan.SWPlanets.SWPlanets;
 import fr.tathan.SWPlanets.registries.SoundsRegistry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
