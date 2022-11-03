@@ -1,8 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "swplanets:item/light_saber_base",
-		"particle": "swplanets:item/light_saber_base"
+		"0": "swplanets:item/light_saber_base"
 	},
 	"elements": [
 		{
@@ -117,32 +116,32 @@
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [0.01, -0.9, 0.4],
-			"translation": [0.5, 3.25, 2],
-			"scale": [0.27734, 0.43359, 0.24414]
+			"translation": [0.75, 2.25, 2],
+			"scale": [0.25, 0.43359, 0.24414]
 		},
 		"thirdperson_lefthand": {
 			"rotation": [0.01, -0.9, 0.4],
-			"translation": [0.5, 3.25, 2],
-			"scale": [0.27734, 0.43359, 0.24414]
+			"translation": [0, 3, 2],
+			"scale": [0.25, 0.43359, 0.24414]
 		},
 		"firstperson_righthand": {
 			"rotation": [0.01, -0.9, 0.4],
-			"translation": [0.5, 3.25, 2.5],
-			"scale": [0.27734, 0.43359, 0.24414]
+			"translation": [0.75, 2.25, 2],
+			"scale": [0.25, 0.5664, 0.18555]
 		},
 		"firstperson_lefthand": {
 			"rotation": [0.01, -0.9, 0.4],
-			"translation": [0.5, 3.25, 2],
-			"scale": [0.27734, 0.43359, 0.24414]
+			"translation": [0.75, 2.25, 2],
+			"scale": [0.25, 0.5664, 0.18555]
 		},
 		"ground": {
 			"rotation": [0.01, -0.9, 0.4],
 			"translation": [0.5, 3.25, 2],
-			"scale": [0.27734, 0.43359, 0.24414]
+			"scale": [0.45898, 0.88867, 0.44141]
 		},
 		"gui": {
-			"rotation": [0.01, -0.9, 0.4],
-			"translation": [0.5, 2.5, 0.25],
+			"rotation": [-0.64, -0.64, -47.85],
+			"translation": [2, 1.25, 0.25],
 			"scale": [0.49805, 1.0957, 0.52344]
 		},
 		"head": {
@@ -151,9 +150,9 @@
 			"scale": [0.27734, 0.43359, 0.24414]
 		},
 		"fixed": {
-			"rotation": [0.01, -0.9, 0.4],
-			"translation": [0.5, 3.25, 0.25],
-			"scale": [0.49805, 1.0957, 0.52344]
+			"rotation": [0.68, -0.59, 46.9],
+			"translation": [-0.5, 2, 0.25],
+			"scale": [0.37891, 0.87305, 0.52344]
 		}
 	},
 	"groups": [

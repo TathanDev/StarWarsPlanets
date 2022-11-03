@@ -69,7 +69,7 @@ public class PlanetProperties {
             );
 
 
-
+/**
     @SubscribeEvent
     public static void init(FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
@@ -91,5 +91,6 @@ public class PlanetProperties {
         });
 
     }
+    */
 
 }

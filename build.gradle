@@ -23,6 +23,9 @@ minecraft {
             property "forge.logging.markers", "REGISTRIES"
             property "forge.logging.console.level", "debug"
             property "forge.enabledGameTestNamespaces", "swplanets"
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+
 
             mods {
                 swplanets {
@@ -78,9 +81,12 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    /*maven {
+    maven {
         url "https://cursemaven.com"
-    }*/
+        content {
+            includeGroup "curse.maven"
+        }
+    }
 
     maven {
         name "Local"
@@ -91,8 +97,8 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:1.19.2-${forge_version}"
 
-    
-    implementation fg.deobf("net.mrscauthd:beyond_earth:1.19-6.3")
+
+    implementation fg.deobf("curse.maven:be-377448:4046319")
 }
 
 jar {
