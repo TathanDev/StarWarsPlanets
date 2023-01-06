@@ -43,6 +43,8 @@ public class SWPlanets {
         FeatureRegistry.CONFIGURED_FEATURES.register(bus);
         FeatureRegistry.PLACED_FEATURES.register(bus);
         StructuresRegistry.STRUCTURES.register(bus);
+        OreGeneration.CONFIGURED_FEATURES.register(bus);
+        LevelRegistry.init();
 
         SWPlanetsNetworkRegistry.register();
 

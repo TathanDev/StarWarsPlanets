@@ -10,7 +10,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.mrscauthd.beyond_earth.BeyondEarth;
 import net.mrscauthd.beyond_earth.client.events.forge.PlanetOverlayEvent;
-
+/**
 @Mod.EventBusSubscriber(modid = SWPlanets.MODID, value = Dist.CLIENT)
 public class ModClientEvents {
 
@@ -36,3 +36,4 @@ public class ModClientEvents {
     }
 
 }
+*/

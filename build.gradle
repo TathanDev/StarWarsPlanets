@@ -2,6 +2,8 @@ plugins {
     id "eclipse"
     id "maven-publish"
     id "net.minecraftforge.gradle" version "5.1+"
+    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+
 }
 
 version = "${mc_version}-${mod_version}"
@@ -12,7 +14,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 minecraft {
 
-    mappings channel: "official", version: "${mc_version}"
+    mappings channel: 'parchment', version: '2022.10.16-1.19.2'
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
 
@@ -98,7 +100,7 @@ dependencies {
     minecraft "net.minecraftforge:forge:1.19.2-${forge_version}"
 
 
-    implementation fg.deobf("curse.maven:be-377448:4046319")
+    implementation fg.deobf("curse.maven:be-377448:4298116")
 }
 
 jar {
