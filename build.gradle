@@ -97,10 +97,10 @@ repositories {
 }
 
 dependencies {
-    minecraft "net.minecraftforge:forge:1.19.2-${forge_version}"
+    minecraft "net.minecraftforge:forge:1.19.2-43.2.4"
 
 
-    implementation fg.deobf("curse.maven:be-377448:4298116")
+    implementation fg.deobf("curse.maven:be-377448:4379817")
 }
 
 jar {

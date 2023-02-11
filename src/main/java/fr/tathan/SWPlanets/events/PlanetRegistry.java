@@ -2,8 +2,6 @@ package fr.tathan.SWPlanets.events;
 
 import fr.tathan.SWPlanets.SWPlanets;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.Level;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.mrscauthd.beyond_earth.BeyondEarth;
@@ -11,6 +9,8 @@ import net.mrscauthd.beyond_earth.common.events.forge.PlanetRegisterEvent;
 import net.mrscauthd.beyond_earth.common.util.Planets;
 
 import fr.tathan.SWPlanets.registries.LevelRegistry;
+
+
 
 @Mod.EventBusSubscriber(modid = SWPlanets.MODID)
 public class PlanetRegistry {
@@ -37,8 +37,7 @@ public class PlanetRegistry {
 
 
     @SubscribeEvent
-    public static void registerPlanets(PlanetRegisterEvent.Load event) {
-
+    public static void registerPlanets(PlanetRegisterEvent.Generate event) {
 
         Planets.registerPlanet(LevelRegistry.TATOOINE, LevelRegistry.TATOOINE_ORBIT);
         Planets.registerPlanet(LevelRegistry.KAMINO, LevelRegistry.KAMINO_ORBIT);
@@ -69,6 +68,7 @@ public class PlanetRegistry {
         tatooine.hasRain = false;
         tatooine.orbitColour = new int[] { 179, 49, 44 };
         tatooine.hasDustStorms = true;
+        tatooine.register();
 
 
         Planets.Planet mustafar = Planets.BY_DIMENSION.get(LevelRegistry.MUSTAFAR);
@@ -83,6 +83,7 @@ public class PlanetRegistry {
         mustafar.hasRain = false;
         mustafar.airDensity = 100;
         mustafar.orbitColour = new int[] { 235, 136, 68 };
+        mustafar.register();
 
         Planets.Planet endor = Planets.BY_DIMENSION.get(LevelRegistry.ENDOR);
         endor.texture = ENDOR_TEXTURE;
@@ -94,6 +95,7 @@ public class PlanetRegistry {
         endor.spaceLevel = false;
         endor.hasRain = true;
         endor.orbitColour = new int[] { 53, 163, 79 };
+        endor.register();
 
 
         Planets.Planet kamino = Planets.BY_DIMENSION.get(LevelRegistry.KAMINO);
@@ -107,13 +109,14 @@ public class PlanetRegistry {
         kamino.airDensity = 0.001f;
         kamino.hasRain = true;
         kamino.orbitColour = new int[] { 37, 49, 146 };
+        kamino.register();
 
         starwars.addChild(tatooine);
         starwars.addChild(mustafar);
         starwars.addChild(endor);
         starwars.addChild(kamino);
-
         starwars.register();
+
 
     }
 
