@@ -5,6 +5,7 @@
   "gui.swplanets.planet_selection.endor_button": "Endor",
   "gui.swplanets.planet_selection.hot_button": "Hot",
   "gui.swplanets.planet_selection.mustafar_button": "Mustafar",
+  "gui.swplanets.planet_selection.mandalore_button": "Mandalore",
 
 
   "advancements.tatooine.title": "Tatooine",
@@ -26,6 +27,13 @@
   "item.swplanets.kyber_crystal_ore_sandstone": "Sandstone Kyber Crystal Ore ",
   "item.swplanets.mustafar_stone": "Mustafar Stone",
   "item.swplanets.mustafar_sand": "Mustafar Sand",
+  "item.swplanets.beskar": "Baskar",
+  "item.swplanets.darksaber": "Dark Saber",
+
+  "item.swplanets.beskar_ore_sandstone": "Beskar Ore",
+  "block.swplanets.beskar_ore_sandstone": "Beskar Ore",
+
+
 
 
 
@@ -35,7 +43,7 @@
   "item.swplanets.light_saber_green": "Green Light Saber ",
   "item.swplanets.light_saber_violet": "Violet Light Saber ",
   "item.swplanets.light_saber_dark_maul": "Darth Maul's lightsaber ",
-  "item.swplanets.light_kylo_ren": "Kylo Ren's lightsaber ",
+  "item.swplanets.light_saber_kylo_ren": "Kylo Ren's lightsaber ",
 
   "item.swplanets.star_manual": "Star Manual ",
 

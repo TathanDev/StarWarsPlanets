@@ -64,7 +64,7 @@ public class ModClientEvents {
                 }
             } else {
                 if (event.getScreen() instanceof TitleScreen && !(event.getScreen() instanceof CustomTitleScreenStars)) {
-                    event.setScreen(new CustomTitleScreenStars());
+                    event.setScreen(new CustomTitleScreenPlanet());
                 }
 
             }

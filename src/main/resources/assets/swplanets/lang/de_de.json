@@ -5,6 +5,8 @@
   "gui.swplanets.planet_selection.endor_button": "Endor",
   "gui.swplanets.planet_selection.hot_button": "Hot",
   "gui.swplanets.planet_selection.mustafar_button": "Mustafar",
+  "gui.swplanets.planet_selection.mandalore_button": "Mandalore",
+
 
   "advancements.tatooine.title": "Tatooine",
   "advancements.tatooine.descr": "Willkommen auf Tatooine !",
@@ -30,7 +32,7 @@
   "item.swplanets.light_saber_green": "Grünes Lichtschwert",
   "item.swplanets.light_saber_violet": "Violettes Lichtschwert",
   "item.swplanets.light_saber_dark_maul": "Darth Maul's Lichtschwert",
-  "item.swplanets.light_kylo_ren": "Kylo Ren's Lichtschwert",
+  "item.swplanets.light_saber_kylo_ren": "Kylo Ren's Lichtschwert",
   "item.swplanets.star_manual": "Stern Handbuch",
   "item.swplanets.stormtrooper_mask": "Sturmtruppen Helm",
   "item.swplanets.stormtrooper_chestplate": "Sturmtruppen Harnisch",
@@ -38,6 +40,11 @@
   "item.swplanets.stormtrooper_boots": "Sturmtruppen Stiefel",
   "item.swplanets.plastic_plate": "Plastik Platte ",
   "item.swplanets.speeder": "Düsenschlitten",
+  "item.swplanets.beskar": "Baskar",
+  "item.swplanets.darksaber": "Dark Saber",
+
+  "item.swplanets.beskar_ore_sandstone": "Sandstein Beskar Erts",
+
 
   "entity.swplanets.speeder": "Düsenschlitten",
 
@@ -51,6 +58,8 @@
   "block.swplanets.kyber_crystal_ore_sandstone": "Sandstein Kyber-Kristallerz",
   "block.swplanets.mustafar_stone": "Mustafar Stein",
   "block.swplanets.mustafar_sand": "Mustafar Sand",
+  "block.swplanets.beskar_ore_sandstone": "Sandstein Beskar Erts",
+
   "message.swplanets.error.patchouli": "&4Patchouli&r ist nicht installiert!",
   "itemGroup.swplanets_tab": "Star Wars Planeten",
   "swplanets.tip.kyber_crystal.title": "Kyber-Kristall",

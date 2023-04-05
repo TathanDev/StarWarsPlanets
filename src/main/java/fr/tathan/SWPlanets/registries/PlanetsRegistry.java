@@ -23,6 +23,8 @@ public class PlanetsRegistry {
 
     public static final ResourceKey<Level> MUSTAFAR = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(SWPlanets.MODID, "mustafar"));
     public static final ResourceKey<Level> MUSTAFAR_ORBIT = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(SWPlanets.MODID, "mustafar_orbit"));
+    public static final ResourceKey<Level> MANDALORE = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(SWPlanets.MODID, "mandalore"));
+    public static final ResourceKey<Level> MANDALORE_ORBIT = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(SWPlanets.MODID, "mandalore_orbit"));
 
 
 }

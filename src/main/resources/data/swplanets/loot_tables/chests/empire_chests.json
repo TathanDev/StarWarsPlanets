@@ -23,7 +23,7 @@
               "add": false
             }
           ],
-          "name": "swplanets:plastic_plates"
+          "name": "swplanets:plastic_plate"
         },
         {
           "type": "minecraft:item",

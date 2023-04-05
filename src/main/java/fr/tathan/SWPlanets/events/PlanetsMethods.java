@@ -20,6 +20,8 @@ public class PlanetsMethods {
             Methods.landerTeleport(player, PlanetsRegistry.HOT);
         } else if (Methods.isWorld(world, PlanetsRegistry.MUSTAFAR_ORBIT)) {
             Methods.landerTeleport(player, PlanetsRegistry.MUSTAFAR);
+        } else if (Methods.isWorld(world, PlanetsRegistry.MANDALORE_ORBIT)) {
+            Methods.landerTeleport(player, PlanetsRegistry.MANDALORE);
         }
     }
 
@@ -36,6 +38,8 @@ public class PlanetsMethods {
             Methods.entityWorldTeleporter(entity, PlanetsRegistry.HOT, 450);
         } else if (world2 == PlanetsRegistry.MUSTAFAR_ORBIT) {
             Methods.entityWorldTeleporter(entity, PlanetsRegistry.MUSTAFAR, 450);
+        } else if (world2 == PlanetsRegistry.MANDALORE_ORBIT) {
+            Methods.entityWorldTeleporter(entity, PlanetsRegistry.MANDALORE, 450);
         }
     }
 }

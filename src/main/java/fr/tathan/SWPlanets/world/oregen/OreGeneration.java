@@ -28,43 +28,54 @@ import java.util.List;
 @Mod.EventBusSubscriber(modid = SWPlanets.MODID)
 public class OreGeneration {
 
-    public static int kyber_vein_size = 9;
-    public static int kyber_vein_common = 20;
+    public static int kyber_vein_size = 5;
+    public static int kyber_vein_common = 8;
 
 
-
-
-
-
-    // KYBER ORE DEEPSLATE
-    public static final RegistryObject<ConfiguredFeature<?, ?>> KYBER_ORE_DEEPSLATE_CONFIGURED = FeatureRegistry.CONFIGURED_FEATURES.register("kyber_crystal_ore_deepslate", () -> new ConfiguredFeature(Feature.ORE, new OreConfiguration(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlocksRegistry.CRYSTAL_KYBER_ORE.get().defaultBlockState(), kyber_vein_size)));
-    //public static final RegistryObject<PlacedFeature> KYBER_ORE = FeatureRegistry.PLACED_FEATURES.register("kyber_crystal_ore", () -> new PlacedFeature(KYBER_ORE_DEEPSLATE_CONFIGURED.getHolder().get(), commonOrePlacement(7, HeightRangePlacement.triangle(VerticalAnchor.absolute(-80), VerticalAnchor.absolute(100)))));
-    public static final RegistryObject<PlacedFeature> KYBER_ORE_DEEPSLATE = FeatureRegistry.PLACED_FEATURES.register("kyber_crystal_ore_deepslate", () -> new PlacedFeature(KYBER_ORE_DEEPSLATE_CONFIGURED.getHolder().get(), commonOrePlacement(kyber_vein_common, HeightRangePlacement.triangle(VerticalAnchor.absolute(-80), VerticalAnchor.absolute(100)))));
-
-    //KYBER ORE TATOOINE
     public static final TagKey<Block> TATOOINE_ORE_REPLACEABLES = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(SWPlanets.MODID, "tatooine_ore_replaceables"));
     public static final RuleTest TATOOINE_MATCH = new TagMatchTest(TATOOINE_ORE_REPLACEABLES);
 
-    public static final RegistryObject<ConfiguredFeature<?, ?>> KYBER_ORE_TATOOINE_CONFIGURED = FeatureRegistry.CONFIGURED_FEATURES.register("kyber_crystal_ore_tatooine", () -> new ConfiguredFeature(Feature.ORE, new OreConfiguration(TATOOINE_MATCH, BlocksRegistry.CRYSTAL_KYBER_ORE.get().defaultBlockState(), kyber_vein_size)));
+
+
+
+    public static final RegistryObject<ConfiguredFeature<?, ?>> KYBER_ORE_DEEPSLATE_CONFIGURED = FeatureRegistry.CONFIGURED_FEATURES.register("kyber_crystal_ore_deepslate", () -> new ConfiguredFeature(Feature.ORE, new OreConfiguration(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlocksRegistry.CRYSTAL_KYBER_ORE.get().defaultBlockState(), kyber_vein_size)));
+    public static final RegistryObject<PlacedFeature> KYBER_ORE_DEEPSLATE = FeatureRegistry.PLACED_FEATURES.register("kyber_crystal_ore_deepslate",
+            () -> new PlacedFeature(KYBER_ORE_DEEPSLATE_CONFIGURED.getHolder().get(),
+                    commonOrePlacement(kyber_vein_common, HeightRangePlacement.triangle(VerticalAnchor.absolute(-80), VerticalAnchor.absolute(100)))));
+
+
+    //KYBER ORE TATOOINE
+
+    public static final RegistryObject<ConfiguredFeature<?, ?>> KYBER_ORE_TATOOINE_CONFIGURED = FeatureRegistry.CONFIGURED_FEATURES.register("kyber_crystal_ore_tatooine", () -> new ConfiguredFeature(Feature.ORE, new OreConfiguration(TATOOINE_MATCH, BlocksRegistry.CRYSTAL_KYBER_ORE_SANDSTONE.get().defaultBlockState(), kyber_vein_size)));
     public static final RegistryObject<PlacedFeature> KYBER_ORE_TATOOINE = FeatureRegistry.PLACED_FEATURES.register("kyber_crystal_ore_tatooine", () -> new PlacedFeature(KYBER_ORE_TATOOINE_CONFIGURED.getHolder().get(), commonOrePlacement(kyber_vein_common, HeightRangePlacement.triangle(VerticalAnchor.absolute(-80), VerticalAnchor.absolute(100)))));
+
+    public static final RegistryObject<ConfiguredFeature<?, ?>> BESKAR_SANDSTONE_CONFIGURED = FeatureRegistry.CONFIGURED_FEATURES.register("beskar_ore_sandstone", () -> new ConfiguredFeature(Feature.ORE, new OreConfiguration(TATOOINE_MATCH, BlocksRegistry.BESKAR_ORE_SANDSTONE.get().defaultBlockState(), kyber_vein_size)));
+    public static final RegistryObject<PlacedFeature> BESKAR_SANDSTONE = FeatureRegistry.PLACED_FEATURES.register("beskar_ore_sandstone", () -> new PlacedFeature(BESKAR_SANDSTONE_CONFIGURED.getHolder().get(), commonOrePlacement(kyber_vein_common, HeightRangePlacement.triangle(VerticalAnchor.absolute(-1), VerticalAnchor.absolute(160)))));
+
 
 
     @SubscribeEvent
-    public static void biomesLoading(BiomeLoadingEvent biome) {
+    public static void biomesLoading(BiomeLoadingEvent event) {
+
+        ResourceLocation biome = event.getName();
+
 
         if (biome.equals(BiomesRegistry.ENDOR_TAIGA)) {
-            biome.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(KYBER_ORE_DEEPSLATE.getHolder().get());
+            event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(KYBER_ORE_DEEPSLATE.getHolder().get());
 
         } else if (biome.equals(BiomesRegistry.KAMINO_OCEAN)) {
-            biome.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(KYBER_ORE_DEEPSLATE.getHolder().get());
+            event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(KYBER_ORE_DEEPSLATE.getHolder().get());
 
         } else if (biome.equals(BiomesRegistry.TATOOINE_DESERT)) {
-            biome.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(KYBER_ORE_TATOOINE.getHolder().get());
+            event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(KYBER_ORE_TATOOINE.getHolder().get());
 
         }  else if (biome.equals(BiomesRegistry.MUSTAFAR_HILL)) {
-        biome.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(KYBER_ORE_DEEPSLATE.getHolder().get());
+            event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(KYBER_ORE_DEEPSLATE.getHolder().get());
 
-    }
+        } else if (biome.equals(BiomesRegistry.MANDALORE_VESTIGE)) {
+            event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(BESKAR_SANDSTONE.getHolder().get());
+
+        }
 
     }
 

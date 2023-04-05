@@ -18,7 +18,9 @@ public class PlanetProperties {
             PlanetsRegistry.ENDOR_ORBIT,
             PlanetsRegistry.HOT_ORBIT,
             PlanetsRegistry.MUSTAFAR_ORBIT,
-            PlanetsRegistry.MUSTAFAR
+            PlanetsRegistry.MUSTAFAR,
+            PlanetsRegistry.MANDALORE_ORBIT
+
 
     );
 
@@ -28,9 +30,12 @@ public class PlanetProperties {
             PlanetsRegistry.TATOOINE_ORBIT,
             PlanetsRegistry.ENDOR_ORBIT,
             PlanetsRegistry.HOT_ORBIT,
-            PlanetsRegistry.MUSTAFAR_ORBIT
+            PlanetsRegistry.MUSTAFAR_ORBIT,
+            PlanetsRegistry.MANDALORE,
+            PlanetsRegistry.MANDALORE_ORBIT
 
-            );
+
+    );
 
     public static final Set<ResourceKey<Level>> spaceWorlds = Set.of(
             PlanetsRegistry.TATOOINE,
@@ -42,7 +47,11 @@ public class PlanetProperties {
             PlanetsRegistry.HOT_ORBIT,
             PlanetsRegistry.HOT,
             PlanetsRegistry.MUSTAFAR_ORBIT,
-            PlanetsRegistry.MUSTAFAR
+            PlanetsRegistry.MUSTAFAR,
+            PlanetsRegistry.MANDALORE,
+            PlanetsRegistry.MANDALORE_ORBIT
+
+
 
     );
 
@@ -51,7 +60,9 @@ public class PlanetProperties {
             PlanetsRegistry.TATOOINE_ORBIT,
             PlanetsRegistry.ENDOR_ORBIT,
             PlanetsRegistry.HOT_ORBIT,
-            PlanetsRegistry.MUSTAFAR_ORBIT
+            PlanetsRegistry.MUSTAFAR_ORBIT,
+            PlanetsRegistry.MANDALORE_ORBIT
+
     );
 
     /**

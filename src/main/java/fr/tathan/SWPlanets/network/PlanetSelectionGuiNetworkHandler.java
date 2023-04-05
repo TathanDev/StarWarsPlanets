@@ -127,6 +127,24 @@ public class PlanetSelectionGuiNetworkHandler extends PlanetSelectionGuiNetworkH
                 message.deleteItems(player);
                 Methods.teleportButton(player, PlanetsRegistry.MUSTAFAR_ORBIT, true);
                 break;
+
+            /** MANDALORE */
+
+            case 15:
+                message.defaultOptions(player);
+                Methods.teleportButton(player, PlanetsRegistry.MANDALORE, false);
+                break;
+
+            case 16:
+                message.defaultOptions(player);
+                Methods.teleportButton(player, PlanetsRegistry.MANDALORE_ORBIT, false);
+                break;
+
+            case 17:
+                message.defaultOptions(player);
+                message.deleteItems(player);
+                Methods.teleportButton(player, PlanetsRegistry.MANDALORE_ORBIT, true);
+                break;
         }
 
         context.setPacketHandled(true);

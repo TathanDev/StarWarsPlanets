@@ -1,0 +1,160 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.porgs.walk": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"leg1": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [47.5, 0, 0]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.5": {
+							"vector": [-37.5, 0, 0]
+						},
+						"2.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"leg2": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [-44.5, 0, 0]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.4583": {
+							"vector": [44.5, 0, 0]
+						},
+						"2.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"armleft": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 27.5]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.5": {
+							"vector": [0, 0, 30]
+						},
+						"2.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"armright": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5417": {
+							"vector": [0, 0, -28.5]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.5": {
+							"vector": [0, 0, -29]
+						},
+						"2.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"animation.porgs.idle": {
+			"loop": true,
+			"animation_length": 0.75,
+			"bones": {
+				"armleft": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 2.5]
+						},
+						"0.375": {
+							"vector": [0, 0, 40]
+						},
+						"0.7083": {
+							"vector": [0, 0, 3]
+						}
+					}
+				},
+				"armright": {
+					"rotation": {
+						"0.0": {
+							"vector": [0.55323, -1.06788, -0.19691]
+						},
+						"0.375": {
+							"vector": [-0.36402, -1.14625, -32.18811]
+						},
+						"0.75": {
+							"vector": [-0.81436, -0.88502, -0.18546]
+						}
+					}
+				}
+			}
+		},
+		"animation.porgs.sitting": {
+			"animation_length": 0.5,
+			"bones": {
+				"leg1": {
+					"rotation": {
+						"vector": [-85, 0, 0]
+					},
+					"position": {
+						"vector": [0, -6, 0]
+					}
+				},
+				"leg2": {
+					"rotation": {
+						"vector": [-85, 0, 0]
+					},
+					"position": {
+						"vector": [0, -6, 0]
+					}
+				},
+				"body": {
+					"position": {
+						"vector": [0, -5, 0]
+					}
+				},
+				"head": {
+					"position": {
+						"vector": [0, -5, 0]
+					}
+				},
+				"armleft": {
+					"position": {
+						"vector": [0, -5, 0]
+					}
+				},
+				"armright": {
+					"position": {
+						"vector": [0, -5, 0]
+					}
+				}
+			}
+		}
+	}
+}

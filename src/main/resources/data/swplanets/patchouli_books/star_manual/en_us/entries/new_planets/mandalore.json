@@ -1,0 +1,24 @@
+{
+  "name": "Mandalore!",
+  "icon": "swplanets:textures/sky/mandalore.png",
+  "category": "swplanets:new_planets",
+  "sortnum": 5,
+  "advancement": "swplanets:mandalore_advancements",
+  "pages": [
+    {
+
+      "type": "patchouli:text",
+      "title":"Mustafar",
+      "text": "What a beautiful planet ! Oh, I got the wrong paper... I start again : What a horrible planet ! Just hot rocks (very hot), lava (also very hot) and... that's it ! But the mountain or king of beautiful🐶"
+    },
+    {
+      "type": "patchouli:image",
+      "images": ["swplanets:textures/gui/background/mustafar.png"],
+      "border": true
+
+    }
+
+
+
+  ]
+}

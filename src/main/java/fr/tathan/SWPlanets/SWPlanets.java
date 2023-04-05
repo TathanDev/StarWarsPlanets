@@ -5,12 +5,16 @@ import fr.tathan.SWPlanets.config.ClientConfigs;
 import fr.tathan.SWPlanets.config.CommonConfig;
 import  fr.tathan.SWPlanets.network.PlanetSelectionGuiNetworkHandler;
 import fr.tathan.SWPlanets.registries.*;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.network.NetworkRegistry;
@@ -27,7 +31,9 @@ public class SWPlanets {
     public static final String MODID = "swplanets";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    /** PACKET HANDLER */
+    /**
+     * PACKET HANDLER
+     */
     private static final String PROTOCOL_VERSION = "1";
     public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(new ResourceLocation(MODID, MODID), () -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
     private static int messageID;
@@ -48,19 +54,19 @@ public class SWPlanets {
         FeatureRegistry.FEATURES.register(bus);
         FeatureRegistry.CONFIGURED_FEATURES.register(bus);
         FeatureRegistry.PLACED_FEATURES.register(bus);
-        EntitiesRegistry.ENTITIES.register(bus);
         StructuresRegistry.DEFERRED_REGISTRY_STRUCTURE.register(bus);
-        
-
-
-
 
         // NETWORK
         SWPlanets.addNetworkMessage(PlanetSelectionGuiNetworkHandler.class, PlanetSelectionGuiNetworkHandler::encode, PlanetSelectionGuiNetworkHandler::decode, PlanetSelectionGuiNetworkHandler::handle);
+
+
+
+
     }
 
     public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder, BiConsumer<T, Supplier<NetworkEvent.Context>> messageConsumer) {
         PACKET_HANDLER.registerMessage(messageID, messageType, encoder, decoder, messageConsumer);
         messageID++;
     }
+
 }

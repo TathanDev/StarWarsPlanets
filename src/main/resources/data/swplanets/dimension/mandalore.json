@@ -1,0 +1,13 @@
+{
+  "type": "swplanets:mandalore",
+  "forge:use_server_seed": false,
+  "generator": {
+    "seed": 12354561312421534562331320,
+    "biome_source": {
+      "biome": "swplanets:mandalore_vestige",
+      "type": "minecraft:fixed"
+    },
+    "settings": "swplanets:mandalore",
+    "type": "minecraft:noise"
+  }
+}

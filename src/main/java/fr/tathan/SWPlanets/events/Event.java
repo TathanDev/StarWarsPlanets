@@ -1,9 +1,12 @@
 package fr.tathan.SWPlanets.events;
 
+import fr.tathan.SWPlanets.items.JediLightSaber;
 import fr.tathan.SWPlanets.registries.ItemsRegistry;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import fr.tathan.SWPlanets.SWPlanets;
 import fr.tathan.SWPlanets.registries.PlanetsRegistry;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -12,8 +15,12 @@ import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingFallEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -64,6 +71,10 @@ public class Event {
             EntityGravity.gravitySystem(event.getEntityLiving(), 0.02F);
         } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.MUSTAFAR_ORBIT)) {
             EntityGravity.gravitySystem(event.getEntityLiving(), 0.02F);
+        } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.MANDALORE)) {
+            EntityGravity.gravitySystem(event.getEntityLiving(), 0.02F);
+        } else if (Methods.isWorld(event.getEntityLiving().level, PlanetsRegistry.MANDALORE_ORBIT)) {
+            EntityGravity.gravitySystem(event.getEntityLiving(), 0.02F);
 
 
         }
@@ -84,6 +95,10 @@ public class Event {
         } else if (Methods.isWorld(level, PlanetsRegistry.TATOOINE_ORBIT)) {
             ItemGravity.gravitySystem(entity, 0.05F);
         } else if (Methods.isWorld(level, PlanetsRegistry.MUSTAFAR_ORBIT)) {
+            ItemGravity.gravitySystem(entity, 0.05F);
+        } else if (Methods.isWorld(level, PlanetsRegistry.MANDALORE_ORBIT)) {
+            ItemGravity.gravitySystem(entity, 0.05F);
+        }else if (Methods.isWorld(level, PlanetsRegistry.MANDALORE)) {
             ItemGravity.gravitySystem(entity, 0.05F);
         }
     }
@@ -161,4 +176,19 @@ public class Event {
         }
 
     }
+
+   /** @SubscribeEvent
+    public static void onRightClick(PlayerInteractEvent.RightClickBlock event) {
+        Level level = event.getWorld();
+        Player player = event.getPlayer();
+        BlockPos pos = event.getPos();
+        BlockState state = level.getBlockState(pos);
+        InteractionHand hand = event.getHand();
+        if (state.is(Blocks.PUMPKIN) ) {
+            if (player.getMainHandItem().getItem() instanceof JediLightSaber && hand.equals(InteractionHand.MAIN_HAND)) {
+                level.setBlockAndUpdate(pos, state.cycle(Blocks.GLOWSTONE.defaultBlockState().getBlock().getStateDefinition().getProperty("")));
+                SWPlanets.LOGGER.info(player.getDirection().getName());
+
+
+    }*/
 }

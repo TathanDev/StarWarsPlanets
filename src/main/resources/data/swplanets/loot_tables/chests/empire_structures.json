@@ -28,7 +28,7 @@
         {
           "type": "minecraft:item",
           "weight": 2,
-          "name": "swplanets:plastic_plates"
+          "name": "swplanets:plastic_plate"
         }
       ]
     }

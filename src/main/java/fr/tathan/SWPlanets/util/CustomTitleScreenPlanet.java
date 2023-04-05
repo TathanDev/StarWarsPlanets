@@ -3,6 +3,7 @@ package fr.tathan.SWPlanets.util;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import fr.tathan.SWPlanets.SWPlanets;
+import fr.tathan.SWPlanets.config.ClientConfigs;
 import net.minecraft.client.gui.components.Widget;
 import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraft.client.renderer.GameRenderer;
@@ -15,7 +16,9 @@ import javax.annotation.Nonnull;
 
 public class CustomTitleScreenPlanet extends TitleScreen {
 
-    private static final ResourceLocation SPLASH =
+
+
+        private static final ResourceLocation SPLASH =
             new ResourceLocation(SWPlanets.MODID, "textures/gui/background/planetbackground.png");
 
     private static final ResourceLocation MINECRAFT_LOGO =

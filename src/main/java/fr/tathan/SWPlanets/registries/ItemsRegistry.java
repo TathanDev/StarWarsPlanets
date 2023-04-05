@@ -10,6 +10,8 @@ import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.mrscauthd.beyond_earth.globe.GlobeItem;
+import net.mrscauthd.beyond_earth.itemgroups.ItemGroups;
 
 public class ItemsRegistry {
 
@@ -35,6 +37,12 @@ public class ItemsRegistry {
 
     //Sith Light Saber
     public static final RegistryObject<SwordItem> LIGHT_SABER_RED = ITEMS.register("light_saber_red", () -> new SithLightSaber(Tiers.KYBER, 8, -2, new  Item.Properties().rarity(Rarity.EPIC).fireResistant().tab(CreativeTabsRegistry.SWPLANETS_TAB).stacksTo(1).durability(1400).setNoRepair()));
+    public static final RegistryObject<SwordItem> LIGHT_SABER_KYLO_REN = ITEMS.register("light_saber_kylo_ren", () -> new SithLightSaber(Tiers.KYBER, 8, -2, new  Item.Properties().rarity(Rarity.EPIC).fireResistant().tab(CreativeTabsRegistry.SWPLANETS_TAB).stacksTo(1).durability(1400).setNoRepair()));
+    public static final RegistryObject<SwordItem> LIGHT_SABER_DARK_MAUL = ITEMS.register("light_saber_dark_maul", () -> new SithLightSaber(Tiers.KYBER, 8, -2, new  Item.Properties().rarity(Rarity.EPIC).fireResistant().tab(CreativeTabsRegistry.SWPLANETS_TAB).stacksTo(1).durability(1400).setNoRepair()));
+
+    //Mandalorian
+    public static final RegistryObject<SwordItem> DARKSABER = ITEMS.register("darksaber", () -> new SwordItem(Tiers.BESKAR, 8, -2, new  Item.Properties().rarity(Rarity.EPIC).fireResistant().tab(CreativeTabsRegistry.SWPLANETS_TAB).stacksTo(1).durability(4000)));
+    public static final RegistryObject<Item> BESKAR = ITEMS.register("beskar", () -> new Item(new Item.Properties().fireResistant().stacksTo(16).tab(CreativeTabsRegistry.SWPLANETS_TAB)));
 
 
     /** Blocks */
@@ -43,9 +51,9 @@ public class ItemsRegistry {
     public static final RegistryObject<BlockItem> MUSTAFAR_STONE_ITEM = ITEMS.register("mustafar_stone", () -> new BlockItem(BlocksRegistry.MUSTAFAR_STONE.get(), new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB)));
     public static final RegistryObject<BlockItem> MUSTAFAR_SAND_ITEM = ITEMS.register("mustafar_sand", () -> new BlockItem(BlocksRegistry.MUSTAFAR_SAND.get(), new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB)));
 
+    public static final RegistryObject<BlockItem> BESKAR_SANDSTONE_ITEM = ITEMS.register("beskar_ore_sandstone", () -> new BlockItem(BlocksRegistry.BESKAR_ORE_SANDSTONE.get(), new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB)));
 
     /** Armors */
-    //TODO CRAFT + CHANGE ARMOR MATERIALS
     public static final RegistryObject<Item> STORMTROOPER_MASK = ITEMS.register("stormtrooper_mask",
             () -> new ArmorItem(ArmorMaterials.STORMTROOPER, EquipmentSlot.HEAD,
                     new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB)));
@@ -63,14 +71,12 @@ public class ItemsRegistry {
     /** Plates */
     public static final RegistryObject<Item> PLASTIC_PLATE = ITEMS.register("plastic_plate", () -> new Item(new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB).stacksTo(64)));
 
-
-    /** Speeder */
-   // public static final RegistryObject<SpeederItem> SPEEDER_ITEM = ITEMS.register("speeder", () -> new SpeederItem(new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB).stacksTo(1)));
-
     /** Manuals */
     public static final RegistryObject<Item> STAR_MANUAL = ITEMS.register("star_manual", () -> new StarManual(new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB).stacksTo(1)));
 
 
+     /** Globes */
+    // public static final RegistryObject<BlockItem> TATOOINE_GLOBE_ITEM = ITEMS.register("tatooine_globe", () -> new GlobeItem(BlocksRegistry.TATOOINE_GLOBE_BLOCK.get(), new Item.Properties().tab(ItemGroups.tab_globes).rarity(Rarity.EPIC).stacksTo(1)));
 
 
 

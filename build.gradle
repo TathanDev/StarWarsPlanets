@@ -22,7 +22,7 @@ apply plugin: 'net.minecraftforge.gradle'
 
 
 
-version = '1.12'
+version = '1.14.1'
 group = 'fr.tathan.SWPlanets'
 archivesBaseName = 'StarWarsPlanets'
 
@@ -110,6 +110,9 @@ repositories {
         }
     }
 
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+
+
 
 
 }
@@ -120,16 +123,13 @@ dependencies {
     //implementation fg.deobf("net.mrscauthd:beyond_earth:1.18.2-6.2")
     implementation fg.deobf("curse.maven:beyond_earth-377448:3807783")
 
-    /** Patchouli */
+    /** Patchouli  */
     compileOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_mc_version}-${patchouli_version}:api")
     runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_mc_version}-${patchouli_version}")
 
-    //implementation ("com.sk89q.worldedit:worldedit-forge-mc1.18.2:7.3.0-SNAPSHOT")
+
     implementation fg.deobf("net.darkhax.tips:Tips-Forge-1.18.2:5.0.8")
     implementation fg.deobf("net.darkhax.bookshelf:Bookshelf-Forge-1.18.2:13.2.49")
-
-
-
 
 }
 

@@ -30,6 +30,8 @@ public class PlanetSelectionGuiEvents {
     public static final Component ENDOR_BUTTON_TEXT = tl("endor_button");
     public static final Component HOT_BUTTON_TEXT = tl("hot_button");
     public static final Component MUSTAFAR_BUTTON_TEXT = tl("mustafar_button");
+    public static final Component MANDALORE_BUTTON_TEXT = tl("mandalore_button");
+
 
 
     /** BUTTONS */
@@ -61,6 +63,12 @@ public class PlanetSelectionGuiEvents {
     private static ImageButtonPlacer mustafarHandlerButton;
     private static ImageButtonPlacer mustafarOrbitHandlerButton;
     private static ImageButtonPlacer mustafarSpaceStationHandlerButton;
+    private static ImageButtonPlacer mandaloreCategoryButton;
+    private static ImageButtonPlacer mandaloreHandlerButton;
+    private static ImageButtonPlacer mandaloreOrbitHandlerButton;
+    private static ImageButtonPlacer mandaloreSpaceStationHandlerButton;
+
+
 
 
     /** CATEGORY */
@@ -72,6 +80,8 @@ public class PlanetSelectionGuiEvents {
     public static final ResourceLocation ENDOR_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/sky/endor.png");
     public static final ResourceLocation HOT_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/sky/hot.png");
     public static final ResourceLocation MUSTAFAR_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/sky/mustafar.png");
+    public static final ResourceLocation MANDALORE_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/sky/mandalore.png");
+
 
 
     @SubscribeEvent
@@ -79,7 +89,7 @@ public class PlanetSelectionGuiEvents {
         PlanetSelectionGuiWindow screen = (PlanetSelectionGuiWindow) event.getScreen();
 
         /** SET THE MAIN (BEYOND EARTH) CATEGORY TO -1 */
-        if (PlanetSelectionGuiHelper.categoryRange(category.get(), 1,5)) {
+        if (PlanetSelectionGuiHelper.categoryRange(category.get(), 1,7)) {
             screen.category.set(-1);
         }
     }
@@ -89,7 +99,7 @@ public class PlanetSelectionGuiEvents {
         PlanetSelectionGuiWindow screen = (PlanetSelectionGuiWindow) event.getScreen();
 
         /** BUTTONS VISIBLE SYSTEM */
-        screen.visibleButton(backButton, PlanetSelectionGuiHelper.categoryRange(category.get(), 1, 5));
+        screen.visibleButton(backButton, PlanetSelectionGuiHelper.categoryRange(category.get(), 1, 7));
 
         screen.visibleButton(solarSystemButton, screen.category.get() == 0);
         screen.visibleButton(tatooineCategoryButton, category.get() == 1);
@@ -123,6 +133,14 @@ public class PlanetSelectionGuiEvents {
         screen.visibleButton(mustafarHandlerButton, category.get() == 6);
         screen.visibleButton(mustafarOrbitHandlerButton, category.get() == 6);
         screen.visibleButton(mustafarSpaceStationHandlerButton, category.get() == 6);
+
+        screen.visibleButton(mandaloreCategoryButton, category.get() == 1);
+
+
+        screen.visibleButton(mandaloreHandlerButton, category.get() == 7);
+        screen.visibleButton(mandaloreOrbitHandlerButton, category.get() == 7);
+        screen.visibleButton(mandaloreSpaceStationHandlerButton, category.get() == 7);
+
     }
 
     @SubscribeEvent
@@ -136,27 +154,32 @@ public class PlanetSelectionGuiEvents {
         PlanetSelectionGuiHelper.enableRenderSystem();
 
         /** SOLAR SYSTEM */
-        if (PlanetSelectionGuiHelper.categoryRange(category.get(), 1, 5)) {
+        if (PlanetSelectionGuiHelper.categoryRange(category.get(), 1, 7)) {
             PlanetSelectionGuiHelper.addCircle(screen.width / 2, screen.height / 2, 23.0D, 180);
             PlanetSelectionGuiHelper.addCircle(screen.width / 2, screen.height / 2, 46.0D, 180);
             PlanetSelectionGuiHelper.addCircle(screen.width / 2, screen.height / 2, 69.5D, 180);
             PlanetSelectionGuiHelper.addCircle(screen.width / 2, screen.height / 2, 92.5D, 180);
             PlanetSelectionGuiHelper.addCircle(screen.width / 2, screen.height / 2, 115.5D, 180);
+            PlanetSelectionGuiHelper.addCircle(screen.width / 2, screen.height / 2, 140.5D, 180);
+
+
 
         }
 
         /** SUN */
-        if (PlanetSelectionGuiHelper.categoryRange(category.get(), 1, 5)) {
+        if (PlanetSelectionGuiHelper.categoryRange(category.get(), 1, 7)) {
             PlanetSelectionGuiHelper.addTexture(poseStack, (screen.width - 15) / 2, (screen.height - 15) / 2, 15, 15, PlanetSelectionGuiWindow.SUN_TEXTURE);
         }
 
         /** PLANETS */
-        if (PlanetSelectionGuiHelper.categoryRange(category.get(), 1, 5)) {
+        if (PlanetSelectionGuiHelper.categoryRange(category.get(), 1, 7)) {
             PlanetSelectionGuiHelper.addRotatedObject(screen, poseStack, TATOOINE_TEXTURE, -20.5F, -20.5F, 10, 10, screen.rotationEarth);
             PlanetSelectionGuiHelper.addRotatedObject(screen, poseStack, KAMINO_TEXTURE, -37, -37, 10, 10, screen.rotationMars);
             PlanetSelectionGuiHelper.addRotatedObject(screen, poseStack, ENDOR_TEXTURE, -54, -54, 10, 10, screen.rotationVenus);
             PlanetSelectionGuiHelper.addRotatedObject(screen, poseStack, HOT_TEXTURE, -70, -70, 10, 10, screen.rotationMercury);
             PlanetSelectionGuiHelper.addRotatedObject(screen, poseStack, MUSTAFAR_TEXTURE, -100, -70, 10, 10, screen.rotationVenus);
+            PlanetSelectionGuiHelper.addRotatedObject(screen, poseStack, MANDALORE_TEXTURE, -134, -70, 10, 10, screen.rotationVenus);
+
 
         }
 
@@ -166,7 +189,7 @@ public class PlanetSelectionGuiEvents {
         }
 
         /** LARGE MENU RENDERER */
-        if (PlanetSelectionGuiHelper.categoryRange(category.get(), 2, 6)) {
+        if (PlanetSelectionGuiHelper.categoryRange(category.get(), 2, 7)) {
             PlanetSelectionGuiHelper.addTexture(poseStack, 0, (screen.height / 2) - 177 / 2, 215, 177, PlanetSelectionGuiWindow.LARGE_MENU_TEXTURE);
         }
 
@@ -194,7 +217,7 @@ public class PlanetSelectionGuiEvents {
                 screen.category.set(0);
                 screen.scrollIndex = 0;
                 screen.updateButtonVisibility();
-            } else if (PlanetSelectionGuiHelper.categoryRange(category.get(), 2, 6)) {
+            } else if (PlanetSelectionGuiHelper.categoryRange(category.get(), 2, 7)) {
                 category.set(1);
                 screen.scrollIndex = 0;
                 screen.updateButtonVisibility();
@@ -300,11 +323,34 @@ public class PlanetSelectionGuiEvents {
 
         /** MUSTAFAR ORBIT TELEPORT BUTTONS */
         mustafarOrbitHandlerButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 84, 2, 37, 20, true, SWPlanets.PACKET_HANDLER, getNetworkHandler(13), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(screen.ORBIT_TEXT.getString(), screen.NO_GRAVITY_TEXT.getString(), "c" + screen.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), screen.SMALL_BLUE_BUTTON_TEXTURE, screen.SMALL_BLUE_LIGHT_BUTTON_TEXTURE, screen.ORBIT_TEXT);
-        screen.visibleButton(hotOrbitHandlerButton, false);
+        screen.visibleButton(mustafarOrbitHandlerButton, false);
 
         /** MUSTAFAR SPACE STATION TELEPORT BUTTONS */
         mustafarSpaceStationHandlerButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 125, 3, 75, 20, screen.spaceStationItemList, SWPlanets.PACKET_HANDLER, getNetworkHandler(14), ImageButtonPlacer.Types.PLANET_SPACE_STATION_CATEGORY, List.of(screen.ORBIT_TEXT.getString(), screen.NO_GRAVITY_TEXT.getString(), "c" + screen.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), screen.LARGE_RED_BUTTON_TEXTURE, screen.LARGE_RED_LIGHT_BUTTON_TEXTURE, screen.SPACE_STATION_TEXT);
         screen.visibleButton(mustafarSpaceStationHandlerButton, false);
+
+        /**
+         *
+         * MANDALORE
+         *
+         */
+
+        /** MANDALORE BUTTONS */
+        mandaloreCategoryButton = PlanetSelectionGuiHelper.addCategoryButton(screen, category, 10, 1, 70, 20, 7, screen.checkTier(4), ImageButtonPlacer.Types.SOLAR_SYSTEM_CATEGORY, List.of(MANDALORE_BUTTON_TEXT.getString(), screen.ROCKET_TIER_4_TEXT.getString()), screen.RED_BUTTON_TEXTURE, screen.RED_LIGHT_BUTTON_TEXTURE, MANDALORE_BUTTON_TEXT);
+        screen.visibleButton(mandaloreCategoryButton, false);
+
+        /** MANDALORE TELEPORT BUTTONS */
+        mandaloreHandlerButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 10, 1, 70, 20, true, SWPlanets.PACKET_HANDLER, getNetworkHandler(15), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(screen.PLANET_TEXT.getString(), "3.721 m/s", "a" + screen.OXYGEN_FALSE_TEXT.getString(), "a" + "169"), screen.BLUE_BUTTON_TEXTURE, screen.BLUE_LIGHT_BUTTON_TEXTURE, MANDALORE_BUTTON_TEXT);
+        screen.visibleButton(mandaloreHandlerButton, false);
+
+        /** MANDALORE ORBIT TELEPORT BUTTONS */
+        mandaloreOrbitHandlerButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 84, 2, 37, 20, true, SWPlanets.PACKET_HANDLER, getNetworkHandler(16), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(screen.ORBIT_TEXT.getString(), screen.NO_GRAVITY_TEXT.getString(), "c" + screen.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), screen.SMALL_BLUE_BUTTON_TEXTURE, screen.SMALL_BLUE_LIGHT_BUTTON_TEXTURE, screen.ORBIT_TEXT);
+        screen.visibleButton(mandaloreOrbitHandlerButton, false);
+
+        /** MANDALORE SPACE STATION TELEPORT BUTTONS */
+        mandaloreSpaceStationHandlerButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 125, 3, 75, 20, screen.spaceStationItemList, SWPlanets.PACKET_HANDLER, getNetworkHandler(17), ImageButtonPlacer.Types.PLANET_SPACE_STATION_CATEGORY, List.of(screen.ORBIT_TEXT.getString(), screen.NO_GRAVITY_TEXT.getString(), "c" + screen.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), screen.LARGE_RED_BUTTON_TEXTURE, screen.LARGE_RED_LIGHT_BUTTON_TEXTURE, screen.SPACE_STATION_TEXT);
+        screen.visibleButton(mandaloreSpaceStationHandlerButton, false);
+
     }
 
     /** GET NETWORK HANDLER */
