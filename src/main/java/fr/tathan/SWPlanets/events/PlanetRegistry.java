@@ -23,6 +23,10 @@ public class PlanetRegistry {
             "textures/planet_bar/kamino_planet_bar.png");
     private static final ResourceLocation ENDOR_PLANET_BAR = new ResourceLocation(SWPlanets.MODID,
             "textures/planet_bar/endor_planet_bar.png");
+    private static final ResourceLocation MUSTAFAR_PLANET_BAR = new ResourceLocation(BeyondEarth.MODID,
+            "textures/planet_bar/mercury_planet_bar.png");
+    private static final ResourceLocation HOT_PLANET_BAR = new ResourceLocation(BeyondEarth.MODID,
+            "textures/planet_bar/glacio_planet_bar.png");
 
     private static final ResourceLocation TATOOINE_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/sky/tatooine.png");
     private static final ResourceLocation KAMINO_TEXTURE = new ResourceLocation(SWPlanets.MODID, "textures/sky/kamino.png");
@@ -53,8 +57,8 @@ public class PlanetRegistry {
         Planets.registerPlanetBar(LevelRegistry.TATOOINE, TATOOINE_PLANET_BAR);
         Planets.registerPlanetBar(LevelRegistry.KAMINO, KAMINO_PLANET_BAR);
         Planets.registerPlanetBar(LevelRegistry.ENDOR, ENDOR_PLANET_BAR);
-        //Planets.registerPlanetBar(LevelRegistry.HOT, Planets.);
-        //Planets.registerPlanetBar(LevelRegistry.MUSTAFAR, Planets.MERCURY_PLANET_BAR);
+        Planets.registerPlanetBar(LevelRegistry.HOT, HOT_PLANET_BAR);
+        Planets.registerPlanetBar(LevelRegistry.MUSTAFAR, MUSTAFAR_PLANET_BAR);
 
         Planets.StarSystem starwars = new Planets.StarSystem();
         starwars.name = "starwars";
@@ -64,6 +68,7 @@ public class PlanetRegistry {
         Planets.Planet tatooine = Planets.BY_DIMENSION.get(LevelRegistry.TATOOINE);
         tatooine.orbitRadius = 0.39f * PLANET_ORBIT_SCALE;
         tatooine.mass = 0.055f * PLANET_MASS_SCALE;
+        tatooine.orbit = LevelRegistry.TATOOINE_ORBIT;
         tatooine.texture = TATOOINE_TEXTURE;
         tatooine.rotation = 270;
         tatooine.tier = 4;
@@ -77,6 +82,7 @@ public class PlanetRegistry {
 
         Planets.Planet mustafar = Planets.BY_DIMENSION.get(LevelRegistry.MUSTAFAR);
         mustafar.orbitRadius = 0.72f * PLANET_ORBIT_SCALE;
+        mustafar.orbit = LevelRegistry.MUSTAFAR_ORBIT;
         mustafar.mass = 0.81f * PLANET_MASS_SCALE;
         mustafar.texture = MUSTAFAR_TEXTURE;
         mustafar.rotation = 180;
@@ -89,6 +95,8 @@ public class PlanetRegistry {
         mustafar.orbitColour = new int[] { 235, 136, 68 };
 
         Planets.Planet endor = Planets.BY_DIMENSION.get(LevelRegistry.ENDOR);
+        endor.orbit = LevelRegistry.ENDOR_ORBIT;
+
         endor.texture = ENDOR_TEXTURE;
         endor.rotation = 90;
         endor.tier = 4;
@@ -102,6 +110,8 @@ public class PlanetRegistry {
 
         Planets.Planet kamino = Planets.BY_DIMENSION.get(LevelRegistry.KAMINO);
         kamino.orbitRadius = 1.52f * PLANET_ORBIT_SCALE;
+        kamino.orbit = LevelRegistry.KAMINO_ORBIT;
+
         kamino.mass = 0.107f * PLANET_MASS_SCALE;
         kamino.texture = KAMINO_TEXTURE;
         kamino.tier = 4;
@@ -112,9 +122,23 @@ public class PlanetRegistry {
         kamino.hasRain = true;
         kamino.orbitColour = new int[] { 37, 49, 146 };
 
+        Planets.Planet hot = Planets.BY_DIMENSION.get(LevelRegistry.HOT);
+        hot.orbitRadius = 1.52f * PLANET_ORBIT_SCALE;
+        hot.mass = 0.107f * PLANET_MASS_SCALE;
+        hot.texture = HOT_TEXTURE;
+        hot.tier = 4;
+        hot.radius = 3389.5;
+        hot.g = 0.3794f;
+        hot.temperature = -63;
+        hot.airDensity = 0.001f;
+        hot.hasRain = true;
+        hot.orbitColour = new int[] { 37, 49, 146 };
+        hot.orbit = LevelRegistry.HOT_ORBIT;
+
         starwars.addChild(tatooine);
         starwars.addChild(mustafar);
         starwars.addChild(endor);
+        starwars.addChild(hot);
         //starwars.addChild(kamino);
         starwars.register();
 
