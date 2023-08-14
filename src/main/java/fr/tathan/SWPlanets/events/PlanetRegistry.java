@@ -37,8 +37,13 @@ public class PlanetRegistry {
 
 
     @SubscribeEvent
-    public static void registerPlanets(PlanetRegisterEvent.Generate event) {
+    public static void registerPlanets(PlanetRegisterEvent.Load event) {
 
+        registerPlanets();
+    }
+
+    public static void registerPlanets() {
+        SWPlanets.LOGGER.info("Registering planets");
         Planets.registerPlanet(LevelRegistry.TATOOINE, LevelRegistry.TATOOINE_ORBIT);
         Planets.registerPlanet(LevelRegistry.KAMINO, LevelRegistry.KAMINO_ORBIT);
         Planets.registerPlanet(LevelRegistry.ENDOR, LevelRegistry.ENDOR_ORBIT);
@@ -68,7 +73,6 @@ public class PlanetRegistry {
         tatooine.hasRain = false;
         tatooine.orbitColour = new int[] { 179, 49, 44 };
         tatooine.hasDustStorms = true;
-        tatooine.register();
 
 
         Planets.Planet mustafar = Planets.BY_DIMENSION.get(LevelRegistry.MUSTAFAR);
@@ -83,7 +87,6 @@ public class PlanetRegistry {
         mustafar.hasRain = false;
         mustafar.airDensity = 100;
         mustafar.orbitColour = new int[] { 235, 136, 68 };
-        mustafar.register();
 
         Planets.Planet endor = Planets.BY_DIMENSION.get(LevelRegistry.ENDOR);
         endor.texture = ENDOR_TEXTURE;
@@ -95,7 +98,6 @@ public class PlanetRegistry {
         endor.spaceLevel = false;
         endor.hasRain = true;
         endor.orbitColour = new int[] { 53, 163, 79 };
-        endor.register();
 
 
         Planets.Planet kamino = Planets.BY_DIMENSION.get(LevelRegistry.KAMINO);
@@ -109,12 +111,11 @@ public class PlanetRegistry {
         kamino.airDensity = 0.001f;
         kamino.hasRain = true;
         kamino.orbitColour = new int[] { 37, 49, 146 };
-        kamino.register();
 
         starwars.addChild(tatooine);
         starwars.addChild(mustafar);
         starwars.addChild(endor);
-        starwars.addChild(kamino);
+        //starwars.addChild(kamino);
         starwars.register();
 
 

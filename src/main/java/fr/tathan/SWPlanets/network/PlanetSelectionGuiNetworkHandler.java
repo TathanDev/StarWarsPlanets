@@ -1,6 +1,6 @@
 package  fr.tathan.SWPlanets.network;
 
-import fr.tathan.SWPlanets.registries.PlanetsRegistry;
+import fr.tathan.SWPlanets.registries.LevelRegistry;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkEvent;
@@ -45,69 +45,69 @@ public class PlanetSelectionGuiNetworkHandler extends PlanetSelectionMenuNetwork
             /** TATOOINE */
             case 0:
                 message.defaultOptions(player);
-                Methods.createLanderAndTeleportTo(player, PlanetsRegistry.TATOOINE, 700, false);
+                Methods.createLanderAndTeleportTo(player, LevelRegistry.TATOOINE, 700, false);
                 break;
 
             case 1:
                 message.defaultOptions(player);
-                Methods.createLanderAndTeleportTo(player, PlanetsRegistry.TATOOINE_ORBIT, 700, false);
+                Methods.createLanderAndTeleportTo(player, LevelRegistry.TATOOINE_ORBIT, 700, false);
                 break;
 
             case 2:
                 message.defaultOptions(player);
                 message.deleteItems(player);
-                Methods.createLanderAndTeleportTo(player, PlanetsRegistry.TATOOINE_ORBIT, 700,true);
+                Methods.createLanderAndTeleportTo(player, LevelRegistry.TATOOINE_ORBIT, 700,true);
                 break;
 
             /** KAMINO */
             case 3:
                 message.defaultOptions(player);
-                Methods.createLanderAndTeleportTo(player, PlanetsRegistry.KAMINO, 700,false);
+                Methods.createLanderAndTeleportTo(player, LevelRegistry.KAMINO, 700,false);
                 break;
 
             case 4:
                 message.defaultOptions(player);
-                Methods.createLanderAndTeleportTo(player, PlanetsRegistry.KAMINO_ORBIT, 700,false);
+                Methods.createLanderAndTeleportTo(player, LevelRegistry.KAMINO_ORBIT, 700,false);
                 break;
 
             case 5:
                 message.defaultOptions(player);
                 message.deleteItems(player);
-                Methods.createLanderAndTeleportTo(player, PlanetsRegistry.KAMINO_ORBIT, 700,true);
+                Methods.createLanderAndTeleportTo(player, LevelRegistry.KAMINO_ORBIT, 700,true);
                 break;
 
             /** ENDOR */
             case 6:
                 message.defaultOptions(player);
-                Methods.createLanderAndTeleportTo(player, PlanetsRegistry.ENDOR, 700,false);
+                Methods.createLanderAndTeleportTo(player, LevelRegistry.ENDOR, 700,false);
                 break;
 
             case 7:
                 message.defaultOptions(player);
-                Methods.createLanderAndTeleportTo(player, PlanetsRegistry.ENDOR_ORBIT, 700,false);
+                Methods.createLanderAndTeleportTo(player, LevelRegistry.ENDOR_ORBIT, 700,false);
                 break;
 
             case 8:
                 message.defaultOptions(player);
                 message.deleteItems(player);
-                Methods.createLanderAndTeleportTo(player, PlanetsRegistry.ENDOR_ORBIT, 700,true);
+                Methods.createLanderAndTeleportTo(player, LevelRegistry.ENDOR_ORBIT, 700,true);
                 break;
 
             /** HOT */
             case 9:
                 message.defaultOptions(player);
-                Methods.createLanderAndTeleportTo(player, PlanetsRegistry.HOT,700, false);
+                Methods.createLanderAndTeleportTo(player, LevelRegistry.HOT,700, false);
                 break;
 
             case 10:
                 message.defaultOptions(player);
-                Methods.createLanderAndTeleportTo(player, PlanetsRegistry.HOT_ORBIT, 700,false);
+                Methods.createLanderAndTeleportTo(player, LevelRegistry.HOT_ORBIT, 700,false);
                 break;
 
             case 11:
                 message.defaultOptions(player);
                 message.deleteItems(player);
-                Methods.createLanderAndTeleportTo(player, PlanetsRegistry.HOT_ORBIT, 700, true);
+                Methods.createLanderAndTeleportTo(player, LevelRegistry.HOT_ORBIT, 700, true);
                 break;
         }
 

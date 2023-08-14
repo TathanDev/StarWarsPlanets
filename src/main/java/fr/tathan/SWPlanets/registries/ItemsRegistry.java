@@ -34,6 +34,11 @@ public class ItemsRegistry {
 
     //Sith Light Saber
     public static final RegistryObject<SwordItem> LIGHT_SABER_RED = ITEMS.register("light_saber_red", () -> new SithLightSaber(Tiers.KYBER, 8, -2, new  Item.Properties().rarity(Rarity.EPIC).fireResistant().tab(CreativeTabsRegistry.SWPLANETS_TAB).stacksTo(1).durability(1400).setNoRepair()));
+    public static final RegistryObject<Item> KYLO_REN_LIGHT_SABER = ITEMS.register("light_saber_kylo_ren", () -> new SithLightSaber(net.minecraft.world.item.Tiers.NETHERITE,3, -2.4F, new Item.Properties().fireResistant().stacksTo(1)));
+    public static final RegistryObject<Item> DARK_MAUL_LIGHT_SABER = ITEMS.register("light_saber_dark_maul", () -> new SithLightSaber(net.minecraft.world.item.Tiers.NETHERITE,3, -2.4F, new Item.Properties().fireResistant().stacksTo(1)));
+
+    public static final RegistryObject<Item> DARKSABER = ITEMS.register("darksaber", () -> new SwordItem(net.minecraft.world.item.Tiers.NETHERITE, 4, -2.5F, new Item.Properties().fireResistant().stacksTo(1).durability(4000)));
+
 
     /** Block */
     public static final RegistryObject<BlockItem> KYBER_CRYSTAl_ORE_ITEM = ITEMS.register("kyber_crystal_ore", () -> new BlockItem(BlocksRegistry.CRYSTAL_KYBER_ORE.get(), new Item.Properties().tab(CreativeTabsRegistry.SWPLANETS_TAB)));

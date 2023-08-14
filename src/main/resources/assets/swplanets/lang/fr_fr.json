@@ -1,10 +1,10 @@
 {
-  "gui.swplanets.planet_selection.solar_system_button": "La Galaxie",
-  "gui.swplanets.planet_selection.tatooine_button": "Tatooine",
-  "gui.swplanets.planet_selection.kamino_button": "Kamino",
-  "gui.swplanets.planet_selection.endor_button": "Endor",
-  "gui.swplanets.planet_selection.hot_button": "Hot",
-  "gui.swplanets.planet_selection.mustafar_button": "Mustafar",
+  "gui.beyond_earth.planet_selection.solar_system_starwars": "La Galaxie",
+  "gui.beyond_earth.planet_selection.tatooine": "Tatooine",
+  "gui.beyond_earth.planet_selection.kamino": "Kamino",
+  "gui.beyond_earth.planet_selection.endor": "Endor",
+  "gui.beyond_earth.planet_selection.hot": "Hot",
+  "gui.beyond_earth.planet_selection.mustafar": "Mustafar",
 
 
   "advancements.tatooine.title": "Tatooine",

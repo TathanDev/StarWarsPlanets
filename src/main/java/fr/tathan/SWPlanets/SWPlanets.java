@@ -2,6 +2,7 @@ package fr.tathan.SWPlanets;
 
 import fr.tathan.SWPlanets.config.ClientConfigs;
 import fr.tathan.SWPlanets.config.CommonConfig;
+import fr.tathan.SWPlanets.events.PlanetRegistry;
 import fr.tathan.SWPlanets.network.SWPlanetsNetworkRegistry;
 import fr.tathan.SWPlanets.registries.*;
 import fr.tathan.SWPlanets.world.oregen.OreGeneration;
@@ -45,8 +46,11 @@ public class SWPlanets {
         StructuresRegistry.STRUCTURES.register(bus);
         OreGeneration.CONFIGURED_FEATURES.register(bus);
         LevelRegistry.init();
-
         SWPlanetsNetworkRegistry.register();
+        PlanetRegistry.registerPlanets();
+
+
+        //SWPlanetsNetworkRegistry.register();
 
 
 

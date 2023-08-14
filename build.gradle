@@ -100,7 +100,7 @@ dependencies {
     minecraft "net.minecraftforge:forge:1.19.2-43.2.4"
 
 
-    implementation fg.deobf("curse.maven:be-377448:4379817")
+    implementation fg.deobf("curse.maven:be-377448:4614812")
 }
 
 jar {
